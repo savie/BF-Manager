@@ -70,6 +70,7 @@ jobs:
           set -euo pipefail
           BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
           echo "$BUILD_TOOLS" >> "$GITHUB_PATH"
+          export PATH="$BUILD_TOOLS:$PATH"
           test -x "$BUILD_TOOLS/zipalign"
           test -x "$BUILD_TOOLS/apksigner"
           zipalign -h >/dev/null 2>&1 || true
