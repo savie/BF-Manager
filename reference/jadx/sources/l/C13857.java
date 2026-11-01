@@ -1,0 +1,27 @@
+package l;
+
+/* JADX INFO: renamed from: l.ܰܰ۟, reason: contains not printable characters */
+/* JADX INFO: compiled from: A451 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13857 extends AbstractC8856 {
+
+    /* JADX INFO: renamed from: ֫, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C20145 f45694;
+
+    /* JADX INFO: renamed from: ۢ, reason: not valid java name and contains not printable characters */
+    public final AbstractC11242 f45695;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C13857(C20145 c20145, AbstractC11242 abstractC11242) {
+        super(c20145, EnumC10477.f35880, "bad var use");
+        this.f45694 = c20145;
+        this.f45695 = abstractC11242;
+    }
+
+    @Override // l.AbstractC8856
+    /* JADX INFO: renamed from: ۙ */
+    public final C11948 mo8964(EnumC17198 enumC17198, InterfaceC12260 interfaceC12260, AbstractC23903 abstractC23903, AbstractC16579 abstractC16579, AbstractC11242 abstractC11242, C21825 c21825, C21825 c21826) {
+        C20145 c20145 = this.f45694;
+        return c20145.f65420.m51912(enumC17198, c20145.f65441.m48186(), interfaceC12260, "illegal.ref.to.restricted.type", this.f45695);
+    }
+}

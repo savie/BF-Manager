@@ -1,0 +1,24 @@
+package l;
+
+import java.util.EnumSet;
+
+/* JADX INFO: renamed from: l.ܶ֨۟, reason: contains not printable characters */
+/* JADX INFO: compiled from: Z5U8 */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C14896 extends AbstractC3956 {
+
+    /* JADX INFO: renamed from: ۚ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ C0429 f48672;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C14896(C0429 c0429, AbstractC11242 abstractC11242, EnumC11368 enumC11368, EnumSet enumSet) {
+        super(c0429, abstractC11242, enumC11368, enumSet);
+        this.f48672 = c0429;
+    }
+
+    @Override // l.AbstractC3956
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo5135(int i, AbstractC23903 abstractC23903) {
+        this.f48672.m2250(abstractC23903);
+    }
+}

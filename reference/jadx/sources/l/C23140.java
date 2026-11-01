@@ -1,0 +1,21 @@
+package l;
+
+import java.util.Iterator;
+
+/* JADX INFO: renamed from: l.᩺ܿᩳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 491A */
+/* JADX INFO: loaded from: classes.dex */
+public final class C23140 implements Iterable {
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final String f75136;
+
+    public C23140(String str) {
+        this.f75136 = str;
+    }
+
+    @Override // java.lang.Iterable
+    public final Iterator iterator() {
+        return new C6911(this);
+    }
+}

@@ -1,0 +1,10 @@
+package l;
+
+/* JADX INFO: renamed from: l.۬ᩳۤ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G67D */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C13278 extends C11867 {
+    public C13278() {
+        throw null;
+    }
+}

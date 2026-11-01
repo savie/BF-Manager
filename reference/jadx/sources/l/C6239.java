@@ -1,0 +1,8 @@
+package l;
+
+/* JADX INFO: renamed from: l.ۛᩴ۟, reason: contains not printable characters */
+/* JADX INFO: compiled from: C42E */
+/* JADX INFO: loaded from: classes2.dex */
+public final class C6239 extends Error {
+    public static final long serialVersionUID = 7732091036771098303L;
+}

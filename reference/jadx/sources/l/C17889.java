@@ -1,0 +1,27 @@
+package l;
+
+/* JADX INFO: renamed from: l.ᩳۜܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: VBIK */
+/* JADX INFO: loaded from: classes5.dex */
+public final enum C17889 extends EnumC7306 {
+    public /* synthetic */ C17889() {
+        this("FORMAT_11N", 3);
+    }
+
+    public C17889(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC7306
+    /* JADX INFO: renamed from: ۙ */
+    public AbstractC17806 mo1324(int i, InterfaceC14985 interfaceC14985) {
+        return new C20007(this, EnumC7306.m19496(i), 0, 0, (EnumC7306.m19492(i) << 28) >> 28, EnumC7306.m19495(i));
+    }
+
+    @Override // l.EnumC7306
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1325(AbstractC17806 abstractC17806, InterfaceC21334 interfaceC21334) {
+        EnumC7306.m19460(abstractC17806.m41391(), EnumC7306.m19472(abstractC17806.mo16133(), abstractC17806.m41386()));
+        interfaceC21334.m47859();
+    }
+}

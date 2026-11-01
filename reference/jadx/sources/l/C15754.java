@@ -1,0 +1,47 @@
+package l;
+
+/* JADX INFO: renamed from: l.ܺۛᩳ, reason: contains not printable characters */
+/* JADX INFO: compiled from: XBIX */
+/* JADX INFO: loaded from: classes4.dex */
+public final enum C15754 extends EnumC21210 {
+    public /* synthetic */ C15754() {
+        this("TagName", 9);
+    }
+
+    public C15754(String str, int i) {
+        super(str, i, 0);
+    }
+
+    @Override // l.EnumC21210
+    /* JADX INFO: renamed from: ۙ */
+    public void mo1598(C20692 c20692, C12931 c12931) {
+        c20692.f67307.m22523(c12931.m32032());
+        char cM32033 = c12931.m32033();
+        if (cM32033 != 0) {
+            if (cM32033 != ' ') {
+                if (cM32033 == '/') {
+                    c20692.m46532(EnumC21210.f69047);
+                    return;
+                }
+                if (cM32033 == '>') {
+                    c20692.m46540();
+                    c20692.m46532(EnumC21210.f69077);
+                    return;
+                }
+                if (cM32033 == 65535) {
+                    c20692.m46544(this);
+                    c20692.m46532(EnumC21210.f69077);
+                    return;
+                } else if (cM32033 != '\t' && cM32033 != '\n' && cM32033 != '\f' && cM32033 != '\r') {
+                    AbstractC8698 abstractC8698 = c20692.f67307;
+                    abstractC8698.getClass();
+                    abstractC8698.m22523(String.valueOf(cM32033));
+                    return;
+                }
+            }
+            c20692.m46532(EnumC21210.f69025);
+            return;
+        }
+        c20692.f67307.m22523(EnumC21210.f69050);
+    }
+}

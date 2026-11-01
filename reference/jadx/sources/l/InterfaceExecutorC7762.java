@@ -1,0 +1,11 @@
+package l;
+
+import java.util.concurrent.Executor;
+
+/* JADX INFO: renamed from: l.۟᩹ܰ, reason: contains not printable characters */
+/* JADX INFO: compiled from: F8QN */
+/* JADX INFO: loaded from: classes3.dex */
+public interface InterfaceExecutorC7762 extends Executor {
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    void mo20430();
+}

@@ -1,0 +1,15 @@
+package l;
+
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+/* JADX INFO: renamed from: l.᩸ۧ᩹, reason: contains not printable characters */
+/* JADX INFO: compiled from: 57TP */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C21546 extends ConcurrentLinkedQueue {
+    public /* synthetic */ C21546(int i) {
+        this();
+    }
+
+    public C21546() {
+    }
+}

@@ -1,0 +1,47 @@
+package l;
+
+/* JADX INFO: renamed from: l.ܶܺۚ, reason: contains not printable characters */
+/* JADX INFO: compiled from: I6YB */
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class C15328 {
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public static final /* synthetic */ int[] f49925;
+
+    static {
+        int[] iArr = new int[EnumC17217.values().length];
+        f49925 = iArr;
+        try {
+            iArr[EnumC17217.STAT.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            f49925[EnumC17217.LIST.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            f49925[EnumC17217.CREATE_FILE_EXCLUSIVE.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            f49925[EnumC17217.CREATE_DIRECTORY_SINGLE.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            f49925[EnumC17217.DELETE_FILE_OR_LINK.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            f49925[EnumC17217.DELETE_EMPTY_DIRECTORY.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            f49925[EnumC17217.RENAME_NO_REPLACE.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            f49925[EnumC17217.REPLACE.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+    }
+}

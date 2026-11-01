@@ -1,0 +1,154 @@
+package l;
+
+import java.io.IOException;
+import java.io.Reader;
+
+/* JADX INFO: renamed from: l.ᩳܽۖ, reason: contains not printable characters */
+/* JADX INFO: compiled from: U6QB */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C18167 extends Reader {
+
+    /* JADX INFO: renamed from: ֡, reason: not valid java name and contains not printable characters */
+    public boolean f58059;
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public boolean f58060;
+
+    /* JADX INFO: renamed from: ܽ, reason: not valid java name and contains not printable characters */
+    public Reader f58061;
+
+    /* JADX INFO: renamed from: ᩶, reason: not valid java name and contains not printable characters */
+    public int f58062;
+
+    public C18167(Reader reader) {
+        C13638.requireNonNull(reader);
+        this.f58061 = reader;
+    }
+
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final int m42290() {
+        return this.f58062;
+    }
+
+    /* JADX INFO: renamed from: ۨ, reason: not valid java name and contains not printable characters */
+    public final boolean m42291() {
+        return this.f58059;
+    }
+
+    @Override // java.io.Reader
+    public final int read() throws IOException {
+        int i;
+        if (this.f58061 == null) {
+            throw new IOException("Line normalizer is closed");
+        }
+        if (this.f58060) {
+            return -1;
+        }
+        do {
+            i = this.f58061.read();
+            if (i == -1) {
+                if (this.f58062 == 0) {
+                    this.f58062 = this.f58059 ? 2 : 1;
+                }
+                this.f58059 = false;
+                this.f58060 = true;
+                return -1;
+            }
+            if (this.f58059) {
+                this.f58059 = false;
+                if (this.f58062 == 0) {
+                    this.f58062 = i == 10 ? 3 : 2;
+                }
+            } else if (i == 13) {
+                this.f58059 = true;
+                return 10;
+            }
+            return i;
+        } while (i == 10);
+        if (i == 13) {
+            return 10;
+        }
+        return i;
+    }
+
+    @Override // java.io.Reader
+    public final int read(char[] cArr, int i, int i2) throws IOException {
+        int i3;
+        if (this.f58061 == null) {
+            throw new IOException("Line normalizer is closed");
+        }
+        C17565.m40836(cArr, i, i2);
+        if (i2 == 0) {
+            return 0;
+        }
+        if (!this.f58060) {
+            int i4 = 0;
+            while (i4 < i2) {
+                int i5 = i + i4;
+                int i6 = i2 - i4;
+                int i7 = this.f58061.read(cArr, i5, i6);
+                if (i7 == -1) {
+                    if (this.f58062 == 0) {
+                        this.f58062 = this.f58059 ? 2 : 1;
+                    }
+                    this.f58059 = false;
+                    this.f58060 = true;
+                    break;
+                }
+                if (i7 <= 0 || i7 > i6) {
+                    throw new IOException("Text normalizer input made invalid progress");
+                }
+                int i8 = i7 + i5;
+                while (i5 < i8) {
+                    if (this.f58059) {
+                        i3 = i5 + 1;
+                        char c = cArr[i5];
+                        this.f58059 = false;
+                        if (this.f58062 == 0) {
+                            this.f58062 = c == '\n' ? 3 : 2;
+                        }
+                        if (c != '\n') {
+                            int i9 = i4 + 1;
+                            cArr[i4 + i] = c != '\r' ? c : '\n';
+                            i5 = i3;
+                            i4 = i9;
+                        }
+                    } else {
+                        i3 = i5;
+                        while (i3 < i8 && cArr[i3] != '\r') {
+                            i3++;
+                        }
+                        int i10 = i3 - i5;
+                        if (i10 != 0) {
+                            int i11 = i + i4;
+                            if (i11 != i5) {
+                                System.arraycopy(cArr, i5, cArr, i11, i10);
+                            }
+                            i4 += i10;
+                        }
+                        if (i3 < i8) {
+                            i3++;
+                            cArr[i4 + i] = '\n';
+                            this.f58059 = true;
+                            i4++;
+                        }
+                    }
+                    i5 = i3;
+                }
+            }
+            if (i4 != 0) {
+                return i4;
+            }
+        }
+        return -1;
+    }
+
+    @Override // java.io.Reader, java.io.Closeable, java.lang.AutoCloseable
+    public final void close() throws IOException {
+        Reader reader = this.f58061;
+        this.f58061 = null;
+        if (reader != null) {
+            reader.close();
+        }
+    }
+}

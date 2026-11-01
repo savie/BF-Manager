@@ -1,0 +1,43 @@
+package l;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.ByteBuffer;
+
+/* JADX INFO: renamed from: l.۠ܶۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: W144 */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C8257 extends InputStream implements InterfaceC20818 {
+
+    /* JADX INFO: renamed from: ܺ, reason: not valid java name and contains not printable characters */
+    public final ByteBuffer f28709;
+
+    @Override // java.io.InputStream, l.InterfaceC20818
+    public /* synthetic */ long transferTo(OutputStream outputStream) {
+        return C10235.transferTo(this, outputStream);
+    }
+
+    public C8257(ByteBuffer byteBuffer) {
+        this.f28709 = byteBuffer;
+    }
+
+    @Override // java.io.InputStream
+    public final int read() {
+        ByteBuffer byteBuffer = this.f28709;
+        if (byteBuffer.hasRemaining()) {
+            return byteBuffer.get() & 255;
+        }
+        return -1;
+    }
+
+    @Override // java.io.InputStream
+    public final int read(byte[] bArr, int i, int i2) {
+        ByteBuffer byteBuffer = this.f28709;
+        if (!byteBuffer.hasRemaining()) {
+            return -1;
+        }
+        int iMin = Math.min(i2, byteBuffer.remaining());
+        byteBuffer.get(bArr, i, iMin);
+        return iMin;
+    }
+}

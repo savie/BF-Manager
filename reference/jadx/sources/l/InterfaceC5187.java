@@ -1,0 +1,9 @@
+package l;
+
+/* JADX INFO: renamed from: l.ۚۜ۬, reason: contains not printable characters */
+/* JADX INFO: compiled from: F70I */
+/* JADX INFO: loaded from: classes2.dex */
+public interface InterfaceC5187 {
+    /* JADX INFO: renamed from: ۙ */
+    C11538 mo11019(String str, String str2);
+}

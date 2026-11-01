@@ -1,0 +1,64 @@
+package l;
+
+/* JADX INFO: renamed from: l.ۛ֡ᩴ, reason: contains not printable characters */
+/* JADX INFO: compiled from: N673 */
+/* JADX INFO: loaded from: classes2.dex */
+public abstract /* synthetic */ class AbstractC5711 {
+    public static final /* synthetic */ int[] a;
+    public static final /* synthetic */ int[] b;
+
+    static {
+        int[] iArr = new int[EnumC22996.values().length];
+        b = iArr;
+        try {
+            iArr[EnumC22996.NANOS.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            b[EnumC22996.MICROS.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            b[EnumC22996.MILLIS.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            b[EnumC22996.SECONDS.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            b[EnumC22996.MINUTES.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            b[EnumC22996.HOURS.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            b[EnumC22996.HALF_DAYS.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            b[EnumC22996.DAYS.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+        int[] iArr2 = new int[EnumC18762.values().length];
+        a = iArr2;
+        try {
+            iArr2[EnumC18762.NANO_OF_SECOND.ordinal()] = 1;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            a[EnumC18762.MICRO_OF_SECOND.ordinal()] = 2;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            a[EnumC18762.MILLI_OF_SECOND.ordinal()] = 3;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            a[EnumC18762.INSTANT_SECONDS.ordinal()] = 4;
+        } catch (NoSuchFieldError unused12) {
+        }
+    }
+}

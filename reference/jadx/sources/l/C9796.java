@@ -1,0 +1,29 @@
+package l;
+
+import java.util.Collections;
+import java.util.List;
+
+/* JADX INFO: renamed from: l.ۢ᩵ܶ, reason: contains not printable characters */
+/* JADX INFO: compiled from: SB7W */
+/* JADX INFO: loaded from: classes4.dex */
+public final class C9796 extends AbstractC8075 implements InterfaceC17952 {
+
+    /* JADX INFO: renamed from: ۬, reason: not valid java name and contains not printable characters */
+    public Float f33522;
+
+    @Override // l.C8781
+    /* JADX INFO: renamed from: ֨ */
+    public final String mo1944() {
+        return "stop";
+    }
+
+    @Override // l.InterfaceC17952
+    /* JADX INFO: renamed from: ۙ */
+    public final void mo6530(C8781 c8781) {
+    }
+
+    @Override // l.InterfaceC17952
+    public final List getChildren() {
+        return Collections.EMPTY_LIST;
+    }
+}

@@ -1,0 +1,30 @@
+package l;
+
+/* JADX INFO: renamed from: l.֡۠ۨ, reason: contains not printable characters */
+/* JADX INFO: compiled from: G7I1 */
+/* JADX INFO: loaded from: classes2.dex */
+public final /* synthetic */ class C0289 implements InterfaceC13717 {
+    @Override // l.InterfaceC13717
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC13717 mo1812(InterfaceC13717 interfaceC13717) {
+        return C4543.m12682(this, interfaceC13717);
+    }
+
+    @Override // l.InterfaceC13717
+    /* JADX INFO: renamed from: ܰ, reason: not valid java name and contains not printable characters */
+    public final /* synthetic */ InterfaceC13717 mo1814(InterfaceC13717 interfaceC13717) {
+        return C4543.m12683(this, interfaceC13717);
+    }
+
+    @Override // l.InterfaceC13717
+    /* JADX INFO: renamed from: ۙ, reason: not valid java name and contains not printable characters */
+    public final boolean mo1813(int i) {
+        return C4312.m12113(i) != 0;
+    }
+
+    @Override // l.InterfaceC13717
+    public final C3111 negate() {
+        C23595 c23595 = C22141.f71668;
+        return C3111.m9336(this);
+    }
+}

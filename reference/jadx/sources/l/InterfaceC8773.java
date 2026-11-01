@@ -1,0 +1,11 @@
+package l;
+
+import android.os.Message;
+
+/* JADX INFO: renamed from: l.ۡۡۜ, reason: contains not printable characters */
+/* JADX INFO: compiled from: A151 */
+/* JADX INFO: loaded from: classes3.dex */
+public interface InterfaceC8773 {
+    /* JADX INFO: renamed from: ۙ */
+    void mo5624(Object obj, Message message);
+}

@@ -1,0 +1,11 @@
+package l;
+
+/* JADX INFO: renamed from: l.۫᩺۠, reason: contains not printable characters */
+/* JADX INFO: compiled from: FA2I */
+/* JADX INFO: loaded from: classes3.dex */
+public enum EnumC12717 {
+    RESOLVER_WINS,
+    RESOLVER_BCAST,
+    RESOLVER_DNS,
+    RESOLVER_LMHOSTS
+}

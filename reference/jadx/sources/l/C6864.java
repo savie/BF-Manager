@@ -1,0 +1,16 @@
+package l;
+
+/* JADX INFO: renamed from: l.ۜܺۡ, reason: contains not printable characters */
+/* JADX INFO: compiled from: 4BJX */
+/* JADX INFO: loaded from: classes3.dex */
+public final class C6864 extends AbstractC2630 {
+    public final String toString() {
+        return C0242.m1617("[", this.f10257, "!=", this.f10258, "]");
+    }
+
+    @Override // l.AbstractC4166
+    /* JADX INFO: renamed from: ۙ */
+    public final boolean mo2407(C0617 c0617, C0617 c0618) {
+        return !this.f10258.equalsIgnoreCase(c0618.mo28144(this.f10257));
+    }
+}
