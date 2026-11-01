@@ -104,30 +104,20 @@ jobs:
       - name: Prepare CI signing key
         shell: bash
         env:
-          DEBUG_KEYSTORE_BASE64: ${{ secrets.DEBUG_KEYSTORE_BASE64 }}
-          DEBUG_KEYSTORE_PASSWORD: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
-          DEBUG_KEY_ALIAS: ${{ secrets.DEBUG_KEY_ALIAS }}
-          DEBUG_KEY_PASSWORD: ${{ secrets.DEBUG_KEY_PASSWORD }}
+          BF_DEBUG_KEYSTORE_BASE64: ${{ secrets.BF_DEBUG_KEYSTORE_BASE64 }}
         run: |
           set -euo pipefail
-          if [ -z "${DEBUG_KEYSTORE_BASE64:-}" ]; then
-            echo "::error::Missing secret DEBUG_KEYSTORE_BASE64"
+          if [ -z "${BF_DEBUG_KEYSTORE_BASE64:-}" ]; then
+            echo "::error::Missing secret BF_DEBUG_KEYSTORE_BASE64"
             exit 1
           fi
-          if [ -z "${DEBUG_KEYSTORE_PASSWORD:-}" ] || [ -z "${DEBUG_KEY_ALIAS:-}" ] || [ -z "${DEBUG_KEY_PASSWORD:-}" ]; then
-            echo "::error::Missing one or more signing secrets: DEBUG_KEYSTORE_PASSWORD, DEBUG_KEY_ALIAS, DEBUG_KEY_PASSWORD"
-            exit 1
-          fi
-          printf '%s' "$DEBUG_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/bf-manager-debug.keystore"
+          printf '%s' "$BF_DEBUG_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/bf-manager-debug.keystore"
           test -s "$RUNNER_TEMP/bf-manager-debug.keystore"
           echo "CI_KEYSTORE=$RUNNER_TEMP/bf-manager-debug.keystore" >> "$GITHUB_ENV"
 
       - name: Align and sign APK
         shell: bash
         env:
-          DEBUG_KEYSTORE_PASSWORD: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
-          DEBUG_KEY_ALIAS: ${{ secrets.DEBUG_KEY_ALIAS }}
-          DEBUG_KEY_PASSWORD: ${{ secrets.DEBUG_KEY_PASSWORD }}
         run: |
           set -euo pipefail
           zipalign -f -v 4 \
@@ -135,9 +125,9 @@ jobs:
             "$RUNNER_TEMP/bf_manager-aligned.apk"
           apksigner sign \
             --ks "$CI_KEYSTORE" \
-            --ks-key-alias "$DEBUG_KEY_ALIAS" \
-            --ks-pass env:DEBUG_KEYSTORE_PASSWORD \
-            --key-pass env:DEBUG_KEY_PASSWORD \
+            --ks-key-alias androiddebugkey \
+            --ks-pass pass:android \
+            --key-pass pass:android \
             --out "$RUNNER_TEMP/bf_manager.apk" \
             "$RUNNER_TEMP/bf_manager-aligned.apk"
           apksigner verify --verbose --print-certs "$RUNNER_TEMP/bf_manager.apk"
