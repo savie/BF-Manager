@@ -1,0 +1,165 @@
+name: BF Manager CI Build
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "bf_manager/**"
+      - "tools/**"
+      - "app/**"
+      - ".github/workflows/bf-manager-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bf-manager-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      APKTOOL_VERSION: "3.0.3"
+      BUILD_NUMBER: ${{ github.run_number }}
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Install Android build tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y curl unzip zip
+          mkdir -p "$ANDROID_HOME/cmdline-tools"
+          curl -fsSL https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -o /tmp/android-cmdline-tools.zip
+          mkdir -p /tmp/android-cmdline-tools
+          unzip -q /tmp/android-cmdline-tools.zip -d /tmp/android-cmdline-tools
+          mkdir -p "$ANDROID_HOME/cmdline-tools/latest"
+          mv /tmp/android-cmdline-tools/cmdline-tools/* "$ANDROID_HOME/cmdline-tools/latest/"
+          echo "$ANDROID_HOME/cmdline-tools/latest/bin" >> "$GITHUB_PATH"
+          echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" \
+            "platform-tools" \
+            "platforms;android-35" \
+            "build-tools;35.0.0"
+
+      - name: Install Apktool
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar" -o "$RUNNER_TEMP/apktool.jar"
+          echo "APKTOOL_JAR=$RUNNER_TEMP/apktool.jar" >> "$GITHUB_ENV"
+          java -jar "$RUNNER_TEMP/apktool.jar" --version
+
+      - name: Prepare build tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
+          echo "$BUILD_TOOLS" >> "$GITHUB_PATH"
+          test -x "$BUILD_TOOLS/zipalign"
+          test -x "$BUILD_TOOLS/apksigner"
+          zipalign -h >/dev/null 2>&1 || true
+          apksigner version
+
+      - name: Apply optional Java, Kotlin and native patches
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -d tools ]; then
+            echo "tools/ found; patch runner is not configured yet. Keeping source unchanged."
+            find tools -maxdepth 2 -type f -print | sort
+          else
+            echo "No tools/ directory in this revision; skipping optional patches."
+          fi
+          if [ -d app ]; then
+            echo "app/ found; no Gradle project is currently configured, so this stage is reserved."
+            find app -maxdepth 2 -type f -print | sort
+          else
+            echo "No app/ directory in this revision; skipping."
+          fi
+
+      - name: Rebuild unsigned APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f bf_manager/apktool.yml
+          java -jar "$APKTOOL_JAR" b bf_manager \
+            --aapt "$ANDROID_HOME/build-tools/35.0.0/aapt2" \
+            -o "$RUNNER_TEMP/bf_manager-unsigned.apk"
+          test -s "$RUNNER_TEMP/bf_manager-unsigned.apk"
+
+      - name: Prepare CI signing key
+        shell: bash
+        env:
+          DEBUG_KEYSTORE_BASE64: ${{ secrets.DEBUG_KEYSTORE_BASE64 }}
+          DEBUG_KEYSTORE_PASSWORD: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
+          DEBUG_KEY_ALIAS: ${{ secrets.DEBUG_KEY_ALIAS }}
+          DEBUG_KEY_PASSWORD: ${{ secrets.DEBUG_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [ -z "${DEBUG_KEYSTORE_BASE64:-}" ]; then
+            echo "::error::Missing secret DEBUG_KEYSTORE_BASE64"
+            exit 1
+          fi
+          if [ -z "${DEBUG_KEYSTORE_PASSWORD:-}" ] || [ -z "${DEBUG_KEY_ALIAS:-}" ] || [ -z "${DEBUG_KEY_PASSWORD:-}" ]; then
+            echo "::error::Missing one or more signing secrets: DEBUG_KEYSTORE_PASSWORD, DEBUG_KEY_ALIAS, DEBUG_KEY_PASSWORD"
+            exit 1
+          fi
+          printf '%s' "$DEBUG_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/bf-manager-debug.keystore"
+          test -s "$RUNNER_TEMP/bf-manager-debug.keystore"
+          echo "CI_KEYSTORE=$RUNNER_TEMP/bf-manager-debug.keystore" >> "$GITHUB_ENV"
+
+      - name: Align and sign APK
+        shell: bash
+        env:
+          DEBUG_KEYSTORE_PASSWORD: ${{ secrets.DEBUG_KEYSTORE_PASSWORD }}
+          DEBUG_KEY_ALIAS: ${{ secrets.DEBUG_KEY_ALIAS }}
+          DEBUG_KEY_PASSWORD: ${{ secrets.DEBUG_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          zipalign -f -v 4 \
+            "$RUNNER_TEMP/bf_manager-unsigned.apk" \
+            "$RUNNER_TEMP/bf_manager-aligned.apk"
+          apksigner sign \
+            --ks "$CI_KEYSTORE" \
+            --ks-key-alias "$DEBUG_KEY_ALIAS" \
+            --ks-pass env:DEBUG_KEYSTORE_PASSWORD \
+            --key-pass env:DEBUG_KEY_PASSWORD \
+            --out "$RUNNER_TEMP/bf_manager.apk" \
+            "$RUNNER_TEMP/bf_manager-aligned.apk"
+          apksigner verify --verbose --print-certs "$RUNNER_TEMP/bf_manager.apk"
+          zipalign -c -v 4 "$RUNNER_TEMP/bf_manager.apk"
+
+      - name: Package APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          ZIP_NAME="bf_manager_ci${BUILD_NUMBER}.zip"
+          mkdir -p "$RUNNER_TEMP/package"
+          cp "$RUNNER_TEMP/bf_manager.apk" "$RUNNER_TEMP/package/bf_manager.apk"
+          cd "$RUNNER_TEMP/package"
+          zip -9 "$GITHUB_WORKSPACE/$ZIP_NAME" bf_manager.apk
+          echo "ARTIFACT_ZIP=$GITHUB_WORKSPACE/$ZIP_NAME" >> "$GITHUB_ENV"
+          echo "ARTIFACT_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.ARTIFACT_ZIP }}
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
