@@ -98,8 +98,12 @@ jobs:
         run: |
           set -euo pipefail
           test -f bf_manager/apktool.yml
+          AAPT2="$ANDROID_HOME/build-tools/35.0.0/aapt2"
+          test -f "$AAPT2"
+          chmod 755 "$AAPT2"
+          test -x "$AAPT2"
           java -jar "$APKTOOL_JAR" b bf_manager \
-            --aapt "$ANDROID_HOME/build-tools/35.0.0/aapt2" \
+            --aapt "$AAPT2" \
             -o "$RUNNER_TEMP/bf_manager-unsigned.apk"
           test -s "$RUNNER_TEMP/bf_manager-unsigned.apk"
 
