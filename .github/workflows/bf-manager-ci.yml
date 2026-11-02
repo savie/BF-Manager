@@ -76,15 +76,19 @@ jobs:
           zipalign -h >/dev/null 2>&1 || true
           apksigner version
 
+      - name: Repair and validate decoded XML
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/repair_xml.py --res bf_manager/res
+
       - name: Apply optional Java, Kotlin and native patches
         shell: bash
         run: |
           set -euo pipefail
           if [ -d tools ]; then
-            echo "tools/ found; patch runner is not configured yet. Keeping source unchanged."
+            echo "Available tools:"
             find tools -maxdepth 2 -type f -print | sort
-          else
-            echo "No tools/ directory in this revision; skipping optional patches."
           fi
           if [ -d app ]; then
             echo "app/ found; no Gradle project is currently configured, so this stage is reserved."
