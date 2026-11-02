@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: bf-manager-ci-${{ github.ref }}
@@ -178,11 +178,13 @@ jobs:
           echo "ARTIFACT_ZIP=$GITHUB_WORKSPACE/$ZIP_NAME" >> "$GITHUB_ENV"
           echo "ARTIFACT_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
 
-      - name: Upload ZIP artifact
-        uses: actions/upload-artifact@v4
+      - name: Publish ZIP to GitHub Releases
+        uses: softprops/action-gh-release@v2
         with:
-          name: ${{ env.ARTIFACT_NAME }}
-          path: ${{ env.ARTIFACT_ZIP }}
-          if-no-files-found: error
-          compression-level: 0
-          retention-days: 30
+          tag_name: ci-build-${{ github.run_number }}
+          name: BF Manager CI #${{ github.run_number }}
+          draft: true
+          prerelease: true
+          files: ${{ env.ARTIFACT_ZIP }}
+          fail_on_unmatched_files: true
+          overwrite_files: true
