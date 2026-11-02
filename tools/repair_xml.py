@@ -1,192 +1,267 @@
 #!/usr/bin/env python3
-"""Repair non-ASCII Apktool XML class element names safely.
+"""Make Apktool's decoded XML compilable without renaming application classes.
 
-Only classes referenced as non-ASCII XML element names are renamed. Their
-smali definitions, all descriptor references, and XML start/end tags are
-updated consistently. Unrelated obfuscated classes are left untouched.
+The prepare phase substitutes only invalid non-ASCII XML element names with
+temporary ASCII tokens. The restore phase patches those tokens back into the
+compiled Android binary-XML string pools inside the rebuilt APK. Smali,
+manifest class names, JNI symbols, and native libraries are never modified.
 """
 from __future__ import annotations
 
 import argparse
+import json
+import os
 import re
+import struct
 import sys
+import tempfile
+import zipfile
 from pathlib import Path
 
-TAG_RE = re.compile(r"(<\/?)([^\s<>/]+)(?=[\s/>])")
-CLASS_RE = re.compile(r"(?m)^\s*\.class\s+[^\r\n]*?(L[^;\s]+;)")
-
-
-def safe_descriptor(descriptor: str) -> str:
-    if not descriptor.startswith("L") or not descriptor.endswith(";"):
-        raise ValueError(f"Invalid class descriptor: {descriptor!r}")
-    body = descriptor[1:-1]
-    out = []
-    for ch in body:
-        if ch.isascii() and (ch.isalnum() or ch in "/_$.-"):
-            out.append(ch)
-        else:
-            out.append(f"_u{ord(ch):04X}_")
-    return "L" + "".join(out) + ";"
+TAG_RE = re.compile(r"(<\\/?)([^\\s<>/]+)(?=[\\s/>])")
+CHUNK_HEADER = struct.Struct("<HHI")
+STRING_POOL_HEADER = struct.Struct("<HHIIIIII")
+UTF8_FLAG = 0x00000100
 
 
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8-sig")
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--res", type=Path, default=Path("bf_manager/res"))
-    ap.add_argument("--smali", type=Path, default=Path("bf_manager"))
-    ap.add_argument("--dry-run", action="store_true")
-    args = ap.parse_args()
+def encode_length8(value: int) -> bytes:
+    if value <= 0x7F:
+        return bytes((value,))
+    if value <= 0x7FFF:
+        return bytes(((value >> 8) | 0x80, value & 0xFF))
+    raise ValueError(f"UTF-8 string length is too large: {value}")
 
-    if not args.res.is_dir() or not args.smali.is_dir():
-        print("Expected decoded resource and smali directories.", file=sys.stderr)
+
+def decode_length8(data: bytes, pos: int) -> tuple[int, int]:
+    first = data[pos]
+    pos += 1
+    if first & 0x80:
+        return (((first & 0x7F) << 8) | data[pos]), pos + 1
+    return first, pos
+
+
+def encode_length16(value: int) -> bytes:
+    if value <= 0x7FFF:
+        return struct.pack("<H", value)
+    if value <= 0x7FFFFFFF:
+        return struct.pack("<HH", ((value >> 16) | 0x8000), value & 0xFFFF)
+    raise ValueError(f"UTF-16 string length is too large: {value}")
+
+
+def decode_length16(data: bytes, pos: int) -> tuple[int, int]:
+    first = struct.unpack_from("<H", data, pos)[0]
+    pos += 2
+    if first & 0x8000:
+        second = struct.unpack_from("<H", data, pos)[0]
+        return (((first & 0x7FFF) << 16) | second), pos + 2
+    return first, pos
+
+
+def decode_pool_string(chunk: bytes, strings_start: int, offset: int, utf8: bool) -> str:
+    pos = strings_start + offset
+    if utf8:
+        _, pos = decode_length8(chunk, pos)  # UTF-16 code-unit count
+        byte_count, pos = decode_length8(chunk, pos)
+        return chunk[pos:pos + byte_count].decode("utf-8")
+    char_count, pos = decode_length16(chunk, pos)
+    return chunk[pos:pos + char_count * 2].decode("utf-16le")
+
+
+def encode_pool_string(value: str, utf8: bool) -> bytes:
+    if utf8:
+        encoded = value.encode("utf-8")
+        return (encode_length8(len(value.encode("utf-16le")) // 2)
+                + encode_length8(len(encoded)) + encoded + b"\\0")
+    encoded = value.encode("utf-16le")
+    return encode_length16(len(encoded) // 2) + encoded + b"\\0\\0"
+
+
+def patch_string_pool(chunk: bytes, replacements: dict[str, str]) -> tuple[bytes, int]:
+    if len(chunk) < STRING_POOL_HEADER.size:
+        raise ValueError("Truncated Android string-pool chunk")
+    (chunk_type, header_size, chunk_size, string_count, style_count,
+     flags, strings_start, styles_start) = STRING_POOL_HEADER.unpack_from(chunk)
+    if chunk_type != 0x0001 or header_size < STRING_POOL_HEADER.size or chunk_size != len(chunk):
+        raise ValueError("Invalid Android string-pool header")
+    arrays_end = header_size + 4 * (string_count + style_count)
+    if arrays_end > len(chunk) or strings_start < arrays_end or strings_start > len(chunk):
+        raise ValueError("Invalid Android string-pool offsets")
+
+    string_offsets = list(struct.unpack_from(f"<{string_count}I", chunk, header_size)) if string_count else []
+    style_offset_pos = header_size + 4 * string_count
+    style_offsets = list(struct.unpack_from(f"<{style_count}I", chunk, style_offset_pos)) if style_count else []
+    utf8 = bool(flags & UTF8_FLAG)
+
+    values = [decode_pool_string(chunk, strings_start, off, utf8) for off in string_offsets]
+    replaced = 0
+    for i, value in enumerate(values):
+        if value in replacements:
+            values[i] = replacements[value]
+            replaced += 1
+
+    if not replaced:
+        return chunk, 0
+
+    strings_blob = bytearray()
+    new_offsets = []
+    for value in values:
+        new_offsets.append(len(strings_blob))
+        strings_blob.extend(encode_pool_string(value, utf8))
+    while len(strings_blob) % 4:
+        strings_blob.append(0)
+
+    new_strings_start = arrays_end
+    styles_blob = b""
+    if style_count:
+        if not styles_start or styles_start > len(chunk):
+            raise ValueError("Invalid Android style-string offsets")
+        styles_blob = chunk[styles_start:]
+        new_styles_start = new_strings_start + len(strings_blob)
+    else:
+        new_styles_start = 0
+
+    new_size = new_strings_start + len(strings_blob) + len(styles_blob)
+    out = bytearray()
+    out.extend(STRING_POOL_HEADER.pack(
+        chunk_type, header_size, new_size, string_count, style_count,
+        flags, new_strings_start, new_styles_start
+    ))
+    out.extend(struct.pack(f"<{string_count}I", *new_offsets) if string_count else b"")
+    out.extend(struct.pack(f"<{style_count}I", *style_offsets) if style_count else b"")
+    if len(out) < new_strings_start:
+        out.extend(b"\\0" * (new_strings_start - len(out)))
+    out.extend(strings_blob)
+    out.extend(styles_blob)
+    return bytes(out), replaced
+
+
+def patch_binary_xml(data: bytes, replacements: dict[str, str]) -> tuple[bytes, int]:
+    if len(data) < 8:
+        raise ValueError("Truncated Android binary XML")
+    xml_type, header_size, total_size = CHUNK_HEADER.unpack_from(data)
+    if xml_type != 0x0003 or header_size < 8 or total_size != len(data):
+        raise ValueError("Resource entry is not a valid Android binary XML document")
+
+    out = bytearray(data[:header_size])
+    pos = header_size
+    total_replaced = 0
+    while pos < total_size:
+        if pos + 8 > total_size:
+            raise ValueError("Truncated Android XML child chunk")
+        chunk_type, child_header_size, child_size = CHUNK_HEADER.unpack_from(data, pos)
+        if child_size < child_header_size or pos + child_size > total_size:
+            raise ValueError("Invalid Android XML child chunk size")
+        chunk = data[pos:pos + child_size]
+        if chunk_type == 0x0001:
+            chunk, count = patch_string_pool(chunk, replacements)
+            total_replaced += count
+        out.extend(chunk)
+        pos += child_size
+    struct.pack_into("<I", out, 4, len(out))
+    return bytes(out), total_replaced
+
+
+def prepare(res_dir: Path, mapping_path: Path) -> int:
+    if not res_dir.is_dir():
+        print(f"Resource directory does not exist: {res_dir}", file=sys.stderr)
         return 2
 
-    xml_files = sorted(args.res.rglob("*.xml"))
-    tag_names: set[str] = set()
-    for path in xml_files:
-        try:
-            data = read_text(path)
-        except (OSError, UnicodeError) as exc:
-            print(f"Cannot read {path}: {exc}", file=sys.stderr)
-            return 1
-        for _, tag in TAG_RE.findall(data):
-            if not tag.startswith(("?", "!")) and not tag.isascii():
-                tag_names.add(tag)
-
-    manifest_path = args.smali / "AndroidManifest.xml"
-    manifest_data = ""
-    manifest_class_names: set[str] = set()
-    if manifest_path.is_file():
-        try:
-            manifest_data = read_text(manifest_path)
-        except (OSError, UnicodeError) as exc:
-            print(f"Cannot read {manifest_path}: {exc}", file=sys.stderr)
-            return 1
-        for value in re.findall(r'android:(?:name|appComponentFactory|targetActivity)="([^"]+)"', manifest_data):
-            if not value.isascii() and "." in value:
-                manifest_class_names.add(value)
-
-    if not tag_names and not manifest_class_names:
-        print("No non-ASCII XML or manifest class names found; nothing to rename.")
-        return 0
-
-    # Build descriptor -> defining file for every class, but do not rename
-    # classes unless an XML element explicitly refers to that descriptor.
-    smali_files = sorted(args.smali.glob("smali*/**/*.smali"))
-    definitions: dict[str, Path] = {}
-    for path in smali_files:
-        try:
-            content = read_text(path)
-        except (OSError, UnicodeError) as exc:
-            print(f"Cannot read {path}: {exc}", file=sys.stderr)
-            return 1
-        match = CLASS_RE.search(content)
-        if match:
-            descriptor = match.group(1)
-            if descriptor in definitions:
-                print(f"Duplicate smali class definition: {descriptor}", file=sys.stderr)
-                return 1
-            definitions[descriptor] = path
-
-    class_map: dict[str, str] = {}
-    tag_map: dict[str, str] = {}
-    unresolved: list[str] = []
-    for tag in sorted(tag_names):
-        descriptor = "L" + tag.replace(".", "/") + ";"
-        if descriptor not in definitions:
-            unresolved.append(tag)
-            continue
-        replacement = safe_descriptor(descriptor)
-        if replacement == descriptor:
-            unresolved.append(tag)
-            continue
-        class_map[descriptor] = replacement
-        tag_map[tag] = replacement[1:-1].replace("/", ".")
-
-    manifest_class_map: dict[str, str] = {}
-    for class_name in sorted(manifest_class_names):
-        descriptor = "L" + class_name.replace(".", "/") + ";"
-        if descriptor not in definitions:
-            unresolved.append(class_name)
-            continue
-        replacement = safe_descriptor(descriptor)
-        if replacement == descriptor:
-            unresolved.append(class_name)
-            continue
-        class_map[descriptor] = replacement
-        manifest_class_map[class_name] = replacement[1:-1].replace("/", ".")
-
-    if unresolved:
-        print("Cannot safely map XML element(s) to smali class definitions:", file=sys.stderr)
-        for tag in unresolved:
-            print(f"  {tag}", file=sys.stderr)
-        return 1
-
-    # Check destinations before modifying anything, so failure is atomic
-    # with respect to the common collision case.
-    targets: dict[Path, Path] = {}
-    for old, source in definitions.items():
-        if old not in class_map:
-            continue
-        new = class_map[old]
-        relative = Path(*new[1:-1].split("/")).with_suffix(".smali")
-        root_index = next((i for i, part in enumerate(source.parts)
-                           if part.startswith("smali")), None)
-        if root_index is None:
-            print(f"Cannot identify smali root for {source}", file=sys.stderr)
-            return 1
-        target = Path(*source.parts[:root_index + 1]) / relative
-        if target.exists() and target != source:
-            print(f"Refusing to overwrite existing class file: {target}", file=sys.stderr)
-            return 1
-        targets[source] = target
-
-    if args.dry_run:
-        print(f"Validated {len(class_map)} XML-referenced class rename(s).")
-        for old, new in sorted(class_map.items()):
-            print(f"  {old} -> {new}")
-        return 0
-
-    changed_files = 0
-    # Replace descriptor references globally before moving definition files.
-    for path in smali_files:
+    manifest: dict[str, dict[str, str]] = {}
+    serial = 0
+    for path in sorted(res_dir.rglob("*.xml")):
         original = read_text(path)
+        tags = sorted({
+            tag for _, tag in TAG_RE.findall(original)
+            if not tag.startswith(("?", "!")) and not tag.isascii()
+        })
+        if not tags:
+            continue
+
+        replacements: dict[str, str] = {}
+        for tag in tags:
+            serial += 1
+            replacements[tag] = f"BFXmlTag{serial:05d}"
         updated = original
-        for old, new in class_map.items():
-            updated = updated.replace(old, new)
-        if updated != original:
-            path.write_text(updated, encoding="utf-8", newline="")
-            changed_files += 1
+        for old, token in replacements.items():
+            updated = updated.replace("<" + old, "<" + token)
+            updated = updated.replace("</" + old, "</" + token)
+        path.write_text(updated, encoding="utf-8", newline="")
+        archive_path = path.relative_to(res_dir.parent).as_posix()
+        manifest[archive_path] = {token: old for old, token in replacements.items()}
 
-    for source, target in targets.items():
-        target.parent.mkdir(parents=True, exist_ok=True)
-        if source != target:
-            source.rename(target)
-
-    for path in xml_files:
-        original = read_text(path)
-        updated = original
-        for old, new in tag_map.items():
-            updated = updated.replace("<" + old, "<" + new)
-            updated = updated.replace("</" + old, "</" + new)
-        if updated != original:
-            path.write_text(updated, encoding="utf-8", newline="")
-            changed_files += 1
-
-    if manifest_data and manifest_class_map:
-        updated_manifest = manifest_data
-        for old, new in manifest_class_map.items():
-            updated_manifest = updated_manifest.replace(f'"{old}"', f'"{new}"')
-        if updated_manifest != manifest_data:
-            manifest_path.write_text(updated_manifest, encoding="utf-8", newline="")
-            changed_files += 1
-
-    print(f"Renamed {len(class_map)} XML/manifest-referenced smali class(es); updated {changed_files} file(s).")
+    mapping_path.parent.mkdir(parents=True, exist_ok=True)
+    mapping_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    print(f"Prepared {sum(len(v) for v in manifest.values())} temporary XML tag token(s) across {len(manifest)} resource file(s).")
+    print("No Smali class, manifest class name, JNI symbol, or native library was changed.")
     return 0
 
 
+def restore(apk_path: Path, mapping_path: Path) -> int:
+    if not apk_path.is_file() or not mapping_path.is_file():
+        print("APK or XML mapping file is missing.", file=sys.stderr)
+        return 2
+    manifest = json.loads(mapping_path.read_text(encoding="utf-8"))
+    if not manifest:
+        print("No XML tag substitutions to restore.")
+        return 0
+
+    fd, temp_name = tempfile.mkstemp(prefix=apk_path.stem + "-", suffix=".apk", dir=apk_path.parent)
+    os.close(fd)
+    total = 0
+    try:
+        with zipfile.ZipFile(apk_path, "r") as source, zipfile.ZipFile(temp_name, "w") as target:
+            seen = set()
+            for info in source.infolist():
+                if info.filename in seen:
+                    raise ValueError(f"Duplicate APK ZIP entry: {info.filename}")
+                seen.add(info.filename)
+                payload = source.read(info.filename)
+                if info.filename in manifest:
+                    payload, count = patch_binary_xml(payload, manifest[info.filename])
+                    expected = len(manifest[info.filename])
+                    if count != expected:
+                        raise ValueError(
+                            f"{info.filename}: restored {count}/{expected} XML tag token(s); "
+                            "refusing to ship a partially restored APK"
+                        )
+                    total += count
+                target.writestr(info, payload)
+            missing = sorted(set(manifest) - seen)
+            if missing:
+                raise ValueError("Compiled APK is missing XML resource(s): " + ", ".join(missing))
+        os.replace(temp_name, apk_path)
+    except Exception:
+        if os.path.exists(temp_name):
+            os.unlink(temp_name)
+        raise
+
+    print(f"Restored {total} original XML tag name(s) in {len(manifest)} compiled resource file(s).")
+    print("Original class names and native/JNI identities were preserved.")
+    return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("phase", choices=("prepare", "restore"))
+    parser.add_argument("--res", type=Path, default=Path("bf_manager/res"))
+    parser.add_argument("--mapping", type=Path, required=True)
+    parser.add_argument("--apk", type=Path)
+    args = parser.parse_args()
+
+    if args.phase == "prepare":
+        return prepare(args.res, args.mapping)
+    if args.apk is None:
+        parser.error("--apk is required for the restore phase")
+    return restore(args.apk, args.mapping)
+
+
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except (OSError, UnicodeError, ValueError, zipfile.BadZipFile, struct.error) as exc:
+        print(f"repair_xml.py: {exc}", file=sys.stderr)
+        raise SystemExit(1)
