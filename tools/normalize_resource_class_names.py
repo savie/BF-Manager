@@ -36,10 +36,11 @@ def custom_view_names(source: str) -> set[str]:
         name = match.group(2)
         if name.startswith("l.") and not ASCII_XML_NAME.fullmatch(name):
             names.add(name)
-    for match in VIEW_CLASS_RE.finditer(source):
-        name = match.group(2)
-        if not ASCII_XML_NAME.fullmatch(name):
-            names.add(name)
+    for pattern in (VIEW_CLASS_RE, COMPONENT_CLASS_RE):
+        for match in pattern.finditer(source):
+            name = match.group(2)
+            if not ASCII_XML_NAME.fullmatch(name):
+                names.add(name)
     return names
 
 
@@ -49,21 +50,21 @@ def rewrite_xml(source: str, mapping: dict[str, str]) -> str:
         lambda match: f"<{match.group(1)}{mapping.get(match.group(2), match.group(2))}",
         source,
     )
-    return VIEW_CLASS_RE.sub(
-        lambda match: f"{match.group(1)}{mapping.get(match.group(2), match.group(2))}{match.group(3)}",
-        source,
-    )
+    for pattern in (VIEW_CLASS_RE, COMPONENT_CLASS_RE):
+        source = pattern.sub(
+            lambda match: f"{match.group(1)}{mapping.get(match.group(2), match.group(2))}{match.group(3)}",
+            source,
+        )
+    return source
 
 
 def main() -> int:
     if not (PROJECT / "apktool.yml").is_file():
         raise SystemExit("bf_manager/apktool.yml not found; run from the repository checkout")
 
-    # The manifest contains runtime component class names, not resource view tags.
-    xml_files = sorted(
-        path for path in PROJECT.rglob("*.xml")
-        if path.name != "AndroidManifest.xml"
-    )
+    # Include manifest component class names: AAPT2 requires valid Java identifiers.
+    # Every renamed component is also rewritten in Smali references below.
+    xml_files = sorted(PROJECT.rglob("*.xml"))
     affected_names: set[str] = set()
     for path in xml_files:
         source = read_utf8_xml(path)
@@ -128,7 +129,7 @@ def main() -> int:
     print(f"Normalized {len(mapping)} custom-view XML class names:")
     for old_name, new_name in sorted(mapping.items()):
         print(f"  {old_name} -> {new_name}")
-    print("AndroidManifest.xml component names were left unchanged.")
+    print("Manifest component names and Smali references were normalized consistently.")
     return 0
 
 
