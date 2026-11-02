@@ -13,8 +13,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PROJECT = REPO_ROOT / "bf_manager"
-TAG_RE = re.compile(r"<(/?)([^\\s/>]+)")
-ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\\Z")
+TAG_RE = re.compile(r"<(/?)([^\s/>]+)")
+ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\Z")
 
 def read_utf8_xml(path: Path) -> str | None:
     """Read textual UTF-8 XML; ignore binary/non-UTF-8 payloads safely."""
