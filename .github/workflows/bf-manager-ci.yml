@@ -93,12 +93,6 @@ jobs:
             echo "No app/ directory in this revision; skipping."
           fi
 
-      - name: Normalize obfuscated XML class names
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 tools/normalize_resource_class_names.py
-
       - name: Rebuild unsigned APK
         shell: bash
         run: |
