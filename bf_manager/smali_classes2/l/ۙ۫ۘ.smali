@@ -23,7 +23,7 @@
     .line 122
     new-instance v0, Landroid/content/ComponentName;
 
-    const-string v1, "bin.mt.plus.MainLightIcon"
+    const-string v1, "bin.bf.plus.MainLightIcon"
 
     invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -32,7 +32,7 @@
     .line 123
     new-instance v1, Landroid/content/ComponentName;
 
-    const-string v2, "bin.mt.plus.MainDarkIcon"
+    const-string v2, "bin.bf.plus.MainDarkIcon"
 
     invoke-direct {v1, p1, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -41,7 +41,7 @@
     .line 124
     new-instance v2, Landroid/content/ComponentName;
 
-    const-string v3, "bin.mt.plus.MainNoBgIcon"
+    const-string v3, "bin.bf.plus.MainNoBgIcon"
 
     invoke-direct {v2, p1, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
