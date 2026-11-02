@@ -40,7 +40,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y curl unzip zip
+          sudo apt-get install -y curl unzip
           mkdir -p "$ANDROID_HOME/cmdline-tools/latest"
           if [ ! -x "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" ]; then
             curl -fsSL https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -o /tmp/android-cmdline-tools.zip
@@ -159,21 +159,17 @@ jobs:
           apksigner verify --verbose --print-certs "$RUNNER_TEMP/bf_manager.apk"
           zipalign -c -v 4 "$RUNNER_TEMP/bf_manager.apk"
 
-      - name: Package APK
+      - name: Prepare APK artifact
         shell: bash
         run: |
           set -euo pipefail
-          ZIP_NAME="bf_manager_ci${BUILD_NUMBER}.zip"
-          mkdir -p "$RUNNER_TEMP/package" "$GITHUB_WORKSPACE/build"
-          cp "$RUNNER_TEMP/bf_manager.apk" "$RUNNER_TEMP/package/bf_manager.apk"
-          cd "$RUNNER_TEMP/package"
-          zip -9 "$GITHUB_WORKSPACE/build/$ZIP_NAME" bf_manager.apk
-          echo "ARTIFACT_ZIP=$GITHUB_WORKSPACE/build/$ZIP_NAME" >> "$GITHUB_ENV"
-          echo "ARTIFACT_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
+          mkdir -p "$GITHUB_WORKSPACE/build"
+          cp "$RUNNER_TEMP/bf_manager.apk" "$GITHUB_WORKSPACE/build/bf_manager.apk"
+          test -s "$GITHUB_WORKSPACE/build/bf_manager.apk"
 
-      - name: Upload ZIP artifact
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.ARTIFACT_NAME }}
-          path: build/${{ env.ARTIFACT_NAME }}
+          name: bf_manager_ci${{ github.run_number }}
+          path: build/bf_manager.apk
           if-no-files-found: error
