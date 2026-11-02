@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Normalize non-ASCII custom-view XML names without renaming app components.
+"""Normalize non-ASCII XML class names and keep Smali references synchronized.
 
-Only custom view element names and <view class="..."> references in resource XML
-are normalized. AndroidManifest.xml is deliberately excluded: Application,
-Activity, Provider, and other component class names can be referenced by native
-code and must retain their original binary names.
+Custom view tags, <view class="..."> references, and android:name component
+attributes are normalized together because AAPT2 rejects non-Java class names.
 """
 from __future__ import annotations
 
@@ -16,6 +14,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 PROJECT = REPO_ROOT / "bf_manager"
 TAG_RE = re.compile(r"<(/?)([^\s/>]+)")
 VIEW_CLASS_RE = re.compile(r"""(\bclass\s*=\s*["'])(l\.[^"']+)(["'])""")
+COMPONENT_CLASS_RE = re.compile(r"""(android:name\s*=\s*["'])(l\.[^"']+)(["'])""")
 ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\Z")
 
 
@@ -30,7 +29,7 @@ def read_utf8_xml(path: Path) -> str | None:
 
 
 def custom_view_names(source: str) -> set[str]:
-    """Return only class names used as XML element tags or <view class> values."""
+    """Return class names used by XML tags, custom-view attrs, and manifest components."""
     names: set[str] = set()
     for match in TAG_RE.finditer(source):
         name = match.group(2)
