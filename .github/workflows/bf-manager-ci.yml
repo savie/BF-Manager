@@ -171,11 +171,11 @@ jobs:
         run: |
           set -euo pipefail
           ZIP_NAME="bf_manager_ci${BUILD_NUMBER}.zip"
-          mkdir -p "$RUNNER_TEMP/package"
+          mkdir -p "$RUNNER_TEMP/package" "$GITHUB_WORKSPACE/build"
           cp "$RUNNER_TEMP/bf_manager.apk" "$RUNNER_TEMP/package/bf_manager.apk"
           cd "$RUNNER_TEMP/package"
-          zip -9 "$GITHUB_WORKSPACE/$ZIP_NAME" bf_manager.apk
-          echo "ARTIFACT_ZIP=$GITHUB_WORKSPACE/$ZIP_NAME" >> "$GITHUB_ENV"
+          zip -9 "$GITHUB_WORKSPACE/build/$ZIP_NAME" bf_manager.apk
+          echo "ARTIFACT_ZIP=$GITHUB_WORKSPACE/build/$ZIP_NAME" >> "$GITHUB_ENV"
           echo "ARTIFACT_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
 
       - name: Upload ZIP artifact
