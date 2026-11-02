@@ -14,6 +14,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PROJECT = REPO_ROOT / "bf_manager"
 TAG_RE = re.compile(r"<(/?)([^\s/>]+)")
+CLASS_REF_RE = re.compile(r"""(?<![A-Za-z0-9_$])l\.[^\s"'<>/]+""")
 ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\Z")
 
 def read_utf8_xml(path: Path) -> str | None:
@@ -36,8 +37,10 @@ def main() -> int:
         source = read_utf8_xml(path)
         if source is None:
             continue
-        for _, name in TAG_RE.findall(source):
-            if name.startswith("l.") and not ASCII_XML_NAME.fullmatch(name):
+        # Include class names in element tags AND manifest attributes such as
+        # application android:name, provider android:name, and activity names.
+        for name in CLASS_REF_RE.findall(source):
+            if not ASCII_XML_NAME.fullmatch(name):
                 affected_names.add(name)
 
     if not affected_names:
