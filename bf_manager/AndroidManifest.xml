@@ -38,8 +38,8 @@
             <action android:name="com.rosan.dhizuku.server.provider"/>
         </intent>
     </queries>
-    <permission android:name="bin.mt.plus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
-    <uses-permission android:name="bin.mt.plus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <permission android:name="bin.bf.plus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="bin.bf.plus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
     <uses-permission android:name="moe.shizuku.manager.permission.API_V23"/>
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
     <uses-permission android:name="com.rosan.dhizuku.permission.API"/>
