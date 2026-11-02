@@ -77,7 +77,7 @@ def encode_pool_string(value: str, utf8: bool) -> bytes:
         return (encode_length8(len(value.encode("utf-16le")) // 2)
                 + encode_length8(len(encoded)) + encoded + b"\0")
     encoded = value.encode("utf-16le")
-    return encode_length16(len(encoded) // 2) + encoded + b"\\0\\0"
+    return encode_length16(len(encoded) // 2) + encoded + b"\0\0"
 
 
 def patch_string_pool(chunk: bytes, replacements: dict[str, str]) -> tuple[bytes, int]:
