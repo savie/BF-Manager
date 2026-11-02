@@ -76,11 +76,14 @@ jobs:
           zipalign -h >/dev/null 2>&1 || true
           apksigner version
 
-      - name: Repair and validate decoded XML
+      - name: Prepare decoded XML without renaming classes
         shell: bash
         run: |
           set -euo pipefail
-          python3 tools/repair_xml.py --res bf_manager/res
+          python3 tools/repair_xml.py prepare \
+            --res bf_manager/res \
+            --mapping "$RUNNER_TEMP/xml-class-name-map.json"
+          echo "XML_CLASS_MAP=$RUNNER_TEMP/xml-class-name-map.json" >> "$GITHUB_ENV"
 
       - name: Apply optional Java, Kotlin and native patches
         shell: bash
@@ -111,6 +114,15 @@ jobs:
           java -jar "$APKTOOL_JAR" b bf_manager \
             --aapt "$AAPT2" \
             -o "$RUNNER_TEMP/bf_manager-unsigned.apk"
+          test -s "$RUNNER_TEMP/bf_manager-unsigned.apk"
+
+      - name: Restore original XML class names in compiled resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/repair_xml.py restore \
+            --mapping "$XML_CLASS_MAP" \
+            --apk "$RUNNER_TEMP/bf_manager-unsigned.apk"
           test -s "$RUNNER_TEMP/bf_manager-unsigned.apk"
 
       - name: Prepare CI signing key
