@@ -187,8 +187,8 @@ def prepare(res_dir: Path, mapping_path: Path) -> int:
             replacements[tag] = f"BFXmlTag{serial:05d}"
         updated = original
         for old, token in replacements.items():
-            updated = updated.replace("<" + old, "<" + token)
-            updated = updated.replace("</" + old, "</" + token)
+            tag_pattern = re.compile(r"(<\\/?)" + re.escape(old) + r"(?=[\\s/>])")
+            updated = tag_pattern.sub(lambda match: match.group(1) + token, updated)
         path.write_text(updated, encoding="utf-8", newline="")
         archive_path = path.relative_to(res_dir.parent).as_posix()
         manifest[archive_path] = {token: old for old, token in replacements.items()}
