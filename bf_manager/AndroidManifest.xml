@@ -46,21 +46,21 @@
     <application android:allowBackup="true" android:alwaysRetainTaskState="true" android:appComponentFactory="l.ܿ᩶" android:extractNativeLibs="true" android:fullBackupContent="true" android:icon="@mipmap/MT_Protector" android:label="@string/APKTOOL_RENAMED_0x7f120090" android:largeHeap="true" android:name="l.֡᩺ۘ" android:pageSizeCompat="enabled" android:requestLegacyExternalStorage="true" android:requestRawExternalStorageAccess="true" android:resizeableActivity="true" android:roundIcon="@mipmap/APKTOOL_RENAMED_0x7f100003" android:supportsRtl="false" android:theme="@style/APKTOOL_RENAMED_0x7f130299" android:usesCleartextTraffic="true">
         <meta-data android:name="UMENG_CHANNEL" android:value="Default"/>
         <meta-data android:name="android.max_aspect" android:value="2.1"/>
-        <provider android:authorities="bin.mt.plus.html-preview" android:exported="false" android:grantUriPermissions="false" android:name="l.ܽۖ᩹"/>
+        <provider android:authorities="bin.bf.plus.html-preview" android:exported="false" android:grantUriPermissions="false" android:name="l.ܽۖ᩹"/>
         <activity android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:exported="true" android:launchMode="singleTop" android:name="bin.mt.plus.Main" android:theme="@style/APKTOOL_RENAMED_0x7f130024" android:windowSoftInputMode="adjustResize"/>
-        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/APKTOOL_RENAMED_0x7f100002" android:name="bin.mt.plus.MainNoBgIcon" android:roundIcon="@mipmap/APKTOOL_RENAMED_0x7f100002" android:targetActivity="bin.mt.plus.Main">
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/APKTOOL_RENAMED_0x7f100002" android:name="bin.bf.plus.MainNoBgIcon" android:roundIcon="@mipmap/APKTOOL_RENAMED_0x7f100002" android:targetActivity="bin.mt.plus.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
-        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/APKTOOL_RENAMED_0x7f100001" android:name="bin.mt.plus.MainDarkIcon" android:roundIcon="@mipmap/APKTOOL_RENAMED_0x7f100001" android:targetActivity="bin.mt.plus.Main">
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/APKTOOL_RENAMED_0x7f100001" android:name="bin.bf.plus.MainDarkIcon" android:roundIcon="@mipmap/APKTOOL_RENAMED_0x7f100001" android:targetActivity="bin.mt.plus.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
-        <activity-alias android:enabled="true" android:exported="true" android:icon="@mipmap/MT_Protector" android:name="bin.mt.plus.MainLightIcon" android:roundIcon="@mipmap/MT_Protector" android:targetActivity="bin.mt.plus.Main">
+        <activity-alias android:enabled="true" android:exported="true" android:icon="@mipmap/MT_Protector" android:name="bin.bf.plus.MainLightIcon" android:roundIcon="@mipmap/MT_Protector" android:targetActivity="bin.mt.plus.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -68,7 +68,7 @@
         </activity-alias>
         <activity android:exported="true" android:launchMode="singleTask" android:name="bin.mt.plus.ShortcutActivity" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
         <activity android:launchMode="singleTask" android:name="l.ۛۡۘ" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f12095b" android:name="bin.mt.plus.OpenFileActivity" android:targetActivity="l.ۛۡۘ">
+        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f12095b" android:name="bin.bf.plus.OpenFileActivity" android:targetActivity="l.ۛۡۘ">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -92,7 +92,7 @@
             </intent-filter>
         </activity-alias>
         <activity android:launchMode="singleTask" android:name="l.ۧۡۘ" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f120a57" android:name="bin.mt.plus.OpenTextActivity" android:targetActivity="l.ۧۡۘ">
+        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f120a57" android:name="bin.bf.plus.OpenTextActivity" android:targetActivity="l.ۧۡۘ">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -116,7 +116,7 @@
         <activity android:configChanges="orientation|screenSize" android:name="l.ۗۗۨ"/>
         <activity android:configChanges="orientation|screenSize" android:name="l.ۡۢۚ"/>
         <activity android:configChanges="orientation|screenSize" android:name="l.ۘ֡ۨ"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۡ᩹ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.Plugin" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۡ᩹ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.Plugin" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
         <activity-alias android:exported="true" android:name="bin.mt.plugin.PusherReceiver" android:targetActivity="l.ۡ᩹ۘ"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.֫ۚۘ" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ᩳۚۘ" android:windowSoftInputMode="adjustResize"/>
@@ -165,10 +165,10 @@
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.֡֡ۨ"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۘ֨᩹" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۫ܶ᩹"/>
-        <activity-alias android:name="bin.mt.plus.CommonPasswordActivity" android:targetActivity="l.۫ܶ᩹"/>
+        <activity-alias android:name="bin.bf.plus.CommonPasswordActivity" android:targetActivity="l.۫ܶ᩹"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.֡ᩳ֨"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۛ᩺ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.ArscQuery" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۧ᩺ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.ArscQuery"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۛ᩺ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.ArscQuery" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۧ᩺ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.ArscQuery"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="l.ۗܺۜ" android:windowSoftInputMode="adjustResize"/>
         <activity android:exported="false" android:name="l.᩻ᩴ᩺"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="l.᩻ۡ᩺" android:windowSoftInputMode="adjustResize"/>
@@ -193,7 +193,7 @@
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ܰ᩸ۘ" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:exported="false" android:name="l.ۤۡۘ" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="orientation|uiMode|screenSize" android:exported="false" android:name="l.ܶ᩷۬" android:theme="@style/APKTOOL_RENAMED_0x7f13000f"/>
-        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f12074d" android:name="bin.mt.plus.ImageViewerActivity" android:targetActivity="l.ܶ᩷۬">
+        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f12074d" android:name="bin.bf.plus.ImageViewerActivity" android:targetActivity="l.ܶ᩷۬">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -203,8 +203,8 @@
                 <data android:mimeType="image/*"/>
             </intent-filter>
         </activity-alias>
-        <activity android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۜ֡۬" android:noHistory="true" android:taskAffinity="bin.mt.plus.Music" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f1206a0" android:name="bin.mt.plus.MusicPlayerActivity" android:targetActivity="l.ۜ֡۬">
+        <activity android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۜ֡۬" android:noHistory="true" android:taskAffinity="bin.bf.plus.Music" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f1206a0" android:name="bin.bf.plus.MusicPlayerActivity" android:targetActivity="l.ۜ֡۬">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -214,7 +214,7 @@
             </intent-filter>
         </activity-alias>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۧۧ۬"/>
-        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f120b4d" android:name="bin.mt.plus.VideoPlayerActivity" android:targetActivity="l.ۧۧ۬">
+        <activity-alias android:exported="true" android:label="@string/APKTOOL_RENAMED_0x7f120b4d" android:name="bin.bf.plus.VideoPlayerActivity" android:targetActivity="l.ۧۧ۬">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -224,23 +224,23 @@
             </intent-filter>
         </activity-alias>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.۬ܺۘ" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ܺ֡ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:name="bin.mt.plus.SmaliQueryActivity" android:targetActivity="l.ܺ֡ۘ"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.᩷֡ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:name="bin.mt.plus.RemoteManageActivity" android:targetActivity="l.᩷֡ۘ"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.۟֡ۘ" android:taskAffinity="bin.mt.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:name="bin.mt.plus.ApkMcpActivity" android:targetActivity="l.۟֡ۘ"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۤ֡ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:name="bin.mt.plus.ColorPickerActivity" android:targetActivity="l.ۤ֡ۘ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ܺ֡ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity-alias android:name="bin.bf.plus.SmaliQueryActivity" android:targetActivity="l.ܺ֡ۘ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.᩷֡ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity-alias android:name="bin.bf.plus.RemoteManageActivity" android:targetActivity="l.᩷֡ۘ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.۟֡ۘ" android:taskAffinity="bin.bf.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity-alias android:name="bin.bf.plus.ApkMcpActivity" android:targetActivity="l.۟֡ۘ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.ۤ֡ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity-alias android:name="bin.bf.plus.ColorPickerActivity" android:targetActivity="l.ۤ֡ۘ"/>
         <activity android:configChanges="orientation|screenSize" android:name="l.᩶ܽۨ"/>
-        <activity-alias android:name="bin.mt.plus.SignatureKeyActivity" android:targetActivity="l.᩶ܽۨ"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.۠֡ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:name="bin.mt.plus.ActivityRecordActivity" android:targetActivity="l.۠֡ۘ"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.᩶֡ۘ" android:noHistory="true" android:taskAffinity="bin.mt.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
-        <activity-alias android:name="bin.mt.plus.StreamMediaActivity" android:targetActivity="l.᩶֡ۘ"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۢ᩷ۜ" android:taskAffinity="bin.mt.plus.ScriptExecutor"/>
-        <activity-alias android:name="bin.mt.plus.ScriptExecutor" android:targetActivity="l.ۢ᩷ۜ"/>
-        <provider android:authorities="bin.mt.plus.fp" android:exported="false" android:grantUriPermissions="true" android:name="l.ܳ۠ۚ"/>
+        <activity-alias android:name="bin.bf.plus.SignatureKeyActivity" android:targetActivity="l.᩶ܽۨ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.۠֡ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity-alias android:name="bin.bf.plus.ActivityRecordActivity" android:targetActivity="l.۠֡ۘ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="l.᩶֡ۘ" android:noHistory="true" android:taskAffinity="bin.bf.plus.Tool" android:theme="@style/APKTOOL_RENAMED_0x7f130011"/>
+        <activity-alias android:name="bin.bf.plus.StreamMediaActivity" android:targetActivity="l.᩶֡ۘ"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="l.ۢ᩷ۜ" android:taskAffinity="bin.bf.plus.ScriptExecutor"/>
+        <activity-alias android:name="bin.bf.plus.ScriptExecutor" android:targetActivity="l.ۢ᩷ۜ"/>
+        <provider android:authorities="bin.bf.plus.fp" android:exported="false" android:grantUriPermissions="true" android:name="l.ܳ۠ۚ"/>
         <activity android:name="l.ۜ᩷ۜ" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <service android:foregroundServiceType="specialUse" android:name="l.᩺᩷ۜ">
             <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="TaskManager"/>
@@ -279,7 +279,7 @@
         </service>
         <service android:name="l.᩺ܶۜ" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <activity android:launchMode="singleTop" android:name="bin.mt.plus.WXPayEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <activity-alias android:exported="true" android:name="bin.mt.plus.wxapi.WXPayEntryActivity" android:targetActivity="bin.mt.plus.WXPayEntryActivity"/>
+        <activity-alias android:exported="true" android:name="bin.bf.plus.wxapi.WXPayEntryActivity" android:targetActivity="bin.mt.plus.WXPayEntryActivity"/>
         <activity android:exported="true" android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -290,9 +290,9 @@
         </activity>
         <activity android:configChanges="keyboardHidden|orientation" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity android:launchMode="singleTop" android:name="l.ܶ᩶ۘ" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <activity-alias android:exported="true" android:name="bin.mt.plus.wxapi.WXEntryActivity" android:targetActivity="l.ܶ᩶ۘ"/>
-        <provider android:authorities="bin.mt.plus.shizuku" android:enabled="true" android:exported="true" android:multiprocess="false" android:name="l.ۗ֡۟" android:permission="android.permission.INTERACT_ACROSS_USERS_FULL"/>
-        <provider android:authorities="bin.mt.plus.androidx-startup" android:exported="false" android:name="l.۬ۧܰ">
+        <activity-alias android:exported="true" android:name="bin.bf.plus.wxapi.WXEntryActivity" android:targetActivity="l.ܶ᩶ۘ"/>
+        <provider android:authorities="bin.bf.plus.shizuku" android:enabled="true" android:exported="true" android:multiprocess="false" android:name="l.ۗ֡۟" android:permission="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+        <provider android:authorities="bin.bf.plus.androidx-startup" android:exported="false" android:name="l.۬ۧܰ">
             <meta-data android:name="l.ᩴۖۙ" android:value="androidx.startup"/>
             <meta-data android:name="l.᩷᩺ۙ" android:value="androidx.startup"/>
             <meta-data android:name="l.ۘ֡ܰ" android:value="androidx.startup"/>
