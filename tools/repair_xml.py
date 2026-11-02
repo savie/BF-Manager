@@ -1,107 +1,155 @@
 #!/usr/bin/env python3
-"""Validate and safely repair malformed decoded Android XML resources.
+"""Repair Apktool XML names that cannot be represented by XML 1.0.
 
-The repair is deliberately conservative: it removes only illegal XML control/
-Unicode code points. It never drops a resource element or rewrites tags,
-attributes, references, or text. If parsing still fails, the build stops with
-a precise diagnostic rather than silently producing a damaged APK.
+Some obfuscated DEX class names contain Unicode combining marks. Apktool writes
+those names as XML element names, but AAPT2 rejects them. This tool creates
+ASCII-safe aliases for the affected DEX class descriptors and applies the same
+rename consistently to smali references and decoded resource XML.
+
+It refuses to guess when an XML tag has no matching smali class.
 """
 from __future__ import annotations
 
 import argparse
+import re
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
-from typing import Iterable
 
-# XML 1.0 valid character ranges (Fifth Edition).
-def is_xml10_char(codepoint: int) -> bool:
-    return (
-        codepoint in (0x9, 0xA, 0xD)
-        or 0x20 <= codepoint <= 0xD7FF
-        or 0xE000 <= codepoint <= 0xFFFD
-        or 0x10000 <= codepoint <= 0x10FFFF
-    )
+TAG_RE = re.compile(r"(<\/?)([A-Za-z_][^\s<>/]*)(?=[\s/>])")
+CLASS_RE = re.compile(r"(?m)^(\s*\.class\s+[^\r\n]*?)(L[^;\s]+;)")
+SAFE = re.compile(r"^[A-Za-z_][A-Za-z0-9_./$-]*$")
 
 
-def sanitize_xml_text(text: str) -> tuple[str, int]:
-    cleaned = []
-    removed = 0
-    for char in text:
-        if is_xml10_char(ord(char)):
-            cleaned.append(char)
+def safe_descriptor(descriptor: str) -> str:
+    body = descriptor[1:-1]
+    out = []
+    for ch in body:
+        if ch.isascii() and (ch.isalnum() or ch in "/_$.-"):
+            out.append(ch)
         else:
-            removed += 1
-    return "".join(cleaned), removed
+            out.append(f"_u{ord(ch):04X}_")
+    return "L" + "".join(out) + ";"
 
 
-def iter_xml_files(root: Path) -> Iterable[Path]:
-    if not root.exists():
-        raise FileNotFoundError(f"Resource directory not found: {root}")
-    yield from sorted(root.rglob("*.xml"))
-
-
-def repair_file(path: Path, dry_run: bool = False) -> tuple[bool, int]:
-    # utf-8-sig accepts both regular UTF-8 and a BOM without retaining it.
-    original = path.read_text(encoding="utf-8-sig")
-    cleaned, removed = sanitize_xml_text(original)
-
-    if removed:
-        try:
-            ET.fromstring(cleaned)
-        except ET.ParseError as exc:
-            raise ValueError(
-                f"{path}: illegal XML characters were found ({removed}), "
-                f"but removing only those characters does not make the XML "
-                f"well-formed: {exc}. No file was changed."
-            ) from exc
-        if not dry_run:
-            path.write_text(cleaned, encoding="utf-8", newline="")
-        return True, removed
-
-    try:
-        ET.fromstring(original)
-    except ET.ParseError as exc:
-        raise ValueError(
-            f"{path}: XML is malformed ({exc}). The file was left unchanged; "
-            "automatic structural rewriting is intentionally disabled."
-        ) from exc
-    return False, 0
+def read_text(path: Path) -> str:
+    return path.read_text(encoding="utf-8-sig")
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="Safely validate decoded APK XML resources."
-    )
-    parser.add_argument(
-        "--res", type=Path, default=Path("bf_manager/res"),
-        help="Decoded resource directory (default: bf_manager/res)",
-    )
-    parser.add_argument(
-        "--dry-run", action="store_true",
-        help="Validate and report without modifying files.",
-    )
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--res", type=Path, default=Path("bf_manager/res"))
+    ap.add_argument("--smali", type=Path, default=Path("bf_manager"))
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
 
-    changed = 0
-    removed_total = 0
-    try:
-        for xml_path in iter_xml_files(args.res):
-            repaired, removed = repair_file(xml_path, args.dry_run)
-            if repaired:
-                changed += 1
-                removed_total += removed
-                action = "Would sanitize" if args.dry_run else "Sanitized"
-                print(f"{action}: {xml_path} (removed {removed} illegal XML character(s))")
-    except (OSError, UnicodeError, ValueError) as exc:
-        print(f"XML validation failed: {exc}", file=sys.stderr)
+    if not args.res.is_dir() or not args.smali.is_dir():
+        print("Expected decoded resource and smali directories.", file=sys.stderr)
+        return 2
+
+    smali_files = sorted(args.smali.glob("smali*/**/*.smali"))
+    class_map: dict[str, str] = {}
+    class_files: dict[str, Path] = {}
+    for path in smali_files:
+        try:
+            text = read_text(path)
+        except (OSError, UnicodeError):
+            continue
+        match = CLASS_RE.search(text)
+        if not match:
+            continue
+        old = match.group(2)
+        new = safe_descriptor(old)
+        if old != new:
+            class_map[old] = new
+            class_files[old] = path
+
+    if not class_map:
+        print("No non-ASCII smali class descriptors found; nothing to rename.")
+        return 0
+
+    xml_files = sorted(args.res.rglob("*.xml"))
+    tag_names: set[str] = set()
+    for path in xml_files:
+        try:
+            data = read_text(path)
+        except (OSError, UnicodeError) as exc:
+            print(f"Cannot read {path}: {exc}", file=sys.stderr)
+            return 1
+        for _, tag in TAG_RE.findall(data):
+            if not tag.startswith(("?", "!")) and not tag.isascii():
+                tag_names.add(tag)
+
+    # Match XML element names to actual DEX class descriptors. No heuristic
+    # renames: a missing class mapping is a hard error.
+    unresolved = []
+    tag_map: dict[str, str] = {}
+    for tag in sorted(tag_names):
+        descriptor = "L" + tag.replace(".", "/") + ";"
+        replacement = class_map.get(descriptor)
+        if replacement is None:
+            unresolved.append(tag)
+        else:
+            tag_map[tag] = replacement[1:-1].replace("/", ".")
+
+    if unresolved:
+        print("Cannot safely map XML element(s) to smali classes:", file=sys.stderr)
+        for tag in unresolved:
+            print(f"  {tag}", file=sys.stderr)
         return 1
 
-    print(
-        f"XML validation passed: {changed} file(s) "
-        f"{'would be sanitized' if args.dry_run else 'sanitized'}, "
-        f"{removed_total} illegal character(s) removed."
-    )
+    # Every XML class must have a corresponding smali definition. Rewrite
+    # descriptor references in all smali sources, then move the defining file.
+    changes = 0
+    if not args.dry_run:
+        for path in smali_files:
+            original = read_text(path)
+            updated = original
+            for old, new in class_map.items():
+                updated = updated.replace(old, new)
+            if updated != original:
+                path.write_text(updated, encoding="utf-8", newline="")
+                changes += 1
+
+        for old, path in class_files.items():
+            new = class_map[old]
+            relative = Path(*new[1:-1].split("/")).with_suffix(".smali")
+            destination = path.parents[0]
+            # Preserve the smali root (smali, smali_classes2, etc.).
+            root = path
+            while root.parent != args.smali and root.parent != root:
+                root = root.parent
+            smali_root = root.parent
+            # Locate the matching smali root from the original path.
+            parts = path.parts
+            root_index = next((i for i, part in enumerate(parts) if part.startswith("smali")), None)
+            if root_index is None:
+                raise RuntimeError(f"Cannot identify smali root for {path}")
+            smali_root = Path(*parts[:root_index + 1])
+            target = smali_root / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            if path != target:
+                if target.exists():
+                    raise RuntimeError(f"Refusing to overwrite existing class file: {target}")
+                path.rename(target)
+
+        for path in xml_files:
+            original = read_text(path)
+            updated = original
+            for old, new in tag_map.items():
+                updated = re.sub(r"(<\\/? )", r"\\1", updated) if False else updated
+                updated = re.sub(
+                    r"(<\\/? )", r"\\1", updated
+                ) if False else updated
+                updated = re.sub(
+                    r"(<\\/? )", r"\\1", updated
+                ) if False else updated
+                updated = updated.replace("<" + old, "<" + new).replace("</" + old, "</" + new)
+            if updated != original:
+                path.write_text(updated, encoding="utf-8", newline="")
+                changes += 1
+
+    mode = "Would rename" if args.dry_run else "Renamed"
+    print(f"{mode} {len(class_map)} smali class descriptor(s); updated {changes} file(s).")
     return 0
 
 
