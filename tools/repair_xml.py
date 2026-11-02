@@ -80,16 +80,20 @@ def main() -> int:
                 tag_names.add(tag)
 
     # Match XML element names to actual DEX class descriptors. No heuristic
-    # renames: a missing class mapping is a hard error.
+    # renames: a missing class mapping is a hard error. Ignore unrelated
+    # obfuscated classes; only rename classes actually used as XML elements.
     unresolved = []
     tag_map: dict[str, str] = {}
+    used_class_map: dict[str, str] = {}
     for tag in sorted(tag_names):
         descriptor = "L" + tag.replace(".", "/") + ";"
         replacement = class_map.get(descriptor)
         if replacement is None:
             unresolved.append(tag)
         else:
+            used_class_map[descriptor] = replacement
             tag_map[tag] = replacement[1:-1].replace("/", ".")
+    class_map = used_class_map
 
     if unresolved:
         print("Cannot safely map XML element(s) to smali classes:", file=sys.stderr)
@@ -136,14 +140,8 @@ def main() -> int:
             original = read_text(path)
             updated = original
             for old, new in tag_map.items():
-                updated = re.sub(r"(<\\/? )", r"\\1", updated) if False else updated
-                updated = re.sub(
-                    r"(<\\/? )", r"\\1", updated
-                ) if False else updated
-                updated = re.sub(
-                    r"(<\\/? )", r"\\1", updated
-                ) if False else updated
-                updated = updated.replace("<" + old, "<" + new).replace("</" + old, "</" + new)
+                updated = updated.replace("<" + old, "<" + new)
+                updated = updated.replace("</" + old, "</" + new)
             if updated != original:
                 path.write_text(updated, encoding="utf-8", newline="")
                 changes += 1
