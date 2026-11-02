@@ -944,7 +944,7 @@
 
     if-nez v2, :cond_6
 
-    const-string v2, "bin.mt.plus.fp"
+    const-string v2, "bin.bf.plus.fp"
 
     .line 188
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
