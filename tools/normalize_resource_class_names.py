@@ -14,9 +14,9 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PROJECT = REPO_ROOT / "bf_manager"
-TAG_RE = re.compile(r"<(/?)([^\\s/>]+)")
-VIEW_CLASS_RE = re.compile(r"""(\\bclass\\s*=\\s*["'])(l\\.[^"']+)(["'])""")
-ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\\Z")
+TAG_RE = re.compile(r"<(/?)([^\s/>]+)")
+VIEW_CLASS_RE = re.compile(r"""(\bclass\s*=\s*["'])(l\.[^"']+)(["'])""")
+ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\Z")
 
 
 def read_utf8_xml(path: Path) -> str | None:
@@ -108,7 +108,7 @@ def main() -> int:
             updated = updated.replace(old_internal, new_internal)
             updated = updated.replace(old_name, new_name)
         if updated != source:
-            path.write_text(updated, encoding="utf-8", newline="\\n")
+            path.write_text(updated, encoding="utf-8", newline="\n")
 
     for old_name, path in class_files.items():
         new_simple = mapping[old_name].split(".", 1)[1]
@@ -123,7 +123,7 @@ def main() -> int:
             continue
         updated = rewrite_xml(source, mapping)
         if updated != source:
-            path.write_text(updated, encoding="utf-8", newline="\\n")
+            path.write_text(updated, encoding="utf-8", newline="\n")
 
     print(f"Normalized {len(mapping)} custom-view XML class names:")
     for old_name, new_name in sorted(mapping.items()):
