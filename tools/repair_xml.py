@@ -18,7 +18,7 @@ import tempfile
 import zipfile
 from pathlib import Path
 
-TAG_RE = re.compile(r"(<\\/?)([^\\s<>/]+)(?=[\\s/>])")
+TAG_RE = re.compile(r"(<\/?)([^\s<>/]+)(?=[\s/>])")
 CHUNK_HEADER = struct.Struct("<HHI")
 STRING_POOL_HEADER = struct.Struct("<HHIIIIII")
 UTF8_FLAG = 0x00000100
@@ -75,7 +75,7 @@ def encode_pool_string(value: str, utf8: bool) -> bytes:
     if utf8:
         encoded = value.encode("utf-8")
         return (encode_length8(len(value.encode("utf-16le")) // 2)
-                + encode_length8(len(encoded)) + encoded + b"\\0")
+                + encode_length8(len(encoded)) + encoded + b"\0")
     encoded = value.encode("utf-16le")
     return encode_length16(len(encoded) // 2) + encoded + b"\\0\\0"
 
@@ -133,7 +133,7 @@ def patch_string_pool(chunk: bytes, replacements: dict[str, str]) -> tuple[bytes
     out.extend(struct.pack(f"<{string_count}I", *new_offsets) if string_count else b"")
     out.extend(struct.pack(f"<{style_count}I", *style_offsets) if style_count else b"")
     if len(out) < new_strings_start:
-        out.extend(b"\\0" * (new_strings_start - len(out)))
+        out.extend(b"\0" * (new_strings_start - len(out)))
     out.extend(strings_blob)
     out.extend(styles_blob)
     return bytes(out), replaced
@@ -187,14 +187,14 @@ def prepare(res_dir: Path, mapping_path: Path) -> int:
             replacements[tag] = f"BFXmlTag{serial:05d}"
         updated = original
         for old, token in replacements.items():
-            tag_pattern = re.compile(r"(<\\/?)" + re.escape(old) + r"(?=[\\s/>])")
+            tag_pattern = re.compile(r"(<\/?)" + re.escape(old) + r"(?=[\s/>])")
             updated = tag_pattern.sub(lambda match: match.group(1) + token, updated)
         path.write_text(updated, encoding="utf-8", newline="")
         archive_path = path.relative_to(res_dir.parent).as_posix()
         manifest[archive_path] = {token: old for old, token in replacements.items()}
 
     mapping_path.parent.mkdir(parents=True, exist_ok=True)
-    mapping_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    mapping_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Prepared {sum(len(v) for v in manifest.values())} temporary XML tag token(s) across {len(manifest)} resource file(s).")
     print("No Smali class, manifest class name, JNI symbol, or native library was changed.")
     return 0
