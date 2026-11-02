@@ -151,7 +151,7 @@ PS: 開啟 Shell 權限後無需授權也可訪問該目錄，支持未 ROOT 的
     <string name="APKTOOL_RENAMED_0x7f12008d">安裝逾時，未得到系統回應</string>
     <string name="APKTOOL_RENAMED_0x7f12008e">安裝逾時，請嘗試關閉開發人員選項中的「MIUI 最佳化」</string>
     <string name="APKTOOL_RENAMED_0x7f12008f">內容</string>
-    <string name="APKTOOL_RENAMED_0x7f120090">BF Manager</string>
+    <string name="APKTOOL_RENAMED_0x7f120090">MT管理器</string>
     <string name="APKTOOL_RENAMED_0x7f1200cd">外觀</string>
     <string name="APKTOOL_RENAMED_0x7f1200ce">未找到程式</string>
     <string name="APKTOOL_RENAMED_0x7f1200cf">套用修改</string>
@@ -740,7 +740,7 @@ Lxxx/StringFog;->decrypt([B[B)Ljava/lang/String;"</string>
     <string name="APKTOOL_RENAMED_0x7f1202f2">刪除檔案時如果未選擇移動到回收站，將顯示紅色警告，可一定程度上避免您誤刪檔案</string>
     <string name="APKTOOL_RENAMED_0x7f1202f3">退出前二次確認</string>
     <string name="APKTOOL_RENAMED_0x7f1202f4">開啟後需要點按兩次返回鍵才能退出</string>
-    <string name="APKTOOL_RENAMED_0x7f1202f5">設定介面轉址失敗，請手動到設定中為BF Manager開啟浮動視窗功能。</string>
+    <string name="APKTOOL_RENAMED_0x7f1202f5">設定介面轉址失敗，請手動到設定中為MT管理器開啟浮動視窗功能。</string>
     <string name="APKTOOL_RENAMED_0x7f1202f6">啟用浮動視窗</string>
     <string name="APKTOOL_RENAMED_0x7f1202f7">開啟記錄</string>
     <string name="APKTOOL_RENAMED_0x7f1202f8">啟用放大鏡</string>
@@ -2187,8 +2187,8 @@ PS：騰訊雲 COS 對 2024 年後建立的 Bucket 禁止使用預設網域下�
     <string name="APKTOOL_RENAMED_0x7f120899">取代原始</string>
     <string name="APKTOOL_RENAMED_0x7f12089a">取代</string>
     <string name="APKTOOL_RENAMED_0x7f12089b">替換次數</string>
-    <string name="APKTOOL_RENAMED_0x7f12089c">為了訪問您設備上的檔案，您需要手動為 MT 授予「所有檔案存取」權限，點按確認後進入設定介面，選擇「BF Manager」並開啟授權。</string>
-    <string name="APKTOOL_RENAMED_0x7f12089d">為了更好的檔案操作效能，您需要手動為 MT 授予「所有檔案存取」權限，點按確認後進入設定介面，選擇「BF Manager」並開啟授權。</string>
+    <string name="APKTOOL_RENAMED_0x7f12089c">為了訪問您設備上的檔案，您需要手動為 MT 授予「所有檔案存取」權限，點按確認後進入設定介面，選擇「MT管理器」並開啟授權。</string>
+    <string name="APKTOOL_RENAMED_0x7f12089d">為了更好的檔案操作效能，您需要手動為 MT 授予「所有檔案存取」權限，點按確認後進入設定介面，選擇「MT管理器」並開啟授權。</string>
     <string name="APKTOOL_RENAMED_0x7f12089e">作為一款檔案管理器，「存取手機儲存空間」是不可缺少的權限，請允許 MT 的權限請求。</string>
     <string name="APKTOOL_RENAMED_0x7f12089f">作為一款檔案管理器，「存取手機儲存空間」是不可缺少的權限，請在應用程式設定中手動選取。</string>
     <string name="APKTOOL_RENAMED_0x7f1208a0">請求 ROOT 權限</string>
@@ -2769,7 +2769,7 @@ PS：騰訊雲 COS 對 2024 年後建立的 Bucket 禁止使用預設網域下�
     <string name="APKTOOL_RENAMED_0x7f120ac7">使用製表符進行縮進</string>
     <string name="APKTOOL_RENAMED_0x7f120ac8">使用 \\t 代替空白進行縮進</string>
     <string name="APKTOOL_RENAMED_0x7f120ac9">借號問題申明</string>
-    <string name="APKTOOL_RENAMED_0x7f120aca">"BF Manager帳號僅供個人使用。嚴禁在公開場合出租、出借帳號，或以獲利為目的組織、參與多人共用帳號，包括但不限於透過閒魚、淘寶等交易平台，以及社群群組、論壇等公開管道發布或提供此類服務。一經查證，官方有權凍結相關帳號。
+    <string name="APKTOOL_RENAMED_0x7f120aca">"MT管理器帳號僅供個人使用。嚴禁在公開場合出租、出借帳號，或以獲利為目的組織、參與多人共用帳號，包括但不限於透過閒魚、淘寶等交易平台，以及社群群組、論壇等公開管道發布或提供此類服務。一經查證，官方有權凍結相關帳號。
 如發現上述違規行為，歡迎向我們檢舉。查證屬實後，我們會贈予檢舉者與被檢舉帳號等值的VIP卡密。"</string>
     <string name="APKTOOL_RENAMED_0x7f120acb">賬號設定</string>
     <string name="APKTOOL_RENAMED_0x7f120acc">正在啟用…</string>
@@ -2942,7 +2942,7 @@ PS：騰訊雲 COS 對 2024 年後建立的 Bucket 禁止使用預設網域下�
     <string name="APKTOOL_RENAMED_0x7f120b70">Dex 字串解密</string>
     <string name="APKTOOL_RENAMED_0x7f120b71">不止於此 >></string>
     <string name="APKTOOL_RENAMED_0x7f120b72">VIP須知</string>
-    <string name="APKTOOL_RENAMED_0x7f120b73">"* 開通VIP後可以使用BF Manager的所有VIP功能，賬號不與手機綁定，您可以在任何多個手機登入使用。
+    <string name="APKTOOL_RENAMED_0x7f120b73">"* 開通VIP後可以使用MT管理器的所有VIP功能，賬號不與手機綁定，您可以在任何多個手機登入使用。
 * 一個帳號預設只能同時登入一個用戶端，開通多端登入（獨立購買）後可獲得更多登入額度。
 * 嚴禁在閒魚、淘寶、群組等公開管道出租、出借帳號，或以獲利為目的多人共用帳號。違規帳號可被凍結。
 * VIP內容屬於虛擬商品，一經購買不支援退款。

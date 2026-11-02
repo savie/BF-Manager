@@ -39,7 +39,7 @@
 Alcuni utenti hanno segnalato che l'avvio con un tocco potrebbe causare il blocco e il riavvio del sistema. Se questo dovesse accadere a te, per favore selezionate l'avvio manuale."</string>
     <string name="APKTOOL_RENAMED_0x7f120024">Il tuo account è stato bloccato</string>
     <string name="APKTOOL_RENAMED_0x7f120025">Riconoscimenti</string>
-    <string name="APKTOOL_RENAMED_0x7f120026">Persone e progetti open source che hanno contribuito allo sviluppo di BF Manager.</string>
+    <string name="APKTOOL_RENAMED_0x7f120026">Persone e progetti open source che hanno contribuito allo sviluppo di MT Manager.</string>
     <string name="APKTOOL_RENAMED_0x7f120027">Attiva ora</string>
     <string name="APKTOOL_RENAMED_0x7f120028">Registra Attività</string>
     <string name="APKTOOL_RENAMED_0x7f120029">Registra Attività (Beta)</string>
@@ -148,7 +148,7 @@ Se il problema persiste nonostante i tentativi, l'unica soluzione potrebbe esser
     <string name="APKTOOL_RENAMED_0x7f12008d">"Timeout dell'installazione, nessuna risposta dal sistema."</string>
     <string name="APKTOOL_RENAMED_0x7f12008e">"Timeout dell'installazione, prova a disattivare Ottimizzazione MIUI nelle opzioni per sviluppatori."</string>
     <string name="APKTOOL_RENAMED_0x7f12008f">Dettagli</string>
-    <string name="APKTOOL_RENAMED_0x7f120090">BF Manager</string>
+    <string name="APKTOOL_RENAMED_0x7f120090">MT Manager</string>
     <string name="APKTOOL_RENAMED_0x7f1200cd">Apparenza</string>
     <string name="APKTOOL_RENAMED_0x7f1200ce">Applicazione non trovata</string>
     <string name="APKTOOL_RENAMED_0x7f1200cf">Applica cambiamenti</string>
@@ -736,7 +736,7 @@ Attenzione! La lista di esclusione ha effetto solo quando il percorso di ricerca
     <string name="APKTOOL_RENAMED_0x7f1202f2">Apparirà un avviso rosso quando si elimina un file se non si è scelto di spostarlo nel cestino.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f3">Doppia conferma prima di uscire</string>
     <string name="APKTOOL_RENAMED_0x7f1202f4">Se abilitato, avrai bisogno di cliccare il bottone indietro due volte prima di uscire.</string>
-    <string name="APKTOOL_RENAMED_0x7f1202f5">Failed to open the setup interface. Please go to the Settings manually to enable the floating window permission for BF Manager.</string>
+    <string name="APKTOOL_RENAMED_0x7f1202f5">Failed to open the setup interface. Please go to the Settings manually to enable the floating window permission for MT Manager.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f6">Abilita finestra fluttuante</string>
     <string name="APKTOOL_RENAMED_0x7f1202f7">Abilita cronologia</string>
     <string name="APKTOOL_RENAMED_0x7f1202f8">"Abilita lente d'ingrandimento"</string>
@@ -1035,11 +1035,11 @@ Attenzione! La lista di esclusione ha effetto solo quando il percorso di ricerca
     <string name="APKTOOL_RENAMED_0x7f12041d">Generazione file arsc…</string>
     <string name="APKTOOL_RENAMED_0x7f12041e">Generazione file dex…</string>
     <string name="APKTOOL_RENAMED_0x7f12041f">Classi da elaborare</string>
-    <string name="APKTOOL_RENAMED_0x7f120424">"BF Manager non è attualmente disponibile su Google Play e non abbiamo intenzione di pubblicarlo in futuro.
+    <string name="APKTOOL_RENAMED_0x7f120424">"MT Manager non è attualmente disponibile su Google Play e non abbiamo intenzione di pubblicarlo in futuro.
 
-Tutte le app attualmente offerte come «BF Manager» su Google Play sono false e non sono associate a noi. **Non acquistarle**. Se hai già pagato, segnala subito l’app e richiedi un rimborso a Google Play.
+Tutte le app attualmente offerte come «MT Manager» su Google Play sono false e non sono associate a noi. **Non acquistarle**. Se hai già pagato, segnala subito l’app e richiedi un rimborso a Google Play.
 
-Scarica BF Manager dal nostro sito ufficiale:
+Scarica MT Manager dal nostro sito ufficiale:
 **[mt.cc](https://mt.cc)**"</string>
     <string name="APKTOOL_RENAMED_0x7f120425">Attenzione alle app false su Google Play</string>
     <string name="APKTOOL_RENAMED_0x7f120426">Concessione fallita: %s</string>
@@ -1079,7 +1079,7 @@ Scarica BF Manager dal nostro sito ufficiale:
     <string name="APKTOOL_RENAMED_0x7f120449">Hex</string>
     <string name="APKTOOL_RENAMED_0x7f12044a">Nascondi</string>
     <string name="APKTOOL_RENAMED_0x7f12044b">Nascondi indirizzo nella barra laterale</string>
-    <string name="APKTOOL_RENAMED_0x7f12044d">Dopo che i file sono stati nascosti, non verranno visualizzati in BF Manager, ma esistono ancora. Per ripristinare la visualizzazione del file, fare clic sul menu in alto a destra - File nascosti - Modifica file nascosti.</string>
+    <string name="APKTOOL_RENAMED_0x7f12044d">Dopo che i file sono stati nascosti, non verranno visualizzati in MT Manager, ma esistono ancora. Per ripristinare la visualizzazione del file, fare clic sul menu in alto a destra - File nascosti - Modifica file nascosti.</string>
     <string name="APKTOOL_RENAMED_0x7f12044e">Nascondi linguaggio</string>
     <string name="APKTOOL_RENAMED_0x7f12044f">"Dopo aver nascosto l'archivio locale, non viene mostrato nella barra laterale, ma puoi comunque accedervi tramite il percorso (come i segnalibri). Se desideri ripristinare la visualizzazione, devi aggiungerlo nuovamente.
 Vuoi comunque nascondere %s?"</string>
@@ -1888,7 +1888,7 @@ Nota che se il testo che vuoi cercare è interrotto dalla fine della pagina, non
     <string name="APKTOOL_RENAMED_0x7f12077f">Il plugin è stato pubblicato.</string>
     <string name="APKTOOL_RENAMED_0x7f120780">Questo plugin richiede Android API %d o superiore</string>
     <string name="APKTOOL_RENAMED_0x7f120781">Questo plugin richiede Android %1$s (API %2$d) o superiore</string>
-    <string name="APKTOOL_RENAMED_0x7f120782">Questo plugin richiede BF Manager con codice versione %d o superiore. La tua versione è troppo vecchia, aggiorna BF Manager!</string>
+    <string name="APKTOOL_RENAMED_0x7f120782">Questo plugin richiede MT Manager con codice versione %d o superiore. La tua versione è troppo vecchia, aggiorna MT Manager!</string>
     <string name="APKTOOL_RENAMED_0x7f120783">"La versione corrente di MT non supporta l'SDK per plugin', per favore aggiorna all'ultima versione. 
  (SDK plugin: %1$d, supporto massimo: %2$d)"</string>
     <string name="APKTOOL_RENAMED_0x7f120784">SDK plugin</string>
@@ -2179,8 +2179,8 @@ Se non usi la funzione di sostituzione, lascia vuoto il testo da trovare"</strin
     <string name="APKTOOL_RENAMED_0x7f120899">"Rimpiazza l'originale"</string>
     <string name="APKTOOL_RENAMED_0x7f12089a">Rimpiazza</string>
     <string name="APKTOOL_RENAMED_0x7f12089b">Limite sostituzioni</string>
-    <string name="APKTOOL_RENAMED_0x7f12089c">"Per accedere ai file sul tuo dispositivo, ti preghiamo di concedere manualmente il permesso di \"Accesso a tutti i file\" a MT. Fai clic su OK per accedere all'interfaccia di configurazione, seleziona \"BF Manager\" e attiva il permesso."</string>
-    <string name="APKTOOL_RENAMED_0x7f12089d">"Per migliorare le prestazioni delle operazioni sui file, ti preghiamo di concedere manualmente il permesso \"Accesso a tutti i file\". Fai clic su OK per accedere all'interfaccia di configurazione, seleziona \"BF Manager\" e attiva il permesso."</string>
+    <string name="APKTOOL_RENAMED_0x7f12089c">"Per accedere ai file sul tuo dispositivo, ti preghiamo di concedere manualmente il permesso di \"Accesso a tutti i file\" a MT. Fai clic su OK per accedere all'interfaccia di configurazione, seleziona \"MT Manager\" e attiva il permesso."</string>
+    <string name="APKTOOL_RENAMED_0x7f12089d">"Per migliorare le prestazioni delle operazioni sui file, ti preghiamo di concedere manualmente il permesso \"Accesso a tutti i file\". Fai clic su OK per accedere all'interfaccia di configurazione, seleziona \"MT Manager\" e attiva il permesso."</string>
     <string name="APKTOOL_RENAMED_0x7f12089e">Come gestore di file, MT richiede il permesso \"File e media\". Per favore, concedi questo permesso.</string>
     <string name="APKTOOL_RENAMED_0x7f12089f">"Come gestore di file, MT richiede il permesso \"File e media\". Per favore, abilitalo manualmente nelle impostazioni dell'applicazione."</string>
     <string name="APKTOOL_RENAMED_0x7f1208a0">Richiedi permessi di root</string>
@@ -2371,7 +2371,7 @@ Alle parti numeriche possono essere aggiunti underline o spazi per una maggiore 
     <string name="APKTOOL_RENAMED_0x7f120947">Modifica Permessi</string>
     <string name="APKTOOL_RENAMED_0x7f120948">Impostando permessi…</string>
     <string name="APKTOOL_RENAMED_0x7f120949">Preferenze</string>
-    <string name="APKTOOL_RENAMED_0x7f12094a">"La richiesta dei permessi di shell è scaduta. Puoi provare ad aprire l'interfaccia di gestione delle applicazioni di Shizuku, revocare l'autorizzazione di BF Manager, e poi riavviare BF Manager."</string>
+    <string name="APKTOOL_RENAMED_0x7f12094a">"La richiesta dei permessi di shell è scaduta. Puoi provare ad aprire l'interfaccia di gestione delle applicazioni di Shizuku, revocare l'autorizzazione di MT Manager, e poi riavviare MT Manager."</string>
     <string name="APKTOOL_RENAMED_0x7f12094b">Pressione breve</string>
     <string name="APKTOOL_RENAMED_0x7f12094c">La funzione di icona personalizzata richiede il VIP</string>
     <string name="APKTOOL_RENAMED_0x7f12094d">Icona</string>
@@ -2534,7 +2534,7 @@ Ad esempio: Se un APK utilizza le firme V1 + V2 dove V1 fallisce ma V2 ha succes
     <string name="APKTOOL_RENAMED_0x7f1209e3">Directory Memoria Interna</string>
     <string name="APKTOOL_RENAMED_0x7f1209e4">Il dispositivo di archiviazione selezionato è incorretto.</string>
     <string name="APKTOOL_RENAMED_0x7f1209e5">Quella selezionata non è la root dello storage.</string>
-    <string name="APKTOOL_RENAMED_0x7f1209e6">"A causa di restrizioni di sistema, devi concedere a BF Manager di ottenere accesso completo alla directory. Dopo aver cliccato OK, puoi premere direttamente il bottone sul fondo per completare l'operazione. 
+    <string name="APKTOOL_RENAMED_0x7f1209e6">"A causa di restrizioni di sistema, devi concedere a MT Manager di ottenere accesso completo alla directory. Dopo aver cliccato OK, puoi premere direttamente il bottone sul fondo per completare l'operazione. 
 
 (Se possiedi i permessi di root, potresti essere in grado di accedere la directory senza concedere l'accesso. È possibile disabilitare Usa l'API per accedere alla memoria esterna nelle impostazioni per nascondere questo messaggio.)"</string>
     <string name="APKTOOL_RENAMED_0x7f1209e7">L’URL del contenuto è scaduto. Aprilo di nuovo.</string>
@@ -2761,7 +2761,7 @@ Architettura: %3$s"</string>
     <string name="APKTOOL_RENAMED_0x7f120ac7">"Usa tab per l'indentazione"</string>
     <string name="APKTOOL_RENAMED_0x7f120ac8">"Usa \"\\t\" invece degli spazi per l'indentazione."</string>
     <string name="APKTOOL_RENAMED_0x7f120ac9">Regole sul prestito degli account</string>
-    <string name="APKTOOL_RENAMED_0x7f120aca">"Gli account BF Manager sono destinati esclusivamente a uso personale. È severamente vietato affittare o prestare account pubblicamente, nonché organizzare o partecipare alla condivisione di un account tra più persone a scopo di lucro. Ciò include, a titolo esemplificativo ma non esaustivo, la pubblicazione di annunci o la fornitura di tali servizi su piattaforme commerciali come Xianyu e Taobao, nonché tramite canali pubblici come gruppi social e forum. Una volta accertata la violazione, ci riserviamo il diritto di bloccare gli account coinvolti.
+    <string name="APKTOOL_RENAMED_0x7f120aca">"Gli account MT Manager sono destinati esclusivamente a uso personale. È severamente vietato affittare o prestare account pubblicamente, nonché organizzare o partecipare alla condivisione di un account tra più persone a scopo di lucro. Ciò include, a titolo esemplificativo ma non esaustivo, la pubblicazione di annunci o la fornitura di tali servizi su piattaforme commerciali come Xianyu e Taobao, nonché tramite canali pubblici come gruppi social e forum. Una volta accertata la violazione, ci riserviamo il diritto di bloccare gli account coinvolti.
 Segnalateci eventuali violazioni di questo tipo. Una volta verificate, ricompenseremo chi le ha segnalate con un codice di attivazione VIP di valore equivalente a quello dell’account segnalato."</string>
     <string name="APKTOOL_RENAMED_0x7f120acb">Impostazioni account</string>
     <string name="APKTOOL_RENAMED_0x7f120acc">Attivazione…</string>
@@ -2931,7 +2931,7 @@ Per favore combia la tua password immediatamente."</string>
     <string name="APKTOOL_RENAMED_0x7f120b70">Decrittazione Stringhe Dex</string>
     <string name="APKTOOL_RENAMED_0x7f120b71">E molto di più</string>
     <string name="APKTOOL_RENAMED_0x7f120b72">Avviso VIP</string>
-    <string name="APKTOOL_RENAMED_0x7f120b73">"* Una volta che VIP è stato attivato, potrete utilizzare tutte le funzionalità VIP di BF Manager. L'account non sarà collegato ad un dispositivo specifico. Potrete accedere da tutti i dispositivi.
+    <string name="APKTOOL_RENAMED_0x7f120b73">"* Una volta che VIP è stato attivato, potrete utilizzare tutte le funzionalità VIP di MT Manager. L'account non sarà collegato ad un dispositivo specifico. Potrete accedere da tutti i dispositivi.
 * Per impostazione predefinita, un account può accedere a un solo client alla volta. Attivando l'accesso multidispositivo (acquistabile separatamente) si ottengono più accessi simultanei.
 * È vietato affittare o prestare account tramite canali pubblici come Xianyu, Taobao e gruppi di chat, o condividerli tra più persone a scopo di lucro. Gli account in violazione possono essere bloccati.
 * Il contenuto VIP è considerato un bene virtuale, e gli acquisti non sono rimborsabili.

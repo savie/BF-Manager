@@ -39,7 +39,7 @@
 Некаторыя карыстальнікі паведамлялі пра завісанне сістэмы пры такім запуску. Калі гэта адбудзецца, абярыце ўласнаручны запуск."</string>
     <string name="APKTOOL_RENAMED_0x7f120024">Ваш акаўнт быў замарожаны</string>
     <string name="APKTOOL_RENAMED_0x7f120025">Шчырыя падзякі</string>
-    <string name="APKTOOL_RENAMED_0x7f120026">Людзі і праекты з адкрытым зыходным кодам, якія дапамаглі развіццю BF Manager</string>
+    <string name="APKTOOL_RENAMED_0x7f120026">Людзі і праекты з адкрытым зыходным кодам, якія дапамаглі развіццю MT Manager</string>
     <string name="APKTOOL_RENAMED_0x7f120027">Дазволіць</string>
     <string name="APKTOOL_RENAMED_0x7f120028">Журнал актыўнасці</string>
     <string name="APKTOOL_RENAMED_0x7f120029">Журнал актыўнасці (Beta)</string>
@@ -148,7 +148,7 @@ PS: Пасля ўключэння shell вы зможаце атрымаць д�
     <string name="APKTOOL_RENAMED_0x7f12008d">Час чакання скончыўся, сістэма не адказвае.</string>
     <string name="APKTOOL_RENAMED_0x7f12008e">Час чакання скончыўся, паспрабуйце адключыць у наладах для распрацоўнікаў аптымізацыю MIUI.</string>
     <string name="APKTOOL_RENAMED_0x7f12008f">Падрабязнасці</string>
-    <string name="APKTOOL_RENAMED_0x7f120090">BF Manager</string>
+    <string name="APKTOOL_RENAMED_0x7f120090">MT Manager</string>
     <string name="APKTOOL_RENAMED_0x7f1200cd">Выгляд</string>
     <string name="APKTOOL_RENAMED_0x7f1200ce">Дадатак не знойдзены</string>
     <string name="APKTOOL_RENAMED_0x7f1200cf">Ужыць змены</string>
@@ -736,7 +736,7 @@ Lxxx/StringFog;->decrypt([B[B)Ljava/lang/String;"</string>
     <string name="APKTOOL_RENAMED_0x7f1202f2">"Пры выдаленні файла з'явіцца чырвонае папярэджанне, калі вы не вырашылі перамясціць яго ў сметніцу."</string>
     <string name="APKTOOL_RENAMED_0x7f1202f3">Пацвярджэнне перад выхадам</string>
     <string name="APKTOOL_RENAMED_0x7f1202f4">Калі ўключана, патрэбна двойчы націснуць кнопку «Назад», каб выйсці</string>
-    <string name="APKTOOL_RENAMED_0x7f1202f5">Не атрымалася адкрыць налады. Перайдзіце ў налады, каб уласнаручна даць BF Manager дазвол на доступ да выплыўных акон.</string>
+    <string name="APKTOOL_RENAMED_0x7f1202f5">Не атрымалася адкрыць налады. Перайдзіце ў налады, каб уласнаручна даць MT Manager дазвол на доступ да выплыўных акон.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f6">Уключыць выплыўное акно</string>
     <string name="APKTOOL_RENAMED_0x7f1202f7">Уключыць гісторыю</string>
     <string name="APKTOOL_RENAMED_0x7f1202f8">Лупа</string>
@@ -1035,11 +1035,11 @@ Lxxx/StringFog;->decrypt([B[B)Ljava/lang/String;"</string>
     <string name="APKTOOL_RENAMED_0x7f12041d">Стварэнне файла arsc…</string>
     <string name="APKTOOL_RENAMED_0x7f12041e">Стварэнне файла dex…</string>
     <string name="APKTOOL_RENAMED_0x7f12041f">Класы для апрацоўвання</string>
-    <string name="APKTOOL_RENAMED_0x7f120424">"BF Manager цяпер не прадстаўлены ў Google Play, і мы не плануем публікаваць яго там у будучыні.
+    <string name="APKTOOL_RENAMED_0x7f120424">"MT Manager цяпер не прадстаўлены ў Google Play, і мы не плануем публікаваць яго там у будучыні.
 
-Усе праграмы, якія цяпер прапануюцца ў Google Play пад назвай «BF Manager», — падробкі, якія не маюць да нас дачынення. **Не купляйце іх**. Калі вы ўжо заплацілі, неадкладна паведаміце пра праграму і запытайце вяртанне сродкаў у Google Play.
+Усе праграмы, якія цяпер прапануюцца ў Google Play пад назвай «MT Manager», — падробкі, якія не маюць да нас дачынення. **Не купляйце іх**. Калі вы ўжо заплацілі, неадкладна паведаміце пра праграму і запытайце вяртанне сродкаў у Google Play.
 
-Спампоўвайце BF Manager з нашага афіцыйнага сайта:
+Спампоўвайце MT Manager з нашага афіцыйнага сайта:
 **[mt.cc](https://mt.cc)**"</string>
     <string name="APKTOOL_RENAMED_0x7f120425">Сцеражыцеся падробак у Google Play</string>
     <string name="APKTOOL_RENAMED_0x7f120426">Адмоўлена ў доступе: %s</string>
@@ -1079,7 +1079,7 @@ Lxxx/StringFog;->decrypt([B[B)Ljava/lang/String;"</string>
     <string name="APKTOOL_RENAMED_0x7f120449">HEX</string>
     <string name="APKTOOL_RENAMED_0x7f12044a">Схаваць</string>
     <string name="APKTOOL_RENAMED_0x7f12044b">Схаваць адрас у бакавой панэлі</string>
-    <string name="APKTOOL_RENAMED_0x7f12044d">Пасля хавання файлы не будуць паказвацца ў BF Manager, але яны застануцца на прыладзе. Каб аднавіць паказ файлаў, націсніце на меню справа ўверсе → Схаваныя файлы → Змяніць схаваныя файлы.</string>
+    <string name="APKTOOL_RENAMED_0x7f12044d">Пасля хавання файлы не будуць паказвацца ў MT Manager, але яны застануцца на прыладзе. Каб аднавіць паказ файлаў, націсніце на меню справа ўверсе → Схаваныя файлы → Змяніць схаваныя файлы.</string>
     <string name="APKTOOL_RENAMED_0x7f12044e">Схаваць мову</string>
     <string name="APKTOOL_RENAMED_0x7f12044f">"Пасля таго, як лакальны дыск будзе схаваны, ён перастае паказвацца на бакавой панэлі, але вы ўсё адно можаце атрымаць да яго доступ праз шлях (прыкладам, закладкі), калі вы хочаце аднавіць адлюстраванне, вам трэба дадаць яго зноў.
 Вы ўсё адно хочаце схаваць %s?"</string>
@@ -1888,7 +1888,7 @@ PS: Tencent Cloud COS забараняе спампоўку apk/ipa файлаў
     <string name="APKTOOL_RENAMED_0x7f12077f">Убудова апублікаваная.</string>
     <string name="APKTOOL_RENAMED_0x7f120780">Гэты плагін патрабуе Android API %d або вышэй</string>
     <string name="APKTOOL_RENAMED_0x7f120781">Гэты плагін патрабуе Android %1$s (API %2$d) або вышэй</string>
-    <string name="APKTOOL_RENAMED_0x7f120782">Гэты плагін патрабуе версію BF Manager з кодам %d або вышэй. Ваша бягучая версія занадта старая, абнавіце BF Manager!</string>
+    <string name="APKTOOL_RENAMED_0x7f120782">Гэты плагін патрабуе версію MT Manager з кодам %d або вышэй. Ваша бягучая версія занадта старая, абнавіце MT Manager!</string>
     <string name="APKTOOL_RENAMED_0x7f120783">"Бягучая версія MT не падтрымлівае працу з убудовамі, абнавіцеся да апошняй версіі. 
  (SDK убудовы: %1$d, макс. падтрымка: %2$d)"</string>
     <string name="APKTOOL_RENAMED_0x7f120784">SDK убудовы</string>
@@ -2179,8 +2179,8 @@ PS: Tencent Cloud COS забараняе спампоўку apk/ipa файлаў
     <string name="APKTOOL_RENAMED_0x7f120899">Замяніць арыгінал</string>
     <string name="APKTOOL_RENAMED_0x7f12089a">Замян.</string>
     <string name="APKTOOL_RENAMED_0x7f12089b">Колькасць замен</string>
-    <string name="APKTOOL_RENAMED_0x7f12089c">Каб атрымаць доступ да файлаў на прыладзе, трэба ўласнаручна даць MT дазвол \"Доступ да ўсіх файлаў\", націсніце Добра, каб адкрыць налады і абярыце \"BF Manager\".</string>
-    <string name="APKTOOL_RENAMED_0x7f12089d">Каб палепшыць прадукцыйнасць працы з файламі, дайце MT дазвол «Доступ да ўсіх файлаў», націсніце «Добра», каб адкрыць налады, абярыце «BF Manager» і дайце доступ.</string>
+    <string name="APKTOOL_RENAMED_0x7f12089c">Каб атрымаць доступ да файлаў на прыладзе, трэба ўласнаручна даць MT дазвол \"Доступ да ўсіх файлаў\", націсніце Добра, каб адкрыць налады і абярыце \"MT Manager\".</string>
+    <string name="APKTOOL_RENAMED_0x7f12089d">Каб палепшыць прадукцыйнасць працы з файламі, дайце MT дазвол «Доступ да ўсіх файлаў», націсніце «Добра», каб адкрыць налады, абярыце «MT Manager» і дайце доступ.</string>
     <string name="APKTOOL_RENAMED_0x7f12089e">«Файлы і мультымедыя» - абавязковы дазвол для файлавага менеджара, дайце доступ ў выплыўным запыце MT.</string>
     <string name="APKTOOL_RENAMED_0x7f12089f">«Файлы і мультымедыя» - абавязковы дазвол для файлавага менеджара, актывуйце яго ўласнаручна ў наладах праграмы.</string>
     <string name="APKTOOL_RENAMED_0x7f1208a0">Запыт root-доступу</string>
@@ -2371,7 +2371,7 @@ PS: Tencent Cloud COS забараняе спампоўку apk/ipa файлаў
     <string name="APKTOOL_RENAMED_0x7f120947">Вызначыць дазволы</string>
     <string name="APKTOOL_RENAMED_0x7f120948">Змена дазволаў</string>
     <string name="APKTOOL_RENAMED_0x7f120949">Налады</string>
-    <string name="APKTOOL_RENAMED_0x7f12094a">Час запыту shell-доступу мінуў. Вы можаце паспрабаваць увайсці ў інтэрфейс кіравання праграмамі Shizuku, скасаваць аўтарызацыю для BF Manager, а потым перазапусціць BF Manager.</string>
+    <string name="APKTOOL_RENAMED_0x7f12094a">Час запыту shell-доступу мінуў. Вы можаце паспрабаваць увайсці ў інтэрфейс кіравання праграмамі Shizuku, скасаваць аўтарызацыю для MT Manager, а потым перазапусціць MT Manager.</string>
     <string name="APKTOOL_RENAMED_0x7f12094b">Кароткі націск</string>
     <string name="APKTOOL_RENAMED_0x7f12094c">Для змены колеру ці значка патрабуецца VIP</string>
     <string name="APKTOOL_RENAMED_0x7f12094d">Значок</string>
@@ -2534,7 +2534,7 @@ PS: Tencent Cloud COS забараняе спампоўку apk/ipa файлаў
     <string name="APKTOOL_RENAMED_0x7f1209e3">Унутраная памяць</string>
     <string name="APKTOOL_RENAMED_0x7f1209e4">Абрана няслушнае сховішча.</string>
     <string name="APKTOOL_RENAMED_0x7f1209e5">Патрэбна абраць корань сховішча.</string>
-    <string name="APKTOOL_RENAMED_0x7f1209e6">"Праз сістэмныя абмежаванні вам патрэбна аўтарызаваць BF Manager, каб атрымаць поўны доступ да бягучага каталога. Пасля таго, як вы націснеце Добра, адкрыецца старонка аўтарызацыі, дзе вы зможаце ўласнаручна націснуць кнопку ўнізе, каб скончыць аўтарызацыю. 
+    <string name="APKTOOL_RENAMED_0x7f1209e6">"Праз сістэмныя абмежаванні вам патрэбна аўтарызаваць MT Manager, каб атрымаць поўны доступ да бягучага каталога. Пасля таго, як вы націснеце Добра, адкрыецца старонка аўтарызацыі, дзе вы зможаце ўласнаручна націснуць кнопку ўнізе, каб скончыць аўтарызацыю. 
 
 (Калі ў вас ёсць правы суперкарыстальніка, вы можаце атрымаць доступ да каталога без аўтарызацыі. Зараз вы можаце адключыць «Доступ да вонкавага сховішча» у наладах MT, каб схаваць запыт.)"</string>
     <string name="APKTOOL_RENAMED_0x7f1209e7">Тэрмін дзеяння URL медыярэсурсу скончыўся. Адкрыйце яго зноў.</string>
@@ -2761,7 +2761,7 @@ PS: Tencent Cloud COS забараняе спампоўку apk/ipa файлаў
     <string name="APKTOOL_RENAMED_0x7f120ac7">Выкарыстанне Tab для водступаў</string>
     <string name="APKTOOL_RENAMED_0x7f120ac8">Выкарыстоўваць для водступаў \"\\t\" замест прагалаў</string>
     <string name="APKTOOL_RENAMED_0x7f120ac9">Правілы перадачы акаўнтаў</string>
-    <string name="APKTOOL_RENAMED_0x7f120aca">"Акаўнты BF Manager прызначаны толькі для асабістага выкарыстання. Строга забаронена публічна здаваць акаўнты ў арэнду або перадаваць іх у часовае карыстанне, а таксама арганізоўваць сумеснае выкарыстанне акаўнта некалькімі асобамі дзеля прыбытку ці ўдзельнічаць у ім. Гэта ўключае, але не абмяжоўваецца размяшчэннем аб’яў або прапановай такіх паслуг на гандлёвых платформах, у тым ліку Xianyu і Taobao, а таксама ў адкрытых каналах, такіх як сацыяльныя групы і форумы. Пасля пацвярджэння парушэння мы маем права замарозіць адпаведныя акаўнты.
+    <string name="APKTOOL_RENAMED_0x7f120aca">"Акаўнты MT Manager прызначаны толькі для асабістага выкарыстання. Строга забаронена публічна здаваць акаўнты ў арэнду або перадаваць іх у часовае карыстанне, а таксама арганізоўваць сумеснае выкарыстанне акаўнта некалькімі асобамі дзеля прыбытку ці ўдзельнічаць у ім. Гэта ўключае, але не абмяжоўваецца размяшчэннем аб’яў або прапановай такіх паслуг на гандлёвых платформах, у тым ліку Xianyu і Taobao, а таксама ў адкрытых каналах, такіх як сацыяльныя групы і форумы. Пасля пацвярджэння парушэння мы маем права замарозіць адпаведныя акаўнты.
 Паведамляйце нам пра такія парушэнні. Пасля пацвярджэння мы ўзнагародзім аўтара паведамлення кодам актывацыі VIP, роўным па вартасці акаўнту, пра які паведамілі."</string>
     <string name="APKTOOL_RENAMED_0x7f120acb">Налады акаўнта</string>
     <string name="APKTOOL_RENAMED_0x7f120acc">Актывацыя…</string>
@@ -2930,7 +2930,7 @@ PS: Tencent Cloud COS забараняе спампоўку apk/ipa файлаў
     <string name="APKTOOL_RENAMED_0x7f120b70">Расшыфроўка радкоў dex</string>
     <string name="APKTOOL_RENAMED_0x7f120b71">Іншае >></string>
     <string name="APKTOOL_RENAMED_0x7f120b72">Апавяшчэнне пра VIP</string>
-    <string name="APKTOOL_RENAMED_0x7f120b73">"* Вы можаце карыстацца ўсімі магчымасцямі BF Manager пасля куплі і актывацыі VIP. Акаўнт не прывязваецца да вашага тэлефона, вы можаце ўвайсці ў акаўнт MT з любага тэлефона.
+    <string name="APKTOOL_RENAMED_0x7f120b73">"* Вы можаце карыстацца ўсімі магчымасцямі MT Manager пасля куплі і актывацыі VIP. Акаўнт не прывязваецца да вашага тэлефона, вы можаце ўвайсці ў акаўнт MT з любага тэлефона.
 * Па змаўчанні адзін акаўнт можа быць адначасова адкрыты толькі ў адным кліенце. Уключэнне ўваходу на некалькіх прыладах (набываецца асобна) дае больш месцаў для ўваходу.
 * Забаронена здаваць акаўнты ў арэнду або перадаваць іх у часовае карыстанне праз адкрытыя каналы, такія як Xianyu, Taobao і групавыя чаты, ці сумесна выкарыстоўваць іх некалькімі асобамі дзеля прыбытку. За парушэнне акаўнты могуць быць замарожаны.
 * VIP-змесціва - віртуальны тавар, пасля куплі вярнуць сродкі немагчыма. 

@@ -39,7 +39,7 @@
 Bazı kullanıcılar tek tıklamayla başlatmanın sistemin donmasına ve yeniden başlatılmasına neden olabileceğini bildirdi. Bu başınıza gelirse, lütfen manuel başlatmayı seçin."</string>
     <string name="APKTOOL_RENAMED_0x7f120024">Hesabınız donduruldu</string>
     <string name="APKTOOL_RENAMED_0x7f120025">Özel teşekkür</string>
-    <string name="APKTOOL_RENAMED_0x7f120026">"BF Manager'in geliştirilmesine yardımcı olan insanlar ve açık kaynak projeleri."</string>
+    <string name="APKTOOL_RENAMED_0x7f120026">"MT Manager'in geliştirilmesine yardımcı olan insanlar ve açık kaynak projeleri."</string>
     <string name="APKTOOL_RENAMED_0x7f120027">Şimdi aç</string>
     <string name="APKTOOL_RENAMED_0x7f120028">Etkinlik Kaydı</string>
     <string name="APKTOOL_RENAMED_0x7f120029">Etkinlik Kaydı (Beta)</string>
@@ -148,7 +148,7 @@ Denedikten sonra sorun hala çözülemiyorsa; root izinlerini etkinleştirerek, 
     <string name="APKTOOL_RENAMED_0x7f12008d">Yükleme zaman aşımına uğradı, sistem yanıt vermiyor.</string>
     <string name="APKTOOL_RENAMED_0x7f12008e">Yükleme zaman aşımına uğradı, lütfen geliştirici seçeneklerinden MIUI optimizasyonunu kapatmayı deneyin.</string>
     <string name="APKTOOL_RENAMED_0x7f12008f">Detaylar</string>
-    <string name="APKTOOL_RENAMED_0x7f120090">BF Manager</string>
+    <string name="APKTOOL_RENAMED_0x7f120090">MT Manager</string>
     <string name="APKTOOL_RENAMED_0x7f1200cd">Görünüm</string>
     <string name="APKTOOL_RENAMED_0x7f1200ce">Uygulama bulunamadı</string>
     <string name="APKTOOL_RENAMED_0x7f1200cf">Değişiklikleri uygula</string>
@@ -736,7 +736,7 @@ Dikkat! Hariç tutma listesi yalnızca arama yolu boş veya \"/\" olduğunda etk
     <string name="APKTOOL_RENAMED_0x7f1202f2">Bir dosyayı geri dönüşüm kutusuna taşımayı seçmediyseniz, silerken kırmızı bir uyarı görünecektir.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f3">Çıkmadan önce iki kez onaylayın</string>
     <string name="APKTOOL_RENAMED_0x7f1202f4">Etkinleştirilirse, çıkmak için geri düğmesine iki kez tıklamanız gerekir.</string>
-    <string name="APKTOOL_RENAMED_0x7f1202f5">"Kurulum arayüzü açılamadı. BF Manager'in kayar pencere iznini etkinleştirmek için lütfen Ayarlar'a manuel olarak gidin."</string>
+    <string name="APKTOOL_RENAMED_0x7f1202f5">"Kurulum arayüzü açılamadı. MT Manager'in kayar pencere iznini etkinleştirmek için lütfen Ayarlar'a manuel olarak gidin."</string>
     <string name="APKTOOL_RENAMED_0x7f1202f6">Kayan pencereyi etkinleştir</string>
     <string name="APKTOOL_RENAMED_0x7f1202f7">Geçmişi etkinleştir</string>
     <string name="APKTOOL_RENAMED_0x7f1202f8">Büyüteci etkinleştir</string>
@@ -1034,11 +1034,11 @@ yapmak istiyor musun?"</string>
     <string name="APKTOOL_RENAMED_0x7f12041d">Arsc dosyası oluşturuluyor…</string>
     <string name="APKTOOL_RENAMED_0x7f12041e">Dex dosyası oluşturuluyor…</string>
     <string name="APKTOOL_RENAMED_0x7f12041f">İşlenecek classlar</string>
-    <string name="APKTOOL_RENAMED_0x7f120424">"BF Manager şu anda Google Play’de mevcut değildir ve gelecekte orada yayımlama planımız yoktur.
+    <string name="APKTOOL_RENAMED_0x7f120424">"MT Manager şu anda Google Play’de mevcut değildir ve gelecekte orada yayımlama planımız yoktur.
 
-Google Play’de şu anda “BF Manager” adıyla sunulan tüm uygulamalar sahtedir ve bizimle hiçbir ilgisi yoktur. **Satın almayın**. Ödeme yaptıysanız hemen Google Play’e uygulamayı bildirin ve geri ödeme talep edin.
+Google Play’de şu anda “MT Manager” adıyla sunulan tüm uygulamalar sahtedir ve bizimle hiçbir ilgisi yoktur. **Satın almayın**. Ödeme yaptıysanız hemen Google Play’e uygulamayı bildirin ve geri ödeme talep edin.
 
-BF Manager’ı resmî web sitemizden indirin:
+MT Manager’ı resmî web sitemizden indirin:
 **[mt.cc](https://mt.cc)**"</string>
     <string name="APKTOOL_RENAMED_0x7f120425">Google Play’deki sahte uygulamalara dikkat</string>
     <string name="APKTOOL_RENAMED_0x7f120426">Yetkilendirme başarısız oldu: %s</string>
@@ -1078,7 +1078,7 @@ BF Manager’ı resmî web sitemizden indirin:
     <string name="APKTOOL_RENAMED_0x7f120449">Hex</string>
     <string name="APKTOOL_RENAMED_0x7f12044a">Gizle</string>
     <string name="APKTOOL_RENAMED_0x7f12044b">Adresi kenar çubuğunda gizle</string>
-    <string name="APKTOOL_RENAMED_0x7f12044d">"Dosyalar gizlendikten sonra BF Manager'da görünmezler, ancak hala mevcutturlar. Gizlenen dosyaları tekrar göstermek için sağ üst menüden Gizli dosyalar - Gizli dosyaları düzenle seçeneğine tıklayın."</string>
+    <string name="APKTOOL_RENAMED_0x7f12044d">"Dosyalar gizlendikten sonra MT Manager'da görünmezler, ancak hala mevcutturlar. Gizlenen dosyaları tekrar göstermek için sağ üst menüden Gizli dosyalar - Gizli dosyaları düzenle seçeneğine tıklayın."</string>
     <string name="APKTOOL_RENAMED_0x7f12044e">Dili gizle</string>
     <string name="APKTOOL_RENAMED_0x7f12044f">"Yerel depolama gizlendikten sonra, yan çubukta görüntülenmez, yine de aynı yoldan erişebilirsiniz (yer imleri gibi), ekranı geri yüklemek istiyorsanız, yeniden eklemeniz gerekir.
 Yine de %s'yi gizlemek istiyor musunuz?"</string>
@@ -1887,7 +1887,7 @@ Aramak istediğiniz metnin bir sayfa sonu nedeniyle kesintiye uğraması durumun
     <string name="APKTOOL_RENAMED_0x7f12077f">Eklenti yayınlandı.</string>
     <string name="APKTOOL_RENAMED_0x7f120780">Bu eklenti Android API %d veya üstünü gerektirir</string>
     <string name="APKTOOL_RENAMED_0x7f120781">Bu eklenti Android %1$s (API %2$d) veya üstünü gerektirir</string>
-    <string name="APKTOOL_RENAMED_0x7f120782">"Bu eklenti, BF Manager sürüm kodu %d veya üstünü gerektirir. Mevcut sürümünüz çok eski, lütfen BF Manager'ı güncelleyin!"</string>
+    <string name="APKTOOL_RENAMED_0x7f120782">"Bu eklenti, MT Manager sürüm kodu %d veya üstünü gerektirir. Mevcut sürümünüz çok eski, lütfen MT Manager'ı güncelleyin!"</string>
     <string name="APKTOOL_RENAMED_0x7f120783">"MT'nin mevcut sürümü eklenti SDK'sını desteklemiyor, lütfen en son sürüme güncelleyin. 
 (eklenti SDK'sı: %1$d, maksimum destek: %2$d)"</string>
     <string name="APKTOOL_RENAMED_0x7f120784">SDK Kimliği</string>
@@ -2178,7 +2178,7 @@ Değiştir işlevini kullanmazsanız, bulmak için metni boş bırakın"</string
     <string name="APKTOOL_RENAMED_0x7f120899">Orijinali değiştirin</string>
     <string name="APKTOOL_RENAMED_0x7f12089a">Rep</string>
     <string name="APKTOOL_RENAMED_0x7f12089b">Değiştirme sınırı</string>
-    <string name="APKTOOL_RENAMED_0x7f12089c">"Cihazınızdaki dosyalara erişmek için lütfen MT'ye manuel olarak \"Tüm dosyalara erişim\" izni verin, yapılandırma arayüzüne girmek için Tamam'a tıklayın \"BF Manager\" seçin ve izni etkinleştirin."</string>
+    <string name="APKTOOL_RENAMED_0x7f12089c">"Cihazınızdaki dosyalara erişmek için lütfen MT'ye manuel olarak \"Tüm dosyalara erişim\" izni verin, yapılandırma arayüzüne girmek için Tamam'a tıklayın \"MT Manager\" seçin ve izni etkinleştirin."</string>
     <string name="APKTOOL_RENAMED_0x7f12089d">"Daha iyi dosya çalıştırma performansı için lütfen MT'ye \"Tüm dosyalara erişim\" iznini manuel olarak verin, ayar arayüzüne girmek için Tamam'ı tıklayın, \"MT Yöneticisi\" seçin ve yetkilendirmeyi açın."</string>
     <string name="APKTOOL_RENAMED_0x7f12089e">"Bir dosya yöneticisi olan Dosyalar ve Medya için izin isteği; vazgeçilmezdir, lütfen izin talebinde bulunan MT'ye izin verin."</string>
     <string name="APKTOOL_RENAMED_0x7f12089f">Bir dosya yöneticisi olan Dosyalar ve Medya için izin isteği; vazgeçilmezdir, lütfen uygulama ayarlarında manuel olarak etkinleştirin.</string>
@@ -2370,7 +2370,7 @@ Daha iyi okunabilirlik için 0b1000_0000_1111 gibi sayısal bölümlere alt çiz
     <string name="APKTOOL_RENAMED_0x7f120947">İzinleri Değiştir</string>
     <string name="APKTOOL_RENAMED_0x7f120948">İzinler ayarlanıyor…</string>
     <string name="APKTOOL_RENAMED_0x7f120949">Tercihler</string>
-    <string name="APKTOOL_RENAMED_0x7f12094a">"Kabuk izni isteği zaman aşımına uğradı. Shizuku'nun uygulama yönetimi arayüzüne girmeyi deneyebilir, BF Manager'ın yetkilendirmesini kapatabilir ve ardından BF Manager'ı yeniden başlatabilirsiniz."</string>
+    <string name="APKTOOL_RENAMED_0x7f12094a">"Kabuk izni isteği zaman aşımına uğradı. Shizuku'nun uygulama yönetimi arayüzüne girmeyi deneyebilir, MT Manager'ın yetkilendirmesini kapatabilir ve ardından MT Manager'ı yeniden başlatabilirsiniz."</string>
     <string name="APKTOOL_RENAMED_0x7f12094b">Kısa basma</string>
     <string name="APKTOOL_RENAMED_0x7f12094c">Özel simge işlevi VIP gerektirir</string>
     <string name="APKTOOL_RENAMED_0x7f12094d">Simge</string>
@@ -2760,7 +2760,7 @@ Mimari: %3$s"</string>
     <string name="APKTOOL_RENAMED_0x7f120ac7">Girinti için sekmeleri kullanın</string>
     <string name="APKTOOL_RENAMED_0x7f120ac8">Girintiler için boşluk yerine \"\\t\" kullanın.</string>
     <string name="APKTOOL_RENAMED_0x7f120ac9">Hesap kiralama ve ödünç verme politikası</string>
-    <string name="APKTOOL_RENAMED_0x7f120aca">"BF Manager hesapları yalnızca kişisel kullanım içindir. Hesapları herkese açık ortamlarda kiraya vermek veya ödünç vermek, ayrıca kazanç amacıyla bir hesabın birden fazla kişi tarafından ortak kullanımını düzenlemek ya da buna katılmak kesinlikle yasaktır. Xianyu ve Taobao gibi alışveriş platformlarında veya sosyal gruplar ve forumlar gibi herkese açık kanallarda bu tür hizmetlerin reklamını yapmak ya da bunları sunmak, bunlarla sınırlı olmamak üzere, bu kapsamdadır. İhlal doğrulandığında ilgili hesapları dondurma hakkımızı saklı tutarız.
+    <string name="APKTOOL_RENAMED_0x7f120aca">"MT Manager hesapları yalnızca kişisel kullanım içindir. Hesapları herkese açık ortamlarda kiraya vermek veya ödünç vermek, ayrıca kazanç amacıyla bir hesabın birden fazla kişi tarafından ortak kullanımını düzenlemek ya da buna katılmak kesinlikle yasaktır. Xianyu ve Taobao gibi alışveriş platformlarında veya sosyal gruplar ve forumlar gibi herkese açık kanallarda bu tür hizmetlerin reklamını yapmak ya da bunları sunmak, bunlarla sınırlı olmamak üzere, bu kapsamdadır. İhlal doğrulandığında ilgili hesapları dondurma hakkımızı saklı tutarız.
 Lütfen bu tür ihlalleri bize bildirin. İhlal doğrulandığında bildirimde bulunan kişiye, bildirilen hesabın değerine eşdeğer bir VIP etkinleştirme kodu vereceğiz."</string>
     <string name="APKTOOL_RENAMED_0x7f120acb">Hesap ayarları</string>
     <string name="APKTOOL_RENAMED_0x7f120acc">Etkinleştiriliyor…</string>

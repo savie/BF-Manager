@@ -60,7 +60,7 @@
 
     move-result-object v2
 
-    const-string v3, "bin.bf.plus.ApkMcpActivity"
+    const-string v3, "bin.mt.plus.ApkMcpActivity"
 
     invoke-direct {v0, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

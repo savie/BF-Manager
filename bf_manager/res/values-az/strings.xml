@@ -148,7 +148,7 @@ Bu problemlə qarşılaşsanız, yəqin ki, "<b>developer seçimlərində MIUI o
     <string name="APKTOOL_RENAMED_0x7f12008d">Quraşdırma vaxtı bitdi, sistem cavabı yoxdur.</string>
     <string name="APKTOOL_RENAMED_0x7f12008e">Quraşdırma vaxtı bitdi, lütfən, tərtibatçı seçimlərində MIUI optimallaşdırmasını söndürməyə çalışın.</string>
     <string name="APKTOOL_RENAMED_0x7f12008f">Təfərrüatlar</string>
-    <string name="APKTOOL_RENAMED_0x7f120090">BF Manager</string>
+    <string name="APKTOOL_RENAMED_0x7f120090">MT Manager</string>
     <string name="APKTOOL_RENAMED_0x7f1200cd">Görünüş</string>
     <string name="APKTOOL_RENAMED_0x7f1200ce">Tətbiq Tapılmadı</string>
     <string name="APKTOOL_RENAMED_0x7f1200cf">Dəyişiklikləri tətbiq edin</string>
@@ -736,7 +736,7 @@ Diqqət! İstisna siyahısı yalnız axtarış yolu boş olduqda və ya \"/\" ol
     <string name="APKTOOL_RENAMED_0x7f1202f2">Faylı zibil qutusuna köçürməyi seçməmisinizsə, onu silərkən qırmızı xəbərdarlıq görünəcək.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f3">Çıxmazdan əvvəl iki dəfə təsdiqləyin</string>
     <string name="APKTOOL_RENAMED_0x7f1202f4">Aktivdirsə, çıxmaq üçün geri düyməsinə iki dəfə basmalısınız.</string>
-    <string name="APKTOOL_RENAMED_0x7f1202f5">Quraşdırma interfeysini açmaq alınmadı. Lütfən, BF Manager üçün üzən pəncərə icazəsini aktivləşdirmək üçün Parametrlərə əl ilə keçin.</string>
+    <string name="APKTOOL_RENAMED_0x7f1202f5">Quraşdırma interfeysini açmaq alınmadı. Lütfən, MT Manager üçün üzən pəncərə icazəsini aktivləşdirmək üçün Parametrlərə əl ilə keçin.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f6">Üzən pəncərəni aktivləşdirin</string>
     <string name="APKTOOL_RENAMED_0x7f1202f7">Tarixçəni aktivləşdirin</string>
     <string name="APKTOOL_RENAMED_0x7f1202f8">Böyüdücü aktivləşdirin</string>
@@ -1034,11 +1034,11 @@ Diqqət! İstisna siyahısı yalnız axtarış yolu boş olduqda və ya \"/\" ol
     <string name="APKTOOL_RENAMED_0x7f12041d">arsc faylı yaradılır…</string>
     <string name="APKTOOL_RENAMED_0x7f12041e">dex faylı yaradılır…</string>
     <string name="APKTOOL_RENAMED_0x7f12041f">Emal ediləcək siniflər</string>
-    <string name="APKTOOL_RENAMED_0x7f120424">"BF Manager hazırda Google Play-də mövcud deyil və gələcəkdə orada yayımlamaq planımız yoxdur.
+    <string name="APKTOOL_RENAMED_0x7f120424">"MT Manager hazırda Google Play-də mövcud deyil və gələcəkdə orada yayımlamaq planımız yoxdur.
 
-Google Play-də hazırda “BF Manager” adı ilə təqdim olunan bütün tətbiqlər saxtadır və bizimlə əlaqəsi yoxdur. **Onları almayın**. Artıq ödəniş etmisinizsə, dərhal Google Play-ə tətbiq barədə şikayət edin və pulun qaytarılmasını tələb edin.
+Google Play-də hazırda “MT Manager” adı ilə təqdim olunan bütün tətbiqlər saxtadır və bizimlə əlaqəsi yoxdur. **Onları almayın**. Artıq ödəniş etmisinizsə, dərhal Google Play-ə tətbiq barədə şikayət edin və pulun qaytarılmasını tələb edin.
 
-BF Manager-i rəsmi saytımızdan endirin:
+MT Manager-i rəsmi saytımızdan endirin:
 **[mt.cc](https://mt.cc)**"</string>
     <string name="APKTOOL_RENAMED_0x7f120425">Google Play-də saxta tətbiqlərdən ehtiyatlı olun</string>
     <string name="APKTOOL_RENAMED_0x7f120426">İcazə verilmədi: %s</string>
@@ -1078,7 +1078,7 @@ BF Manager-i rəsmi saytımızdan endirin:
     <string name="APKTOOL_RENAMED_0x7f120449">Hex</string>
     <string name="APKTOOL_RENAMED_0x7f12044a">Gizlət</string>
     <string name="APKTOOL_RENAMED_0x7f12044b">Ünvanı yan paneldə gizlədin</string>
-    <string name="APKTOOL_RENAMED_0x7f12044d">Fayllar gizlədildikdən sonra onlar BF Manager-də göstərilməyəcək, lakin onlar hələ də mövcuddur. Fayl ekranını bərpa etmək üçün yuxarı sağ menyuda klikləyin - Gizli fayllar - Gizli faylları redaktə edin.</string>
+    <string name="APKTOOL_RENAMED_0x7f12044d">Fayllar gizlədildikdən sonra onlar MT Manager-də göstərilməyəcək, lakin onlar hələ də mövcuddur. Fayl ekranını bərpa etmək üçün yuxarı sağ menyuda klikləyin - Gizli fayllar - Gizli faylları redaktə edin.</string>
     <string name="APKTOOL_RENAMED_0x7f12044e">Dili gizlədin</string>
     <string name="APKTOOL_RENAMED_0x7f12044f">"Yerli yaddaş gizlədildikdən sonra o, sadəcə yan paneldə göstərilmir, siz hələ də ona yol (məsələn, əlfəcinlər) vasitəsilə daxil ola bilərsiniz, ekranı bərpa etmək istəyirsinizsə, onu yenidən əlavə etməlisiniz.
 Hər halda %s gizlətmək istəyirsiniz?"</string>
@@ -1887,7 +1887,7 @@ Nəzərinizə çatdıraq ki, axtarış etmək istədiyiniz mətn səhifə fasil�
     <string name="APKTOOL_RENAMED_0x7f12077f">Plugin dərc edilib.</string>
     <string name="APKTOOL_RENAMED_0x7f120780">Bu plagin Android API %d və ya daha yüksək versiya tələb edir</string>
     <string name="APKTOOL_RENAMED_0x7f120781">Bu plagin Android %1$s (API %2$d) və ya daha yüksək versiya tələb edir</string>
-    <string name="APKTOOL_RENAMED_0x7f120782">Bu plagin BF Manager versiya kodu %d və ya daha yüksək tələb edir. Cari versiyanız köhnədir, zəhmət olmasa BF Manager-i yeniləyin!</string>
+    <string name="APKTOOL_RENAMED_0x7f120782">Bu plagin MT Manager versiya kodu %d və ya daha yüksək tələb edir. Cari versiyanız köhnədir, zəhmət olmasa MT Manager-i yeniləyin!</string>
     <string name="APKTOOL_RENAMED_0x7f120783">"MT-nin cari versiyası SDK plaginini dəstəkləmir, lütfən, ən son versiyaya yeniləyin. 
  (plugin SDK: %1$d, maksimum dəstək: %2$d)"</string>
     <string name="APKTOOL_RENAMED_0x7f120784">Plugin SDK</string>
@@ -2178,8 +2178,8 @@ Sistem sinfi adlandırılmamalıdır, buna görə də bu seçimi işarələməli
     <string name="APKTOOL_RENAMED_0x7f120899">Orijinalı dəyişdirin</string>
     <string name="APKTOOL_RENAMED_0x7f12089a">Rep</string>
     <string name="APKTOOL_RENAMED_0x7f12089b">Əvəzetmə limiti</string>
-    <string name="APKTOOL_RENAMED_0x7f12089c">Cihazınızdakı fayllara daxil olmaq üçün lütfən, MT-yə \"Bütün fayllara giriş\" icazəsini əl ilə verin, konfiqurasiya interfeysinə daxil olmaq üçün OK düyməsini klikləyin, \"BF Manager\" seçin və icazəni aktivləşdirin.</string>
-    <string name="APKTOOL_RENAMED_0x7f12089d">Daha yaxşı fayl əməliyyat performansı üçün lütfən, MT-yə \"Bütün fayllara giriş\" icazəsini əl ilə verin, parametr interfeysinə daxil olmaq üçün OK düyməsini klikləyin, \"BF Manager\" seçin və icazəni açın.</string>
+    <string name="APKTOOL_RENAMED_0x7f12089c">Cihazınızdakı fayllara daxil olmaq üçün lütfən, MT-yə \"Bütün fayllara giriş\" icazəsini əl ilə verin, konfiqurasiya interfeysinə daxil olmaq üçün OK düyməsini klikləyin, \"MT Manager\" seçin və icazəni aktivləşdirin.</string>
+    <string name="APKTOOL_RENAMED_0x7f12089d">Daha yaxşı fayl əməliyyat performansı üçün lütfən, MT-yə \"Bütün fayllara giriş\" icazəsini əl ilə verin, parametr interfeysinə daxil olmaq üçün OK düyməsini klikləyin, \"MT Manager\" seçin və icazəni açın.</string>
     <string name="APKTOOL_RENAMED_0x7f12089e">Bir fayl meneceri olaraq, fayllar və media məcburi bir icazədir, xahiş edirəm MT-ə icazə verin.</string>
     <string name="APKTOOL_RENAMED_0x7f12089f">Bir fayl meneceri olaraq, fayllar və media məcburi bir icazədir, zəhmət olmasa tətbiq parametrlərində əl ilə aktivləşdirin.</string>
     <string name="APKTOOL_RENAMED_0x7f1208a0">Kök icazəsi tələb edin</string>
@@ -2370,7 +2370,7 @@ Rəqəm hissələrinə daha yaxşı oxunaqlılıq üçün alt xətt və ya boşl
     <string name="APKTOOL_RENAMED_0x7f120947">İcazələri dəyişdirin</string>
     <string name="APKTOOL_RENAMED_0x7f120948">İcazələr ayarlanır…</string>
     <string name="APKTOOL_RENAMED_0x7f120949">Üstünlüklər</string>
-    <string name="APKTOOL_RENAMED_0x7f12094a">"Qabıq (shell) icazəsi üçün sorğunun vaxtı bitdi. Siz Shizuku'nun proqram idarəetmə interfeysinə daxil olmağa cəhd edə, BF Manager-in icazəsini bağlaya və sonra BF Manager-i yenidən başladın."</string>
+    <string name="APKTOOL_RENAMED_0x7f12094a">"Qabıq (shell) icazəsi üçün sorğunun vaxtı bitdi. Siz Shizuku'nun proqram idarəetmə interfeysinə daxil olmağa cəhd edə, MT Manager-in icazəsini bağlaya və sonra MT Manager-i yenidən başladın."</string>
     <string name="APKTOOL_RENAMED_0x7f12094b">Qısa mətbuat</string>
     <string name="APKTOOL_RENAMED_0x7f12094c">Fərdi ikona funksiyası VIP tələb edir</string>
     <string name="APKTOOL_RENAMED_0x7f12094d">İkon</string>
@@ -2760,7 +2760,7 @@ Memarlıq: %3$s"</string>
     <string name="APKTOOL_RENAMED_0x7f120ac7">Giriş üçün tablardan istifadə edin</string>
     <string name="APKTOOL_RENAMED_0x7f120ac8">Girinti üçün boşluq əvəzinə \"\\t\" istifadə edin.</string>
     <string name="APKTOOL_RENAMED_0x7f120ac9">Hesabın icarəyə və istifadəyə verilməsi qaydaları</string>
-    <string name="APKTOOL_RENAMED_0x7f120aca">"BF Manager hesabları yalnız şəxsi istifadə üçündür. Hesabları ictimai şəkildə icarəyə və ya başqasının istifadəsinə vermək, yaxud mənfəət əldə etmək məqsədilə bir hesabın bir neçə şəxs tərəfindən birgə istifadəsini təşkil etmək və ya bunda iştirak etmək qəti qadağandır. Buraya Xianyu və Taobao kimi ticarət platformalarında, sosial qruplar və forumlar kimi açıq kanallarda bu cür xidmətləri elan etmək və ya təklif etmək daxildir, lakin bununla məhdudlaşmır. Pozuntu təsdiqləndikdə, müvafiq hesabları dondurmaq hüququnu özümüzdə saxlayırıq.
+    <string name="APKTOOL_RENAMED_0x7f120aca">"MT Manager hesabları yalnız şəxsi istifadə üçündür. Hesabları ictimai şəkildə icarəyə və ya başqasının istifadəsinə vermək, yaxud mənfəət əldə etmək məqsədilə bir hesabın bir neçə şəxs tərəfindən birgə istifadəsini təşkil etmək və ya bunda iştirak etmək qəti qadağandır. Buraya Xianyu və Taobao kimi ticarət platformalarında, sosial qruplar və forumlar kimi açıq kanallarda bu cür xidmətləri elan etmək və ya təklif etmək daxildir, lakin bununla məhdudlaşmır. Pozuntu təsdiqləndikdə, müvafiq hesabları dondurmaq hüququnu özümüzdə saxlayırıq.
 Belə pozuntuları bizə bildirin. Pozuntu təsdiqləndikdən sonra məlumat verən şəxsə bildirilmiş hesabın dəyərinə bərabər VIP aktivləşdirmə kodu hədiyyə edəcəyik."</string>
     <string name="APKTOOL_RENAMED_0x7f120acb">Hesab ayarı</string>
     <string name="APKTOOL_RENAMED_0x7f120acc">Aktivləşdirilir…</string>

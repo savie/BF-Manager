@@ -39,7 +39,7 @@
 Beberapa pengguna melaporkan bahwa permulaan sekali klik dapat menyebabkan sistem terhenti dan memulai ulang. Jika ini terjadi pada Anda, silakan pilih mulai manual."</string>
     <string name="APKTOOL_RENAMED_0x7f120024">Akun Anda telah dibekukan</string>
     <string name="APKTOOL_RENAMED_0x7f120025">Pengakuan</string>
-    <string name="APKTOOL_RENAMED_0x7f120026">Orang dan proyek sumber terbuka yang membantu pengembangan BF Manager.</string>
+    <string name="APKTOOL_RENAMED_0x7f120026">Orang dan proyek sumber terbuka yang membantu pengembangan MT Manager.</string>
     <string name="APKTOOL_RENAMED_0x7f120027">Buka sekarang</string>
     <string name="APKTOOL_RENAMED_0x7f120028">Catatan Aktivitas</string>
     <string name="APKTOOL_RENAMED_0x7f120029">Catatan Aktivitas (Beta)</string>
@@ -735,7 +735,7 @@ Perhatian! Daftar pengecualian hanya berlaku jika jalur pencarian kosong atau \"
     <string name="APKTOOL_RENAMED_0x7f1202f2">Peringatan berwarna merah akan muncul saat menghapus file jika Anda tidak memilih untuk memindahkannya ke recycle bin.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f3">Konfirmasi ganda sebelum keluar</string>
     <string name="APKTOOL_RENAMED_0x7f1202f4">Jika diaktifkan, Anda perlu mengklik tombol kembali dua kali untuk keluar.</string>
-    <string name="APKTOOL_RENAMED_0x7f1202f5">Gagal membuka antarmuka penyiapan. Silakan buka Pengaturan secara manual untuk mengaktifkan izin jendela mengambang untuk BF Manager.</string>
+    <string name="APKTOOL_RENAMED_0x7f1202f5">Gagal membuka antarmuka penyiapan. Silakan buka Pengaturan secara manual untuk mengaktifkan izin jendela mengambang untuk MT Manager.</string>
     <string name="APKTOOL_RENAMED_0x7f1202f6">Aktifkan jendela mengambang</string>
     <string name="APKTOOL_RENAMED_0x7f1202f7">Aktifkan riwayat</string>
     <string name="APKTOOL_RENAMED_0x7f1202f8">Aktifkan kaca pembesar</string>
@@ -1033,11 +1033,11 @@ Perhatian! Daftar pengecualian hanya berlaku jika jalur pencarian kosong atau \"
     <string name="APKTOOL_RENAMED_0x7f12041d">Membuat file arsc…</string>
     <string name="APKTOOL_RENAMED_0x7f12041e">Membuat file dex…</string>
     <string name="APKTOOL_RENAMED_0x7f12041f">Class yang akan diproses</string>
-    <string name="APKTOOL_RENAMED_0x7f120424">"BF Manager saat ini tidak tersedia di Google Play, dan kami tidak berencana merilisnya di sana.
+    <string name="APKTOOL_RENAMED_0x7f120424">"MT Manager saat ini tidak tersedia di Google Play, dan kami tidak berencana merilisnya di sana.
 
-Semua aplikasi yang saat ini ditawarkan sebagai “BF Manager” di Google Play adalah aplikasi palsu dan tidak terkait dengan kami. **Jangan membelinya**. Jika Anda sudah membayar, segera laporkan aplikasi tersebut dan ajukan pengembalian dana kepada Google Play.
+Semua aplikasi yang saat ini ditawarkan sebagai “MT Manager” di Google Play adalah aplikasi palsu dan tidak terkait dengan kami. **Jangan membelinya**. Jika Anda sudah membayar, segera laporkan aplikasi tersebut dan ajukan pengembalian dana kepada Google Play.
 
-Unduh BF Manager dari situs web resmi kami:
+Unduh MT Manager dari situs web resmi kami:
 **[mt.cc](https://mt.cc)**"</string>
     <string name="APKTOOL_RENAMED_0x7f120425">Waspadai aplikasi palsu di Google Play</string>
     <string name="APKTOOL_RENAMED_0x7f120426">Pemberian Gagal: %s</string>
@@ -1077,7 +1077,7 @@ Unduh BF Manager dari situs web resmi kami:
     <string name="APKTOOL_RENAMED_0x7f120449">hex</string>
     <string name="APKTOOL_RENAMED_0x7f12044a">Tersembunyi</string>
     <string name="APKTOOL_RENAMED_0x7f12044b">Hide address in sidebar</string>
-    <string name="APKTOOL_RENAMED_0x7f12044d">Setelah file disembunyikan, file tersebut tidak akan ditampilkan di BF Manager, tetapi masih ada. Untuk mengembalikan tampilan file, silahkan klik menu kanan atas - File tersembunyi - Edit file tersembunyi.</string>
+    <string name="APKTOOL_RENAMED_0x7f12044d">Setelah file disembunyikan, file tersebut tidak akan ditampilkan di MT Manager, tetapi masih ada. Untuk mengembalikan tampilan file, silahkan klik menu kanan atas - File tersembunyi - Edit file tersembunyi.</string>
     <string name="APKTOOL_RENAMED_0x7f12044e">Sembunyikan bahasa</string>
     <string name="APKTOOL_RENAMED_0x7f12044f">"Setelah penyimpanan lokal disembunyikan, hanya tidak ditampilkan di bilah samping, Anda masih dapat mengaksesnya melalui jalur (seperti bookmark), jika ingin mengembalikan tampilan, Anda perlu menambahkannya lagi.
 Apakah Anda ingin tetap menyembunyikan %s?"</string>
@@ -1886,7 +1886,7 @@ Perhatikan bahwa jika teks yang ingin Anda cari terganggu oleh hentian halaman, 
     <string name="APKTOOL_RENAMED_0x7f12077f">Plugin telah diterbitkan.</string>
     <string name="APKTOOL_RENAMED_0x7f120780">Plugin ini memerlukan Android API %d atau yang lebih tinggi</string>
     <string name="APKTOOL_RENAMED_0x7f120781">Plugin ini memerlukan Android %1$s (API %2$d) atau yang lebih tinggi</string>
-    <string name="APKTOOL_RENAMED_0x7f120782">Plugin ini memerlukan BF Manager dengan kode versi %d atau lebih tinggi. Versi Anda terlalu lama, silakan perbarui BF Manager!</string>
+    <string name="APKTOOL_RENAMED_0x7f120782">Plugin ini memerlukan MT Manager dengan kode versi %d atau lebih tinggi. Versi Anda terlalu lama, silakan perbarui MT Manager!</string>
     <string name="APKTOOL_RENAMED_0x7f120783">"Versi MT saat ini tidak mendukung SDK plugin, harap perbarui ke versi terbaru. 
  (SDK plugin: %1$d, dukungan maksimum: %2$d)"</string>
     <string name="APKTOOL_RENAMED_0x7f120784">Plugin SDK</string>
@@ -2177,7 +2177,7 @@ Jika Anda tidak menggunakan fungsi ganti, biarkan teks kosong"</string>
     <string name="APKTOOL_RENAMED_0x7f120899">Ganti yang asli</string>
     <string name="APKTOOL_RENAMED_0x7f12089a">Mengganti</string>
     <string name="APKTOOL_RENAMED_0x7f12089b">Batas penggantian</string>
-    <string name="APKTOOL_RENAMED_0x7f12089c">Untuk mengakses file di perangkat Anda, berikan izin \"Semua akses file secara manual kepada MT, klik OK untuk masuk ke antarmuka konfigurasi, pilih \"BF Manager dan aktifkan izin.</string>
+    <string name="APKTOOL_RENAMED_0x7f12089c">Untuk mengakses file di perangkat Anda, berikan izin \"Semua akses file secara manual kepada MT, klik OK untuk masuk ke antarmuka konfigurasi, pilih \"MT Manager dan aktifkan izin.</string>
     <string name="APKTOOL_RENAMED_0x7f12089d">Untuk kinerja operasi file yang lebih baik, berikan MT izin \"Akses semua file\" secara manual, klik OK untuk masuk ke antarmuka pengaturan, pilih \"Manajer MT\" dan buka otorisasi.</string>
     <string name="APKTOOL_RENAMED_0x7f12089e">Sebagai pengelola file, File dan media adalah izin yang sangat diperlukan, izinkan permintaan izin dari MT.</string>
     <string name="APKTOOL_RENAMED_0x7f12089f">Sebagai pengelola file, File dan media adalah izin yang sangat diperlukan, harap aktifkan secara manual di pengaturan aplikasi.</string>
@@ -2369,7 +2369,7 @@ Bagian numerik dapat ditambahkan garis bawah atau spasi untuk keterbacaan yang l
     <string name="APKTOOL_RENAMED_0x7f120947">Ubah Izin</string>
     <string name="APKTOOL_RENAMED_0x7f120948">Menyetel izin…</string>
     <string name="APKTOOL_RENAMED_0x7f120949">Preferensi</string>
-    <string name="APKTOOL_RENAMED_0x7f12094a">Permintaan izin shell habis. Anda dapat mencoba masuk ke antarmuka manajemen aplikasi Shizuku, menutup otorisasi BF Manager, lalu memulai ulang BF Manager.</string>
+    <string name="APKTOOL_RENAMED_0x7f12094a">Permintaan izin shell habis. Anda dapat mencoba masuk ke antarmuka manajemen aplikasi Shizuku, menutup otorisasi MT Manager, lalu memulai ulang MT Manager.</string>
     <string name="APKTOOL_RENAMED_0x7f12094b">Tekan sebentar</string>
     <string name="APKTOOL_RENAMED_0x7f12094c">Fungsi ikon khusus memerlukan VIP</string>
     <string name="APKTOOL_RENAMED_0x7f12094d">Icon</string>
@@ -2759,7 +2759,7 @@ Arsitektur: %3$s"</string>
     <string name="APKTOOL_RENAMED_0x7f120ac7">Gunakan tab untuk lekukan</string>
     <string name="APKTOOL_RENAMED_0x7f120ac8">Menggunakan \"\\t\" alih-alih spasi untuk lekukan.</string>
     <string name="APKTOOL_RENAMED_0x7f120ac9">Kebijakan peminjaman akun</string>
-    <string name="APKTOOL_RENAMED_0x7f120aca">"Akun BF Manager hanya untuk penggunaan pribadi. Menyewakan atau meminjamkan akun secara terbuka, serta mengatur atau berpartisipasi dalam penggunaan satu akun oleh banyak orang untuk memperoleh keuntungan, dilarang keras. Ini termasuk, tetapi tidak terbatas pada, mengiklankan atau menawarkan layanan tersebut di platform jual beli seperti Xianyu dan Taobao, serta melalui saluran publik seperti grup sosial dan forum. Setelah pelanggaran terbukti, kami berhak membekukan akun yang terlibat.
+    <string name="APKTOOL_RENAMED_0x7f120aca">"Akun MT Manager hanya untuk penggunaan pribadi. Menyewakan atau meminjamkan akun secara terbuka, serta mengatur atau berpartisipasi dalam penggunaan satu akun oleh banyak orang untuk memperoleh keuntungan, dilarang keras. Ini termasuk, tetapi tidak terbatas pada, mengiklankan atau menawarkan layanan tersebut di platform jual beli seperti Xianyu dan Taobao, serta melalui saluran publik seperti grup sosial dan forum. Setelah pelanggaran terbukti, kami berhak membekukan akun yang terlibat.
 Silakan laporkan pelanggaran tersebut kepada kami. Setelah terbukti, kami akan memberikan kode aktivasi VIP yang setara dengan nilai akun yang dilaporkan kepada pelapor."</string>
     <string name="APKTOOL_RENAMED_0x7f120acb">Pengaturan akun</string>
     <string name="APKTOOL_RENAMED_0x7f120acc">Aktivasi…</string>
@@ -2928,7 +2928,7 @@ Mohon segera ubah kata sandi Anda."</string>
     <string name="APKTOOL_RENAMED_0x7f120b70">Dekripsi string dex</string>
     <string name="APKTOOL_RENAMED_0x7f120b71">More than that >></string>
     <string name="APKTOOL_RENAMED_0x7f120b72">Pemberitahuan VIP</string>
-    <string name="APKTOOL_RENAMED_0x7f120b73">"* Anda dapat menggunakan semua fungsi VIP BF Manager setelah Anda mengaktifkan VIP. Akun tidak terikat ke ponsel. Anda dapat masuk untuk digunakan di ponsel apa pun.
+    <string name="APKTOOL_RENAMED_0x7f120b73">"* Anda dapat menggunakan semua fungsi VIP MT Manager setelah Anda mengaktifkan VIP. Akun tidak terikat ke ponsel. Anda dapat masuk untuk digunakan di ponsel apa pun.
 * Secara default, satu akun hanya dapat masuk ke satu klien dalam satu waktu. Mengaktifkan masuk multiperangkat (dibeli terpisah) akan menambah slot masuk.
 * Dilarang menyewakan atau meminjamkan akun melalui saluran publik seperti Xianyu, Taobao, dan grup obrolan, atau berbagi akun dengan banyak orang untuk memperoleh keuntungan. Akun yang melanggar dapat dibekukan.
 * Konten VIP milik barang virtual, setelah pembelian tidak mendukung operasi pengembalian dana.
