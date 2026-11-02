@@ -12,8 +12,8 @@ import re
 import sys
 from pathlib import Path
 
-TAG_RE = re.compile(r"(<\\/?)([^\\s<>/]+)(?=[\\s/>])")
-CLASS_RE = re.compile(r"(?m)^\\s*\\.class\\s+[^\\r\\n]*?(L[^;\\s]+;)")
+TAG_RE = re.compile(r"(<\/?)([^\s<>/]+)(?=[\s/>])")
+CLASS_RE = re.compile(r"(?m)^\s*\.class\s+[^\r\n]*?(L[^;\s]+;)")
 
 
 def safe_descriptor(descriptor: str) -> str:
