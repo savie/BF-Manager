@@ -16,6 +16,15 @@ PROJECT = REPO_ROOT / "bf_manager"
 TAG_RE = re.compile(r"<(/?)([^\\s/>]+)")
 ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\\Z")
 
+def read_utf8_xml(path: Path) -> str | None:
+    """Read textual UTF-8 XML; ignore binary/non-UTF-8 payloads safely."""
+    data = path.read_bytes()
+    try:
+        return data.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        print(f"Skipping non-UTF-8 XML payload: {path.relative_to(REPO_ROOT)}", file=sys.stderr)
+        return None
+
 
 def main() -> int:
     if not (PROJECT / "apktool.yml").is_file():
@@ -24,7 +33,9 @@ def main() -> int:
     xml_files = sorted(PROJECT.rglob("*.xml"))
     affected_names: set[str] = set()
     for path in xml_files:
-        source = path.read_text(encoding="utf-8")
+        source = read_utf8_xml(path)
+        if source is None:
+            continue
         for _, name in TAG_RE.findall(source):
             if name.startswith("l.") and not ASCII_XML_NAME.fullmatch(name):
                 affected_names.add(name)
@@ -78,7 +89,9 @@ def main() -> int:
 
     # Resource XML element names must match the renamed JVM class names.
     for path in xml_files:
-        source = path.read_text(encoding="utf-8")
+        source = read_utf8_xml(path)
+        if source is None:
+            continue
         updated = source
         for old_name, new_name in mapping.items():
             updated = updated.replace(old_name, new_name)
