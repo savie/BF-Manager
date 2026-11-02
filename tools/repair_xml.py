@@ -56,8 +56,21 @@ def main() -> int:
             if not tag.startswith(("?", "!")) and not tag.isascii():
                 tag_names.add(tag)
 
-    if not tag_names:
-        print("No non-ASCII XML element names found; nothing to rename.")
+    manifest_path = args.smali / "AndroidManifest.xml"
+    manifest_data = ""
+    manifest_class_names: set[str] = set()
+    if manifest_path.is_file():
+        try:
+            manifest_data = read_text(manifest_path)
+        except (OSError, UnicodeError) as exc:
+            print(f"Cannot read {manifest_path}: {exc}", file=sys.stderr)
+            return 1
+        for value in re.findall(r'android:(?:name|appComponentFactory|targetActivity)="([^"]+)"', manifest_data):
+            if not value.isascii() and "." in value:
+                manifest_class_names.add(value)
+
+    if not tag_names and not manifest_class_names:
+        print("No non-ASCII XML or manifest class names found; nothing to rename.")
         return 0
 
     # Build descriptor -> defining file for every class, but do not rename
@@ -92,6 +105,19 @@ def main() -> int:
             continue
         class_map[descriptor] = replacement
         tag_map[tag] = replacement[1:-1].replace("/", ".")
+
+    manifest_class_map: dict[str, str] = {}
+    for class_name in sorted(manifest_class_names):
+        descriptor = "L" + class_name.replace(".", "/") + ";"
+        if descriptor not in definitions:
+            unresolved.append(class_name)
+            continue
+        replacement = safe_descriptor(descriptor)
+        if replacement == descriptor:
+            unresolved.append(class_name)
+            continue
+        class_map[descriptor] = replacement
+        manifest_class_map[class_name] = replacement[1:-1].replace("/", ".")
 
     if unresolved:
         print("Cannot safely map XML element(s) to smali class definitions:", file=sys.stderr)
@@ -150,7 +176,15 @@ def main() -> int:
             path.write_text(updated, encoding="utf-8", newline="")
             changed_files += 1
 
-    print(f"Renamed {len(class_map)} XML-referenced smali class(es); updated {changed_files} file(s).")
+    if manifest_data and manifest_class_map:
+        updated_manifest = manifest_data
+        for old, new in manifest_class_map.items():
+            updated_manifest = updated_manifest.replace(f'"{old}"', f'"{new}"')
+        if updated_manifest != manifest_data:
+            manifest_path.write_text(updated_manifest, encoding="utf-8", newline="")
+            changed_files += 1
+
+    print(f"Renamed {len(class_map)} XML/manifest-referenced smali class(es); updated {changed_files} file(s).")
     return 0
 
 
