@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Normalize non-ASCII XML class names and keep Smali references synchronized.
+"""Normalize obfuscated custom-view class names so AAPT2 can parse resource XML.
 
-Custom view tags, <view class="..."> references, and android:name component
-attributes are normalized together because AAPT2 rejects non-Java class names.
+The rename is semantics-preserving: each affected Smali class and every textual
+Smali/XML reference is renamed together. The original class implementation and
+inheritance are left untouched.
 """
 from __future__ import annotations
 
@@ -13,10 +14,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PROJECT = REPO_ROOT / "bf_manager"
 TAG_RE = re.compile(r"<(/?)([^\s/>]+)")
-VIEW_CLASS_RE = re.compile(r"""(\bclass\s*=\s*["'])(l\.[^"']+)(["'])""")
-COMPONENT_CLASS_RE = re.compile(r"""(android:name\s*=\s*["'])(l\.[^"']+)(["'])""")
+CLASS_REF_RE = re.compile(r"""(?<![A-Za-z0-9_$])l\.[^\s"'<>/]+""")
 ASCII_XML_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_.:-]*\Z")
-
 
 def read_utf8_xml(path: Path) -> str | None:
     """Read textual UTF-8 XML; ignore binary/non-UTF-8 payloads safely."""
@@ -28,50 +27,24 @@ def read_utf8_xml(path: Path) -> str | None:
         return None
 
 
-def custom_view_names(source: str) -> set[str]:
-    """Return class names used by XML tags, custom-view attrs, and manifest components."""
-    names: set[str] = set()
-    for match in TAG_RE.finditer(source):
-        name = match.group(2)
-        if name.startswith("l.") and not ASCII_XML_NAME.fullmatch(name):
-            names.add(name)
-    for pattern in (VIEW_CLASS_RE, COMPONENT_CLASS_RE):
-        for match in pattern.finditer(source):
-            name = match.group(2)
-            if not ASCII_XML_NAME.fullmatch(name):
-                names.add(name)
-    return names
-
-
-def rewrite_xml(source: str, mapping: dict[str, str]) -> str:
-    """Rewrite only custom-view tag and <view class> references."""
-    source = TAG_RE.sub(
-        lambda match: f"<{match.group(1)}{mapping.get(match.group(2), match.group(2))}",
-        source,
-    )
-    for pattern in (VIEW_CLASS_RE, COMPONENT_CLASS_RE):
-        source = pattern.sub(
-            lambda match: f"{match.group(1)}{mapping.get(match.group(2), match.group(2))}{match.group(3)}",
-            source,
-        )
-    return source
-
-
 def main() -> int:
     if not (PROJECT / "apktool.yml").is_file():
         raise SystemExit("bf_manager/apktool.yml not found; run from the repository checkout")
 
-    # Include manifest component class names: AAPT2 requires valid Java identifiers.
-    # Every renamed component is also rewritten in Smali references below.
     xml_files = sorted(PROJECT.rglob("*.xml"))
     affected_names: set[str] = set()
     for path in xml_files:
         source = read_utf8_xml(path)
-        if source is not None:
-            affected_names.update(custom_view_names(source))
+        if source is None:
+            continue
+        # Include class names in element tags AND manifest attributes such as
+        # application android:name, provider android:name, and activity names.
+        for name in CLASS_REF_RE.findall(source):
+            if not ASCII_XML_NAME.fullmatch(name):
+                affected_names.add(name)
 
     if not affected_names:
-        print("No non-ASCII custom-view XML class names need normalization.")
+        print("No non-ASCII obfuscated l.* XML class names need normalization.")
         return 0
 
     smali_roots = sorted(p for p in PROJECT.glob("smali*") if p.is_dir())
@@ -117,18 +90,20 @@ def main() -> int:
             raise SystemExit(f"Refusing to overwrite existing Smali file: {new_path}")
         path.rename(new_path)
 
+    # Resource XML element names must match the renamed JVM class names.
     for path in xml_files:
         source = read_utf8_xml(path)
         if source is None:
             continue
-        updated = rewrite_xml(source, mapping)
+        updated = source
+        for old_name, new_name in mapping.items():
+            updated = updated.replace(old_name, new_name)
         if updated != source:
             path.write_text(updated, encoding="utf-8", newline="\n")
 
-    print(f"Normalized {len(mapping)} custom-view XML class names:")
+    print(f"Normalized {len(mapping)} obfuscated XML class names:")
     for old_name, new_name in sorted(mapping.items()):
         print(f"  {old_name} -> {new_name}")
-    print("Manifest component names and Smali references were normalized consistently.")
     return 0
 
 
