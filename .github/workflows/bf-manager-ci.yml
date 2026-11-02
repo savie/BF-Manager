@@ -123,30 +123,23 @@ jobs:
           set -euo pipefail
           KEYSTORE="$RUNNER_TEMP/bf-manager-debug.keystore"
 
-          if [ -n "${BF_DEBUG_KEYSTORE_BASE64:-}" ]; then
-            echo "Using BF_DEBUG_KEYSTORE_BASE64 repository secret."
-            if ! printf '%s' "$BF_DEBUG_KEYSTORE_BASE64" | base64 --decode > "$KEYSTORE"; then
-              echo "::error::BF_DEBUG_KEYSTORE_BASE64 is not valid Base64."
-              exit 1
-            fi
-            if [ ! -s "$KEYSTORE" ]; then
-              echo "::error::Decoded keystore is empty."
-              exit 1
-            fi
-          else
-            echo "::warning::BF_DEBUG_KEYSTORE_BASE64 is not set. Generating a temporary debug keystore for this build."
-            keytool -genkeypair -noprompt \
-              -keystore "$KEYSTORE" \
-              -storepass android \
-              -keypass android \
-              -alias androiddebugkey \
-              -keyalg RSA \
-              -keysize 2048 \
-              -validity 10000 \
-              -dname "CN=Android Debug,O=Android,C=US"
+          if [ -z "${BF_DEBUG_KEYSTORE_BASE64:-}" ]; then
+            echo "::error::Missing repository secret BF_DEBUG_KEYSTORE_BASE64. Refusing to generate a temporary signing key."
+            exit 1
           fi
 
-          test -s "$KEYSTORE"
+          if ! printf '%s' "$BF_DEBUG_KEYSTORE_BASE64" | base64 --decode > "$KEYSTORE"; then
+            echo "::error::BF_DEBUG_KEYSTORE_BASE64 is not valid Base64."
+            exit 1
+          fi
+
+          if [ ! -s "$KEYSTORE" ]; then
+            echo "::error::Decoded keystore is empty."
+            exit 1
+          fi
+
+          keytool -list -keystore "$KEYSTORE" -storepass android -alias androiddebugkey >/dev/null
+          keytool -list -v -keystore "$KEYSTORE" -storepass android -alias androiddebugkey | grep -E 'SHA1:|SHA-1:'
           echo "CI_KEYSTORE=$KEYSTORE" >> "$GITHUB_ENV"
 
       - name: Align and sign APK
