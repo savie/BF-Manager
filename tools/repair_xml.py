@@ -193,10 +193,31 @@ def prepare(res_dir: Path, mapping_path: Path) -> int:
         archive_path = path.relative_to(res_dir.parent).as_posix()
         manifest[archive_path] = {token: old for old, token in replacements.items()}
 
+    # AAPT2 validates class names in the decoded text manifest too.
+    # Use temporary syntactically valid tokens, then restore the original
+    # class-name strings in the compiled binary AndroidManifest.xml.
+    manifest_path = res_dir.parent / "AndroidManifest.xml"
+    if manifest_path.is_file():
+        original = read_text(manifest_path)
+        replacements: dict[str, str] = {}
+        attr_re = re.compile(r'(android:(?:name|appComponentFactory|targetActivity)=")([^"]+)(")')
+        for match in attr_re.finditer(original):
+            value = match.group(2)
+            if not value.isascii() and value not in replacements:
+                serial += 1
+                replacements[value] = f"BFXmlClass{serial:05d}"
+        updated = original
+        for old_value, token in replacements.items():
+            updated = updated.replace('"' + old_value + '"', '"' + token + '"')
+        if updated != original:
+            manifest_path.write_text(updated, encoding="utf-8", newline="")
+            manifest["AndroidManifest.xml"] = {token: old_value for old_value, token in replacements.items()}
+
     mapping_path.parent.mkdir(parents=True, exist_ok=True)
     mapping_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Prepared {sum(len(v) for v in manifest.values())} temporary XML tag token(s) across {len(manifest)} resource file(s).")
-    print("No Smali class, manifest class name, JNI symbol, or native library was changed.")
+    total = sum(len(v) for v in manifest.values())
+    print(f"Prepared {total} temporary XML/class-name token(s) across {len(manifest)} compiled XML file(s).")
+    print("No Smali class definition, descriptor, JNI symbol, or native library was changed.")
     return 0
 
 
