@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    const-string v1, "bin.mt.plus.html-preview"
+    const-string v1, "bin.bf.plus.html-preview"
 
     .line 104
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -155,7 +155,7 @@
 
     if-eqz v0, :cond_2
 
-    const-string v0, "bin.mt.plus.html-preview"
+    const-string v0, "bin.bf.plus.html-preview"
 
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
