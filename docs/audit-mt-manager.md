@@ -290,3 +290,19 @@ Baseline audit kini memisahkan dua versi: APK di Library adalah MT Manager 2.26.
 **Status:** siap mulai membuat fondasi P0 dan spesifikasi modul BF Manager. Belum siap mengklaim parity fitur penuh. Sebelum modul kompleks (APK/DEX/resource editing, native filesystem, root/Shizuku) dibangun, audit Smali/call-site serta verifikasi runtime masih wajib.
 
 BF Manager harus menjadi implementasi Kotlin independen. Gunakan hasil audit untuk menentukan fitur/kontrak dan menguji kompatibilitas; jangan memasukkan kode hasil dekompilasi MT, native binaries, signing material, private API, atau asset tanpa hak redistribusi ke source BF Manager.
+
+
+## Pembaruan audit mendalam (2026-11-04)
+
+Audit lanjutan menelusuri secara langsung wrapper JNI Java/Smali dan resource bookmark. File decode `master/reference/apktool/apktool.yml` menunjukkan MT Manager 2.26.11; JNI declarations pada Features/Features2/Features3 di Smali cocok dengan Java wrapper JADX.
+
+Temuan baru:
+- `libmt1`: analyze, deleteFile, getABI, uid2name.
+- `libmt2`: init dengan empat String dan installSeccomp.
+- `libmt3`: path metadata/delete/rename/readlink/listGarbledFileNames dan handle-based IO read/write/seek/tell/length/truncate/sync.
+- Wrapper stat memakai `long[3]`, path UTF-8, dan errno-style return code.
+- Resource strings membuktikan add selected files to bookmarks dan Add group; schema persistence belum diketahui.
+
+PENTING: E3 yang tercapai hanya interface-level untuk native wrapper. Belum ada bukti end-to-end caller, provider, root/SAF semantics, bookmark persistence, atau runtime behavior. Jangan klaim mapping filesystem selesai. Kontrak BF harus SAF-first, URI opaque, capability-aware, streaming, explicit conflict policy, dan copy-verify-delete untuk move lintas provider.
+
+Detail dan backlog: `docs/audit-filesystem-jni-permissions-bookmarks.md`.
