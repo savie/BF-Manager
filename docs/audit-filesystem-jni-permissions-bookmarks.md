@@ -668,3 +668,15 @@ Class `l/ۧܿ֫` adalah subclass konkret dari abstract server `l/֨ܿᩴ`. Ia me
 Abstract server `l/֨ܿᩴ.ۙ(boolean)` memilih LocalServerSocket atau ServerSocket, menjalankan acceptor pada thread terpisah, lalu menunggu session hasil handshake. Callback manager mengirim identitas endpoint kepada pihak pemanggil. Jika LocalSocket tidak menghasilkan session dan kondisi fallback terpenuhi, manager mencoba ServerSocket; ini menunjukkan fallback adalah bagian dari lifecycle koneksi, bukan transport yang selalu aktif bersamaan.
 
 Batasan: method callback `ۙ(String, boolean)` milik `l/ۧܿ֫` masih obfuscated dan belum direkonstruksi menjadi command line yang dapat dibaca. Karena itu, belum dapat dipastikan dari bukti ini saja apakah peer yang menerima socket name/port adalah root daemon, privilege bridge, atau komponen lain.
+
+
+### 17.5 Provider interface dan connection manager
+
+JADX cross-check mengidentifikasi:
+- `l/InterfaceC23405` adalah interface capability manager dengan tiga boolean method.
+- `l/C11762` (Smali class `l/ۧܿ֫`) merupakan implementor konkret dan subclass server `l/֨ܿᩴ`.
+- Static manager `l/C4013` (Smali `l/ۘ۟ᩴ`) menyimpan provider aktif pada field `f13713`; `m12986()` mengembalikan provider tersebut, `m12978(provider)` mengaturnya, dan `m12983()` menguji keberadaannya.
+- Tiga capability boolean implementor `C11762` diteruskan ke helper state `C7756`; method server abstract juga memanggil capability method implementor untuk memilih local socket atau TCP fallback.
+- Connection manager `C4319` meminta session dengan `m4908(true)`; manager `C7742` meminta session dengan `m4908(false)`. Keduanya memakai session protocol yang sama tetapi memilih parameter transport berbeda.
+
+JADX tidak berhasil merekonstruksi method utama `C11762.mo4910(String, boolean)` dan `mo4909(int)`; Smali tetap sumber utama. Karena helper `C7756` dan pemilik state capability belum ditelusuri sampai deklarasi/runtime provider, belum aman memberi label implementasi ini sebagai Root, Shizuku, atau privilege provider tertentu hanya dari nama class.
