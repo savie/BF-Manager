@@ -158,11 +158,6 @@ Manifest declarations alone do not prove usage. Each dependency must be connecte
 | Runtime tests | Not performed |
 | BF implementation | Not started |
 
-## 6. Next audit sequence
+## 6. Status dan tindak lanjut
 
-1. Extract all string resources and cluster feature names systematically; map resource IDs to Smali references.
-2. Trace the highest-impact workflows: file operations, archive, APK build/install, DEX/Smali editor.
-3. Trace bookmark repository and import/export/backup serialization.
-4. Trace network storage protocol implementations and credential handling.
-5. Trace terminal/root/shell and plugin execution boundaries.
-6. Build a feature-by-feature parity matrix with evidence file, method, expected behavior, test case, and status.
+Seluruh daftar dalam dokumen ini merupakan discovery berbasis resource (E2), bukan bukti runtime atau implementasi. Penelusuran call-site, permission, protocol, dan workflow dilanjutkan berdasarkan [status audit aktif](audit-follow-up.md). Jangan membuat backlog kedua di dokumen katalog ini.
