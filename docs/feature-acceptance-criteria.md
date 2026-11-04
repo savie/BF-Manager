@@ -88,3 +88,15 @@ Untuk setiap Feature ID dokumentasikan:
 Jangan menghilangkan fitur karena membutuhkan permission. Minta izin just-in-time. Jangan meminta izin yang tidak relevan saat onboarding. Manifest BF harus mencakup seluruh permission yang diperlukan implementasi BF.
 
 Release tidak boleh disebut parity 1:1 sebelum seluruh Feature ID diimplementasikan dan diuji, termasuk archive, APK/signing/install, DEX, resources, editor, viewer, network, system integration, plugin, dan backup. Batasan platform harus spesifik pada perangkat/API dan disetujui; bukan alasan diam-diam menghapus fitur.
+
+
+## Acceptance criteria tambahan MT Manager v2.26.11
+
+| Feature ID | Acceptance criteria BF Manager | Minimum test | Catatan |
+|---|---|---|---|
+| AR-05 | Baca multi-part TAR secara streaming, urutkan part secara deterministik, dan laporkan part hilang/duplikat | complete set, missing part, duplicate part, wrong order, truncated last part, cancel | Tidak boleh menghasilkan ekstraksi sukses dari payload terpotong |
+| ED-03 | HTML/Markdown preview mendukung search, file selection, root selection, dan konfigurasi ask/edit/preview per tipe file | malicious HTML, local file boundary, search, missing asset, mode persistence, rotate | Isolasi WebView dan file access wajib diuji |
+| ED-04 | HEX comparator menampilkan dua file, diff offset/byte, synchronized navigation, edit, dan explicit save | identical, insertion/deletion, large files, overlapping edits, cancel, save failure | Hex editor tunggal tidak memenuhi comparator |
+| SY-05 | Activity recorder dan layout inspector merekam event/hierarchy sesuai capability yang diberikan dan dapat berhenti/ekspor | permission denied/revoked, app switch, sensitive-window handling, lifecycle, export | Matriks Accessibility/Usage/Root/Shizuku harus ditentukan sebelum implementasi |
+| AP-05 | User dapat memilih jalur instalasi sistem atau adapter Root/Shizuku yang tersedia; hasil install diverifikasi | no adapter, denied, user cancel, signature conflict, split APK, install failure | Jangan bypass konfirmasi sistem atau menyamarkan kegagalan |
+| MCP-01 | MCP server memiliki start/stop eksplisit, tool schemas tervalidasi, scope capability, bounded file transfer, real-time logs dan redaction | malformed tool args, unauthorized call, large transfer, disconnect, concurrent request, log secret scan | Bind address dan authentication policy harus disetujui sebelum exposure jaringan |
