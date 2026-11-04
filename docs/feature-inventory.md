@@ -300,3 +300,26 @@ Strata belum dibuktikan memiliki semua fitur MT. Khususnya UI Analysis, MCP serv
 ### MCP SDK reference
 
 [modelcontextprotocol/kotlin-sdk](https://github.com/modelcontextprotocol/kotlin-sdk) adalah SDK Kotlin resmi dengan source/build project. File LICENSE menyatakan transisi MIT ke Apache-2.0; sebagian kontribusi lama yang belum memberi persetujuan relicensing tetap MIT. Lisensi perlu dipastikan pada exact revision dan modul yang dipakai. SDK ini menyediakan fondasi protocol, bukan aplikasi MCP Android siap pakai. Repository `YogandherMurali/Mobile-MCP-Server` tidak dimasukkan sebagai implementasi Android karena tree yang diperiksa hanya berisi README/docs dan tidak menunjukkan source/build app Android.
+
+### Tambahan kandidat OSS terverifikasi melalui GitHub source tree
+
+| Domain | Repository | Lisensi terdeteksi | Bukti source/build | Peran yang dapat dievaluasi |
+|---|---|---|---|---|
+| ARSC/AXML | [REAndroid/ARSCLib](https://github.com/REAndroid/ARSCLib) | Apache-2.0 | Java source, Gradle build, LICENSE; 1.099 file Java/Kotlin terdeteksi pada tree | Binary Android resources read/write; kandidat inti untuk parser/editor ARSC/AXML. Tetap wajib round-trip test pada fixture MT. |
+| APKS/App Bundle | [google/bundletool](https://github.com/google/bundletool) | Apache-2.0 | Java source, Gradle build, LICENSE; 664 file Java/Kotlin | Split APK set, Android App Bundle/APKS tooling; evaluasi embedding vs subprocess/CLI dan ukuran dependency. |
+| Root bridge | [topjohnwu/libsu](https://github.com/topjohnwu/libsu) | Apache-2.0 | Java/Kotlin source, Gradle build, LICENSE; 54 source files | Root shell/service integration; adapter opsional, tidak menggantikan Shizuku. |
+| Media playback | [androidx/media](https://github.com/androidx/media) | Apache-2.0 | Java/Kotlin source, Gradle build, LICENSE; 2.841 source files | Media3/ExoPlayer audio/video playback, playlist, subtitle dan session controls. |
+| SFTP/SSH | [hierynomus/sshj](https://github.com/hierynomus/sshj) | Apache-2.0 | Java source, Gradle build, LICENSE; 388 source files | SSH/SFTP client; host-key verification dan auth policy tetap harus diuji. |
+| WebDAV | [bitfireAT/dav4jvm](https://github.com/bitfireAT/dav4jvm) | MPL-2.0 | Kotlin/Java source, Gradle build, LICENSE; 122 source files | WebDAV client; MPL-2.0 compatibility review diperlukan. |
+| FTP server | [apache/mina-ftpserver](https://github.com/apache/mina-ftpserver) | Apache-2.0 | Java source, Maven build, LICENSE; 333 source files | Embedded FTP server; audit lifecycle, TLS/passive ports dan Android compatibility. |
+| S3-compatible storage | [aws/aws-sdk-java-v2](https://github.com/aws/aws-sdk-java-v2) | Apache-2.0 | Java source, Gradle build, LICENSE; 5.505 source files | S3/cloud storage adapter; jangan membawa seluruh SDK bila modular service/client cukup. |
+| Google Drive API | [googleapis/google-api-java-client](https://github.com/googleapis/google-api-java-client) | Apache-2.0 | Java source, Gradle/Maven build, LICENSE; 162 source files | Client foundation; pilih Drive API module dan OAuth scope minimal, bukan akses semua akun. |
+
+Catatan pengecualian: [hierynomus/smbj](https://github.com/hierynomus/smbj) memiliki source Java dan Gradle build, tetapi pemeriksaan tree pada snapshot ini tidak menemukan file LICENSE yang jelas dan GitHub metadata memberi NOASSERTION. Jangan masukkan ke dependency BF sampai provenance dan lisensinya dapat dibuktikan.
+
+### Pembagian kategori agar referensi tidak salah dipakai
+- **Aplikasi referensi:** Strata, MaterialFiles, SentryFileManager, Files. Pelajari alur UI, arsitektur dan implementasi; jangan anggap seluruh aplikasi dapat dicopy atau langsung cocok dengan BF.
+- **Engine/parser:** Apktool, JADX, smali/dexlib2, ARSCLib, bundletool, Commons Compress, libarchive. Bungkus dengan adapter BF dan uji input/output.
+- **UI/library Android:** Sora Editor, Media3, Shizuku, libsu. Integrasikan hanya modul yang diperlukan.
+- **Network providers:** SSHJ, dav4jvm, Apache MINA FTPServer, AWS SDK, Google API client. Setiap protokol wajib punya test conformance dan credential storage policy.
+- **Protocol SDK:** Kotlin MCP SDK. SDK bukan MCP server BF siap pakai; tool handlers, permissions, transport, authentication dan UI lifecycle harus dibuat sendiri.
