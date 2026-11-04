@@ -167,17 +167,17 @@ Status pada bagian historis sebelumnya tetap dipertahankan sebagai catatan waktu
 | AUD-01R | Reflection dan dynamic invocation | Partial | Scan statis seluruh 33.491 Smali tidak menemukan bukti eksplisit reflection/MethodHandle ke Features3. Reflection umum ditemukan; string decoder/dynamic DEX/native registration belum tertutup. Lihat §12. |
 | AUD-02 | Native Filesystem Semantics | Partial | Path operations, handle I/O (read/write/fsync/lseek/fstat/ftruncate), dan listGarbledFileNames telah dianalisis pada arm64-v8a. Cross-ABI, runtime, permission chain, serta error/race verification masih terbuka. Lihat §13 dan §15. |
 | AUD-03 | ELF Inventory | Awal selesai | Empat ABI libmt3.so telah diinventarisasi pada tingkat ELF metadata, exports, imports, Build ID, dan SHA-256. |
-| AUD-03R | Disassembly libmt3.so | Partial | arm64-v8a startMTIO dan receiveFdResponse telah dibaca awal; helper MTIO dan SCM_RIGHTS teridentifikasi. Command/state machine dan cross-ABI belum selesai. Lihat §14. |
-| AUD-04 | Permission Mapping | Pending | Telusuri caller/provider/factory hingga permission dan capability backend. |
+| AUD-03R | Disassembly libmt3.so | Partial | startMTIO/receiveFdResponse, SCM_RIGHTS, PFD handoff, server LocalSocket/TCP, serta cross-ABI exports/imports terpetakan. Helper command/state machine, asal argumen worker, peer launcher, dan cross-ABI instruction comparison belum selesai. Lihat §14, §16–17. |
+| AUD-04 | Permission Mapping | Partial | Transport interface, LocalSocket FD capability, TCP fallback, LocalServerSocket/ServerSocket acceptor, dan guard Android/data/obb API 30+ terpetakan. Upstream peer, privilege context, permission/provider chain masih terbuka. Lihat §16–17. |
 | AUD-05 | Feature Inventory | Pending | Sinkronkan Feature ID dan evidence hanya setelah audit caller/permission cukup; jangan klaim parity dari string/resource saja. |
 
 ### Urutan kerja berikutnya
 
-1. Selesaikan penelusuran decoder string dan dynamic loading yang relevan terhadap Features3 (AUD-01R), dengan scope pada jalur filesystem/MTIO.
-2. Selesaikan bagian AUD-02 yang belum dibaca: kontrak newStringUTF, error-path/race review, dan perbandingan hasil arm64 dengan tiga ABI lain.
-3. Lanjutkan AUD-03R: trace asal kedua argumen startMTIO dari constructor/worker caller, rekonstruksi command/state machine helper MTIO, lifecycle socket dan descriptor, lalu bandingkan ABI lainnya.
-4. Telusuri factory ParcelFileDescriptor, asal socket/descriptor, caller, dan permission/capability chain (AUD-04).
-5. Baru setelah evidence caller dan permission terkumpul, perbarui Feature Inventory dan acceptance criteria (AUD-05).
+1. Lanjutkan AUD-01R secara terarah: telusuri string decoder dan dynamic loading hanya pada class yang membangun/menjalankan worker MTIO; jangan audit seluruh reflection call-site tanpa target.
+2. Selesaikan AUD-02: kontrak newStringUTF, error-path/race review, dan perbandingan instruction-level arm64 dengan ABI lain.
+3. Lanjutkan AUD-03R: temukan pembentuk String[] worker (khusus elemen 1/2), peer launcher yang menerima socket name/port, lalu rekonstruksi command/state machine helper MTIO dan lifecycle descriptor.
+4. Lanjutkan AUD-04: telusuri implementor/caller interface l/᩹۟ᩴ, pemanggil LocalServerSocket setup, proses peer, privilege context, serta permission/provider chain.
+5. Setelah evidence caller dan permission cukup, sinkronkan Feature Inventory dan acceptance criteria (AUD-05).
 
 ### Catatan eksekusi
 
