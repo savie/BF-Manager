@@ -680,3 +680,81 @@ JADX cross-check mengidentifikasi:
 - Connection manager `C4319` meminta session dengan `m4908(true)`; manager `C7742` meminta session dengan `m4908(false)`. Keduanya memakai session protocol yang sama tetapi memilih parameter transport berbeda.
 
 JADX tidak berhasil merekonstruksi method utama `C11762.mo4910(String, boolean)` dan `mo4909(int)`; Smali tetap sumber utama. Karena helper `C7756` dan pemilik state capability belum ditelusuri sampai deklarasi/runtime provider, belum aman memberi label implementasi ini sebagai Root, Shizuku, atau privilege provider tertentu hanya dari nama class.
+
+
+## 18. Penelusuran helper capability C7756 dan backend shell (AUD-04, 2026-11-04)
+
+### 18.1 Identitas helper dan sumber evidence
+
+JADX mengidentifikasi class `l/C7756` sebagai class Smali `l/۟۠ۧ` pada DEX `classes3`. Class ini bukan sekadar capability flag: ia mengelola lifecycle backend shell, pemilihan backend, proses prewarm/recovery, state koneksi, serta penulisan executable helper `mtio`.
+
+Bukti utama berasal dari `reference/jadx/sources/l/C7756.java`, lalu dikorelasikan dengan pemanggil Smali/JADX `C11762`, `C5556`, `C24948`, `C4319`, dan `C7742`. Karena sebagian method obfuscated dan control-flow JADX tidak selalu utuh, pemetaan nama method di bawah dibatasi pada bagian yang terlihat eksplisit.
+
+### 18.2 Backend yang dikelola
+
+Class C7756 menyimpan backend aktif melalui `InterfaceC24911 f25525`. Dari pemanggilan interface dan penetapan label backend, terdapat tiga jenis backend yang dapat dibedakan:
+
+| Backend | Bukti implementasi | Keterangan |
+|---|---|---|
+| Root | `new C1790(suPath, true)`; label `root`; `InterfaceC24911.mo6265()` | Mencari executable `su` melalui `C19036.m44123(false)`; jika path tidak ditemukan, mencatat permission denied. |
+| Shizuku | `new C10695(...)`; label `shizuku`; `InterfaceC24911.mo6267()` | Memeriksa ketersediaan melalui `C10695.m27256()`, mengelola binder/prewarm dan status permission/service. |
+| App shell | `new C1790("sh", false)`; label `app`; `InterfaceC24911.mo6266()` | Fallback shell dalam konteks aplikasi, bukan privilege root/Shizuku. |
+
+Pemilihan Root dikondisikan oleh preference `get_root` (default true) dan pemeriksaan environment `!C16514.m39144() && ApplicationC17729.m41519()`. Jalur Shizuku dikondisikan oleh preference `get_adb` (default true), pemeriksaan ketersediaan Shizuku, serta state binder/permission/service. Jika backend berprivilege tidak tersedia atau gagal, kode dapat kembali membuat backend `sh` biasa.
+
+Dengan demikian, provider yang sebelumnya belum dapat diidentifikasi kini dapat dinyatakan mengelola **Root, Shizuku, dan app shell fallback**. Belum ada bukti pada helper ini yang cukup untuk menyatakan Dhizuku sebagai backend pada jalur MTIO yang sedang ditelusuri.
+
+### 18.3 Capability boolean pada C11762
+
+Tiga method interface `InterfaceC23405` pada implementor `C11762` didelegasikan langsung ke C7756:
+
+| Method C11762 | Delegasi C7756 | Makna yang didukung source |
+|---|---|---|
+| `mo29539()` | `C7756.m21096()` | Backend aktif adalah Root (`mo6265()`). |
+| `mo29538()` | `C7756.m21111()` | Backend aktif adalah Shizuku (`mo6267()`). |
+| `mo29537()` | `C7756.m21109()` | Backend aktif adalah app shell (`mo6266()`). |
+
+Method `C7756.m21112()` hanya menguji apakah backend aktif tersedia dan `mo6264()` mengembalikan true. Method `m21104(provider, ...)` mengganti backend aktif, menutup backend lama bila berbeda, menyimpan backend baru, lalu memulai persiapan helper. Method `m21103()` menyimpan label backend terakhir sebagai `root`, `shizuku`, atau `app`.
+
+### 18.4 Pembuatan dan penempatan helper MTIO
+
+Pada `C7756.m21104()`, setelah backend aktif ditetapkan, kode menyiapkan executable dari asset internal dengan nama `mtio`:
+
+- Backend Root: membaca asset `/assets/<nama ABI/helper>`, menulis ke direktori aplikasi yang diperoleh dari `C21576.m49072()`, membandingkan isi file yang sudah ada, memperbarui bila berbeda, dan mengatur executable bit. Jika `File.setExecutable(true)` gagal, backend menjalankan perintah `chmod 755 <path>`.
+- Backend Shizuku: menulis asset ke external cache, menyiapkan direktori `/data/local/tmp/<runtime-name>`, menyalin executable menjadi `mtio`, lalu menjalankan `chmod 711`. Jika command gagal, backend Shizuku ditutup dan kode mencoba fallback ke app shell `sh`.
+- Backend app shell: tidak menjalankan cabang penempatan helper khusus Root/Shizuku tersebut.
+
+Temuan ini menghubungkan capability provider dengan helper executable MTIO yang menjadi peer dari socket server Java. Namun, nama asset/ABI yang dipilih oleh `m21121()`, command lengkap untuk menjalankan helper, dan korelasi langsung ke callback socket `C11762.mo4910(String, boolean)` masih perlu dibuktikan dari Smali/call-chain.
+
+### 18.5 Batasan callback dan privilege chain
+
+Method `C11762.mo4910(String, boolean)` dan `mo4909(int)` tetap belum direkonstruksi secara utuh. JADX menandai keduanya sebagai method dengan control-flow yang gagal didecompile; Smali berisi control-flow obfuscated besar dan pemanggilan string decoder. Oleh karena itu, belum boleh ditulis sebagai fakta bahwa callback tersebut menjalankan command tertentu atau bahwa setiap sesi MTIO selalu memakai Root/Shizuku.
+
+Bukti saat ini mendukung alur tingkat arsitektur berikut:
+
+1. C7756 memilih backend aktif: Root, Shizuku, atau app shell.
+2. C11762 mengekspos capability backend melalui tiga boolean interface.
+3. C7756 menyiapkan executable helper MTIO untuk backend Root/Shizuku.
+4. Abstract server menerima koneksi LocalSocket atau TCP dan meneruskan endpoint ke callback C11762.
+5. Peer/helper menggunakan endpoint tersebut untuk membentuk sesi protocol dan mengirim file descriptor pada jalur LocalSocket.
+
+Hubungan langkah 3–5 telah didukung oleh class dan transport evidence, tetapi command launcher dan argumen persisnya belum tertaut langsung. Lifecycle process, UID aktual, SELinux domain, permission grant, dan kondisi fallback tiap device juga belum diuji runtime.
+
+### 18.6 Dampak terhadap BF Manager
+
+Untuk parity, BF perlu memodelkan backend sebagai capability provider terpisah, bukan menganggap semua operasi berjalan sebagai root:
+
+- `AppShellProvider`: operasi yang memang tersedia dalam sandbox aplikasi.
+- `RootProvider`: hanya aktif setelah deteksi dan validasi `su` serta hasil command/identity check.
+- `ShizukuProvider`: hanya aktif setelah binder, service, dan permission Shizuku valid.
+- Capability harus dilaporkan per operasi; status backend aktif tidak otomatis berarti semua path dapat diakses.
+- Fallback tidak boleh diam-diam menaikkan privilege atau mengklaim operasi berhasil ketika backend berubah ke app shell.
+- Helper native BF harus dibangun independen; jangan menyalin executable, asset, atau binary MT.
+
+Ini adalah rekomendasi arsitektur BF berdasarkan bukti provider MT, bukan klaim bahwa implementasi BF sudah tersedia.
+
+### 18.7 Status audit
+
+- AUD-04: **partial, meningkat** — identitas backend Root/Shizuku/app shell dan tiga capability boolean kini terpetakan. Callback launcher, permission chain, UID/SELinux, serta runtime fallback tetap terbuka.
+- AUD-03R: **partial** — lokasi penyiapan executable MTIO telah ditemukan; command invocation dan korelasi endpoint-to-process belum selesai.
+- AUD-01R: tetap **partial** — decoder string dan dynamic invocation pada jalur callback/launcher belum ditutup.
