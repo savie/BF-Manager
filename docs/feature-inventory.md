@@ -75,3 +75,14 @@ Status: `indicated` (ada indikasi), `tracing` (penelusuran berjalan), `specified
 ## Catatan implementasi dan verifikasi
 
 Pada snapshot `v1.0` tanggal 2026-11-04, seluruh entri masih berstatus `indicated`: daftar ini berasal dari bukti MT, bukan status implementasi BF Manager. Gunakan `docs/feature-acceptance-criteria.md` untuk Definition of Done per Feature ID dan `docs/bf-manager-p0-spec.md` untuk kontrak P0. Status hanya boleh dinaikkan setelah commit implementasi dan bukti test/call-site dicantumkan.
+
+
+## Pembaruan audit JNI dan bookmark (2026-11-04)
+
+Bukti tambahan statis dari `master`:
+- Bookmark: resource string prompt add selected files to bookmarks, success message, dan Add group (E2). Schema/persistence belum diketahui.
+- JNI wrapper Features/libmt1, Features2/libmt2, Features3/libmt3: declarations dan Smali cocok (E3 interface-level). Caller belum dipetakan sehingga feature behavior tetap `indicated`.
+- Filesystem contract BF: provider URI opaque, capability-aware operations, explicit conflict policy, copy-verify-delete untuk cross-provider move, partial outcomes, streaming/cancellation.
+- Permission decisions: SAF-first; persisted grants; `MANAGE_EXTERNAL_STORAGE` bukan default; privilege bridges optional.
+
+Feature inventory tidak dinaikkan ke `implemented` atau `validated`. Lihat `docs/audit-filesystem-jni-permissions-bookmarks.md` untuk evidence, kontrak, dan backlog lengkap.
