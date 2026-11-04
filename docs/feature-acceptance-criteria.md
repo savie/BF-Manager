@@ -1,7 +1,7 @@
 # Matriks Kriteria Fitur BF Manager
 
 Tanggal: 2026-11-04  
-Status implementasi: `not_started`.
+Status implementasi BF: `not_started`. Status audit MT dan backlog teknis berada di [dashboard audit aktif](audit-follow-up.md).
 
 Dokumen ini mendefinisikan bukti yang diperlukan sebelum fitur disebut implemented atau validated. Keberadaan string/menu MT bukan bukti bahwa BF Manager telah memiliki fitur tersebut.
 
