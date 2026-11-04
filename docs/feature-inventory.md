@@ -51,6 +51,13 @@ Status: `indicated` (ada indikasi), `tracing` (penelusuran berjalan), `specified
 | PL-01 | Extensibility | Plugin manager/viewer, translation/editor plugins | E2 | indicated |
 | BK-01 | Backup | Local/cloud backup dan restore data pengguna | E2; payload pending | indicated |
 
+| AR-05 | Archive | Multi-part TAR archive read/list/extract | E2; release notes v2.26.11 | indicated |
+| ED-03 | Editor/Viewer | HTML/Markdown preview, search, file picker, root switching, open-mode settings | E2; release notes v2.26.11 | indicated |
+| ED-04 | Editor | Two-file HEX comparator with simultaneous edit/save | E2; release notes v2.26.11 | indicated |
+| SY-05 | System | UI Analysis: Activity logging and layout inspection | E2; release notes v2.26.11 | indicated |
+| AP-05 | APK | Custom install source using Root/Shizuku adapter | E2; release notes v2.26.10 | indicated |
+| MCP-01 | Integration | MCP service, tool registry, logs, APK/ZIP/ARSC operations and file transfer | E2; release notes v2.26.10–2.26.11 | indicated |
+
 ## Prioritas awal BF Manager
 
 | Prioritas | Feature ID | Target |
@@ -61,7 +68,7 @@ Status: `indicated` (ada indikasi), `tracing` (penelusuran berjalan), `specified
 | P1 | AR-01..AR-04 | Archive reader/create/extract |
 | P1 | ED-01 | Editor teks/code |
 | P2 | AP-01..AP-04, ED-02, VW-01..VW-02, UT-01 | Tools lanjutan dan viewers |
-| P3 | DX-01..DX-02, RS-01..RS-03, NW-01..NW-03, SY-02..SY-04, PL-01 | Modul kompleks dan integrasi privilege |
+| P3 | DX-01..DX-02, RS-01..RS-03, NW-01..NW-04, SY-02..SY-05, PL-01, MCP-01 | Modul kompleks, privilege, UI analysis, MCP service dan integrasi jaringan |
 
 ## Langkah menaikkan evidence
 
